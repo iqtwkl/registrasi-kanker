@@ -10,7 +10,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRumahSakitTable extends Migration
+class CreateAnamnesisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,7 @@ class CreateRumahSakitTable extends Migration
      */
     public function up()
     {
-        Schema::create('rumah_sakit', function (blueprint $table) {
+        Schema::create('anamnesis', function (blueprint $table) {
             $table->uuid("id");
             $table->string("id_pasien");
 	        $table->string("nama_pasien");
@@ -430,6 +430,6 @@ class CreateRumahSakitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rumah_sakit');
+        Schema::dropIfExists('anamnesis');
     }
 }

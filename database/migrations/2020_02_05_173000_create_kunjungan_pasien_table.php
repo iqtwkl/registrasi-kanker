@@ -1,10 +1,16 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: TMPCZuliansyah
+ * Date: 05/02/2020
+ * Time: 17:32
+ */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateKunjunganPasienTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +19,10 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('kunjungan_pasien', function (Blueprint $table) {
             $table->uuid('id');
-            $table->string('nama');
-            $table->string('password');
-            $table->string('email')->unique();
-            $table->string('parent');
-            $table->integer('hak_akses');
+            $table->string('id_pasien');
+            $table->string('kunjungan_ke');
             $table->timestamps();
         });
     }
@@ -31,6 +34,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('kunjungan_pasien');
     }
 }

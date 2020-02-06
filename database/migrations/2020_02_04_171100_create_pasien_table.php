@@ -23,11 +23,11 @@ class CreatePasienTable extends Migration
             $table->uuid("id");
             $table->string("kode_rs");
             $table->string("no_rekam_medis");
-            $table->integer("id_rs");
-            $table->string("nama_pasien");
-            $table->string("namaOrangTua");
-            $table->string("tempatLahir");
-            $table->date("tglLahir");
+            $table->string("id_rs");
+            $table->string("nama");
+            $table->string("nama_orang_tua");
+            $table->string("tempat_lahir");
+            $table->date("tgl_lahir");
             //addAttributeUsia
             $table->string("pendidikan");
             $table->string("pekerjaan");

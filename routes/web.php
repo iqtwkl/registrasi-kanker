@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['prefix' => 'auth','namespace' => 'Auth'], function(){
+    //Sign In User
+    Route::get('login', ['middleware' => 'web', 'uses' => 'LoginController@index'])->name('login');
+});
+
+Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'UserController@index'])->name('user');
 });

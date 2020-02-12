@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -40,5 +42,23 @@ class LoginController extends Controller
 
     public function index(){
         return view('auth.login');
+    }
+
+    public function loginAction(LoginRequest $request){
+        $email = $request->input("email");
+        $password = $request->input("password");
+
+        $credentials = [
+            'email' => $email,
+            'password' => $password
+        ];
+
+        if(Auth::attempt($credentials)){
+            return redirect(route("users"));
+        }
+
+        $errors = [];
+        $errors[] = trans("validation.login_failed_errors");
+        return back()->withErrors($errors);
     }
 }

@@ -147,5 +147,6 @@ return [
     */
 
     'attributes' => [],
+    'login_failed_errors' => 'email or password is not valid'
 
 ];

@@ -20,14 +20,28 @@ class UserRepository implements IUserRepository{
 
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array()){
         $condition = "1=1";
+        $filter = [];
         if(count($search) > 0) {
             foreach ($search as $key => $value) {
-                if ($key == 'search_key') {
+                if (in_array($key,['nama', 'email'])) {
                     if (!empty($value) && trim($value) != '') {
-                        $condition .= " and (LOWER(name) like '%" . strtolower($value) . "%') ";
+                        $filter[] = " (LOWER(".$key.") like '%" . strtolower($value) . "%') ";
                     }
                 }
             }
+        }
+
+        if(count($filter) > 0){
+            $condition .= " and (";
+            $i=0;
+            foreach($filter as $k => $item){
+                if($i > 0){
+                    $condition .= " or ";
+                }
+                $condition .= $item;
+                $i++;
+            }
+            $condition .= ")  ";
         }
 
         $orderByRaw = ' 1 asc';
@@ -38,8 +52,8 @@ class UserRepository implements IUserRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit);
-        $count = $this->model->query()->whereRaw($condition)->count();
+        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
+        $count = $this->model->query()->selectRaw("count(*) as jml")->whereRaw($condition)->get("jml");
 
 
         return response(["totalRecords" => $count, "data" => $result]);

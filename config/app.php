@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          */
 
+        App\Modules\Users\Providers\UsersProvider::class,
+
         /*
          * Application Service Providers...
          */

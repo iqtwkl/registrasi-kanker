@@ -21,3 +21,9 @@ Route::group(['prefix' => 'auth','namespace' => 'Auth'], function(){
 Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'UserController@index'])->name('users');
 });
+
+
+///AJAX
+Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'UserAjaxController@getAll'])->name('users.all');
+});

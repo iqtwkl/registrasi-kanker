@@ -39,13 +39,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-users"></i>
                         <span>Pasien</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-comment-medical"></i>
+                        <i class="fa fa-book-medical"></i>
                         <span>Anamnesis</span>
                     </a>
                 </li>
@@ -57,7 +57,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-syringe"></i>
                         <span>Pemeriksaan Penunjang</span>
                     </a>
                 </li>
@@ -69,7 +69,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-procedures"></i>
                         <span>Terapi</span>
                     </a>
                 </li>

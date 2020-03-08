@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'id' => 1,
+            'id' => "991a75ce-6124-11ea-bc55-0242ac130003",
             'nama' => 'admin',
             'email' => 'admin@mail.com',
             'password' => md5('password'),
@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'hak_akses' => 0
         ]);
         DB::table('users')->insert([
-            'id' => 2,
+            'id' => "991a75ce-6124-11ea-bc55-0242ac130004",
             'nama' => 'Rumah Sakit A',
             'email' => 'rsa@mail.com',
             'password' => md5('password'),
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'hak_akses' => 0
         ]);
         DB::table('users')->insert([
-            'id' => 3,
+            'id' => "991a75ce-6124-11ea-bc55-0242ac130005",
             'nama' => 'Rumah Sakit B',
             'email' => 'rsb@mail.com',
             'password' => md5('password'),

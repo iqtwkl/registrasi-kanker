@@ -29,5 +29,13 @@ class UsersTableSeeder extends Seeder
             'parent' => '0',
             'hak_akses' => 0
         ]);
+        DB::table('users')->insert([
+            'id' => 3,
+            'nama' => 'Rumah Sakit B',
+            'email' => 'rsb@mail.com',
+            'password' => md5('password'),
+            'parent' => '0',
+            'hak_akses' => 0
+        ]);
     }
 }

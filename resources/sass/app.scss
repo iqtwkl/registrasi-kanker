@@ -26,6 +26,10 @@
   -webkit-box-shadow: 3px 4px 5px 0px rgba(198, 198, 198, 0.75);
   -moz-box-shadow: 3px 4px 5px 0px rgba(198, 198, 198, 0.75);
   box-shadow: 3px 4px 5px 0px rgba(198, 198, 198, 0.75);
+  img {
+    background: #ffffff;
+    padding: 3px 0;
+  }
 }
 
 form input.field{

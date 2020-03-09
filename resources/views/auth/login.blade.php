@@ -11,7 +11,7 @@
         {{ csrf_field() }}
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
-                <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg">
+                <img class="img" src="{{ asset('img/logo.png') }}" >
             </div>
         </div>
 

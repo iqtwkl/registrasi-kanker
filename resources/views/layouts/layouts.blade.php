@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <!--<link href="{{ asset('css/all.css') }}" rel="stylesheet">-->
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <title>KODI ONKOLOGI BKL</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield("styled")
 </head>
 <body>

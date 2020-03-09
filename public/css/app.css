@@ -1,0 +1,43 @@
+.container-login {
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  height: 100%;
+}
+
+.form-sign-in {
+  background-color: #990033;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 3px 4px 5px 0px rgba(198, 198, 198, 0.75);
+}
+
+body {
+  color: #343434;
+}
+
+.table-info,
+.table-info > td,
+.table-info > th {
+  background-color: #005e65;
+  color: #fff4ff;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #990033;
+  border-color: #990033;
+}
+

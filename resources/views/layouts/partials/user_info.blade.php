@@ -1,6 +1,6 @@
 <div class="user-pic">
     <img class="img-responsive img-rounded"
-         src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+         src="{{ asset('img/user.jpg') }}"
          alt="User picture">
 </div>
 <div class="user-info">

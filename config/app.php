@@ -167,6 +167,7 @@ return [
          */
 
         App\Modules\Users\Providers\UsersProvider::class,
+        App\Modules\Pasiens\Providers\PasiensProvider::class,
 
         /*
          * Application Service Providers...

@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('pasien') }}">
                         <i class="fa fa-users"></i>
                         <span>Pasien</span>
                     </a>
@@ -87,7 +87,7 @@
                     <div class="sidebar-submenu">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('users') }}">
                                     <i class="fa fa-users"></i>
                                     User
                                 </a>

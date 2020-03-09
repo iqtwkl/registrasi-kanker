@@ -27,6 +27,11 @@ Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'UserController@index'])->name('users');
 });
 
+Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
+});
+
+
 
 ///AJAX
 Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){

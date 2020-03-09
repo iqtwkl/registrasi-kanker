@@ -38,7 +38,7 @@ class PasienRepository implements IPasienRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-        $result = $this->model->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit);
+        $result = $this->model->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
         $count = $this->model->whereRaw($condition)->count();
 
 

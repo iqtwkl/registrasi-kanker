@@ -25,9 +25,7 @@ var dataTable = {
             url: _url,
             data: {search: _filter.filter, limit: _filter.limit, offset: _filter.offset, _token: _token, sort: dataTable.sort}
         }).done(function(_return){
-            //$(_className+' > tbody').html(_return);
-
-
+            $(_className+' tbody').html(_return);
         });
     },
     search: function(_className){

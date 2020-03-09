@@ -19,6 +19,7 @@
 <script src="{{ asset("js/popper.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/bootstrap.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/sidebar.js") }}" type="text/javascript"></script>
+<script src="{{ asset("js/app.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/table.js") }}" type="text/javascript"></script>
 @yield("scripts")
 </body>

@@ -1,121 +1,179 @@
 var dataTable = {
-    query:{},
-    limit: 10,
-    offset: 0,
-    sort: {},
-    init: function(_className){
-        var _filter = {};
-        $(_className+'-filter-value').each(function(){
-            _filter[$(this).attr('name')] = $(this).val();
-        });
-        dataTable.set(_filter);
-        dataTable.initSort(_className);
-        dataTable.setDefaultSort(_className);
-
-        dataTable.getContent(_className, dataTable.get());
-        dataTable.search(_className);
-        dataTable.searchKey(_className);
-        dataTable.setSorting(_className);
+    configs: {
+        search: null,
+        columns:[],
+        perPage: 10,
+        page: 1
     },
-    getContent: function(_className,_filter){
-        var _url = $(_className).attr('data-url');
-        var _token = $(_className).attr('data-token');
+    init: function(_tableElement, _configs){
+        if(_configs) {
+            dataTable.set(_configs);
+            console.log(_configs);
+        }
+
+        dataTable.fetchData(_tableElement);
+    },
+    fetchData: function(_tableElement){
+        var _url = $(_tableElement).attr('data-url');
+        var _token = $(_tableElement).attr('data-token');
+        var _limit = dataTable.configs.perPage;
+        var _offset = (dataTable.configs.page - 1);
+
         $.ajax({
             method: "POST",
             url: _url,
-            data: {search: _filter.filter, limit: _filter.limit, offset: _filter.offset, _token: _token, sort: dataTable.sort}
+            data: {search: [], limit: _limit, offset: _offset, _token: _token, sort: []}
         }).done(function(_return){
-            //$(_className+' > tbody').html(_return);
-            console.log(_return);
+            dataTable.generateSearchField(_tableElement);
+            dataTable.generateTableHeader(_tableElement, _return.data);
+            dataTable.generateTableBody(_tableElement, _return.data);
         });
     },
-    search: function(_className){
-        $(_className+'-filter-button').click(function(){
-            var _filter = {};
-            $(_className+'-filter-value').each(function(){
-                _filter[$(this).attr('name')] = $(this).val();
-            });
+    generateSearchField: function(_tableElement){
+        var element = $(_tableElement);
+        if($(_tableElement).parent('.table-responsive').length > 0){
+            element = $(_tableElement).parent('.table-responsive');
+        }
 
-            dataTable.set(_filter);
-            dataTable.getContent(_className, dataTable.get());
-        });
+        var insertedHtml = '<div class="row">' +
+            '<div class="col-sm-12 col-md-6">' +
+                '<div class="dataTables_length" id="example_length">' +
+                    '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' +
+                        '<option value="10">10</option>' +
+                        '<option value="25">25</option>' +
+                        '<option value="50">50</option>' +
+                        '<option value="100">100</option>' +
+                    '</select> entries</label>' +
+                '</div>' +
+            '</div>' +
+            '<div class="col-sm-12 col-md-6">' +
+                '<div id="example_filter" class="dataTables_filter float-right">' +
+                    '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
+                '</div>' +
+            '</div>' +
+        '</div>';
+
+        element.prepend(insertedHtml);
     },
-    searchKey: function(_className){
-        $(_className+'-filter-value').keyup(function(event) {
-            if (event.keyCode === 13) {
-                var _filter = {};
-                $(_className+'-filter-value').each(function(){
-                    _filter[$(this).attr('name')] = $(this).val();
+    generateTableHeader: function(_tableElement, _data){
+        var columns = [];
+        if(dataTable.configs.columns.length > 0){
+            for(var i=0; i < dataTable.configs.columns.length; i++){
+                columns.push({
+                    title: dataTable.configs.columns[i].title,
+                    sort: dataTable.configs.columns[i].sort
                 });
-
-                dataTable.set(_filter);
-                dataTable.getContent(_className, dataTable.get());
             }
-        });
-    },
-    initSort: function(_className){
-        $(_className+' td.js-sort').each(function(i, item){
-            $(item).attr('data-sort', '');
-            if($(item).find('i').length < 1){
-                $(item).append(' <i class=""></i>');
+        }
+        else if(_data.length > 0){
+            var keys = Object.keys(_data[0]);
+            for(var j=0; j < keys.length; j++){
+                columns.push({
+                    title: keys[j],
+                    sort: false
+                });
             }
+        }
 
-            $(item).find('i').attr('class', 'fas fa-sort');
-        });
-    },
-    setDefaultSort: function(_className){
-        dataTable.sort = {};
-        $(_className+' td.js-sort').each(function(i, item){
-            if(i==0) {
-                $(item).attr('data-sort', 'asc');
-                $(item).find('i').attr('class', 'fas fa-sort-down');
-                dataTable.sort[$(item).attr('data-order')] = $(item).attr('data-sort');
+        console.log(columns);
+
+        var tHead = "<thead>" +
+            "<tr>";
+        for(var key in columns){
+            console.log(key);
+            tHead +="<th>";
+            tHead += columns[key].title;
+            if(columns[key].sort){
+                tHead+="";
             }
-        });
+            tHead +="</th>";
+        }
+        tHead += "</tr></thead>";
+
+        $(_tableElement).append(tHead);
     },
-    setSorting: function(_className){
-        $(_className+' td.js-sort').click(function(){
-            var _sort = $(this).attr('data-sort');
-            dataTable.initSort(_className);
-            $(this).attr('data-sort', _sort);
-            dataTable.sort = {};
-            if($(this).attr('data-sort') == 'asc'){
-                $(this).attr('data-sort', 'desc');
-                $(this).find('i').attr('class', 'fas fa-sort-up');
-                dataTable.sort[$(this).attr('data-order')] = $(this).attr('data-sort');
-                dataTable.getContent(_className, dataTable.get());
+    generateTableBody: function(_tableElement, _data){
+        var fieldSettings = [];
+        if(dataTable.configs.columns.length > 0){
+            for(var i=0; i < dataTable.configs.columns.length; i++){
+                fieldSettings.push({
+                    field: dataTable.configs.columns[i].field,
+                    columnType: dataTable.configs.columns[i].columnType
+                });
             }
-            else{
-                $(this).attr('data-sort', 'asc');
-                $(this).find('i').attr('class', 'fas fa-sort-down');
-                dataTable.sort[$(this).attr('data-order')] = $(this).attr('data-sort');
-                dataTable.getContent(_className, dataTable.get());
+        }
+        else if(_data.length > 0){
+            var keys = Object.keys(_data[0]);
+            for(var x=0; x < keys.length; x++){
+                fieldSettings.push({
+                    field: keys[x],
+                    columnType: 'text'
+                });
             }
-        });
-    },
-    generatePagination: function(totalData){
+        }
 
-    },
-    getDataPageAt: function(_className, _page){
-        var _classPageButton = _className+'-page-at';
-        var _filter = {};
-        $(_className+'-filter-value').each(function(){
-            _filter[$(this).attr('name')] = $(this).val();
-        });
+        console.log(fieldSettings);
 
-        dataTable.offset = (parseInt(_page) - 1);
-        dataTable.set(_filter);
+        var allowedFields = [];
+        for(var j=0; j < _data.length; j++){
+            for(var k=0; k < fieldSettings.length; k++){
+                console.log(_data[j][fieldSettings[k].field])
+            }
+        }
 
-        dataTable.getContent(_className, dataTable.get());
+        console.log(allowedFields);
+/*
+        var tBody = "<tbody>";
+        if(allowedFields.length > 0){
+            for(var a = 0; a < allowedFields.length; a++){
+                tBody+="<tr>";
+                    for(var b = 0; b < allowedFields[a].length; b++){
+                        tBody+="<td>";
+                        if(allowedFields[a][b].columnType == "link"){
+                            tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].field+"</a>";
+                        }
+                        else{
+                            tBody+=allowedFields[a][b].field;
+                        }
+                        tBody+="</td>";
+                    }
+                tBody+="</tr>";
+            }
+        }
+        tBody += "</tbody>";
+
+        $(_tableElement).append(tBody);*/
     },
-    set: function(_filter){
-        dataTable.query = {
-            filter : _filter,
-            limit : dataTable.limit,
-            offset : dataTable.offset
-        };
+    set: function(_configs){
+        if(_configs.search){
+            dataTable.configs.search = _configs.search;
+        }
+
+        if(_configs.columns){
+            if(_configs.columns.length > 0){
+                for(var i= 0; i < _configs.columns.length; i++){
+                    var column = {
+                        title: (_configs.columns[i].title)?_configs.columns[i].title:'',
+                        field: (_configs.columns[i].field)?_configs.columns[i].field:'',
+                        sort: (_configs.columns[i].sort)?_configs.columns[i].sort:false,
+                        columnType: (_configs.columns[i].columnType)?_configs.columns[i].columnType:'',
+                        filterField: (_configs.columns[i].filterField)?(_configs.columns[i].filterField):''
+                    };
+
+                    dataTable.configs.columns.push(column);
+                }
+            }
+        }
+
+        if(_configs.perPage){
+            dataTable.configs.perPage = _configs.perPage;
+        }
+
+        if(_configs.page){
+            dataTable.configs.page = _configs.page;
+        }
     },
     get: function(){
-        return dataTable.query;
+        return dataTable.configs;
     }
 };

@@ -8,17 +8,8 @@
     <h2>User</h2>
     <hr />
 
-    <div class="table-responsive js-data-users" data-token="{{ csrf_token() }}" data-url="{{ route("users.all") }}">
-        <table class="table">
-            <thead>
-            <tr class="table-info">
-                <th>No</th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
+    <div class="table-responsive">
+        <table id="js-table-users" class="table js-data-users" data-token="{{ csrf_token() }}" data-url="{{ route("users.all") }}">
         </table>
     </div>
 @endsection
@@ -26,7 +17,9 @@
 @section('scripts')
 <script type="text/javascript">
  $(document).ready(function(){
-     dataTable.init(".js-data-users");
+     if($('#js-table-users').hasClass('js-data-users')) {
+        dataTable.init(".js-data-users");
+     }
  });
 </script>
 @endsection

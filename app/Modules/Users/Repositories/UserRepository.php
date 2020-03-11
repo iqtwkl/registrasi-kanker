@@ -53,10 +53,10 @@ class UserRepository implements IUserRepository{
 
         $skip = intval($limit) * intval($offset);
         $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
-        $count = $this->model->query()->selectRaw("count(*) as jml")->whereRaw($condition)->get("jml");
+        $count = $this->model->query()->selectRaw("count(*) as total")->whereRaw($condition)->first();
 
 
-        return response(["totalRecords" => $count, "data" => $result]);
+        return ["totalRecords" => $count->total, "data" => $result];
     }
 
     public function getById($id){

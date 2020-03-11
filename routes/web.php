@@ -18,6 +18,7 @@ Route::group(['prefix' => 'auth','namespace' => 'Auth'], function(){
     Route::post('login', ['middleware' => 'web', 'uses' => 'LoginController@loginAction'])->name('login.action');
 });
 
+
 Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'UserController@index'])->name('users');
 });

@@ -29,6 +29,8 @@ class UserAjaxController extends Controller
         $sort = $request->has('sort')?$request->input('sort'):array();
 
         $searchArr = ["name" => $search, "email" => $search];
-        return $this->userContract->getAll($searchArr, $offset, $limit, $sort);
+        $result = $this->userContract->getAll($searchArr, $offset, $limit, $sort);
+
+        return response($result);
     }
 }

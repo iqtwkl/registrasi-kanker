@@ -8,7 +8,7 @@
     <!--<link href="{{ asset('css/all.css') }}" rel="stylesheet">-->
     <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
-    <title>Test</title>
+    <title>KODI ONKOLOGI BKL</title>
     @yield("styled")
 </head>
 <body>

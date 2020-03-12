@@ -4,7 +4,7 @@
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
         <div class="sidebar-brand">
-            <a href="#">registrasi kanker</a>
+            <a href="#">Kodi Onkologi Bedah Kepala Leher</a>
             <div id="close-sidebar">
                 <i class="fas fa-times"></i>
             </div>

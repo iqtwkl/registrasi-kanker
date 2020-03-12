@@ -3,7 +3,8 @@ var dataTable = {
         search: null,
         columns:[],
         perPage: 10,
-        page: 1
+        page: 1,
+        showDataInfo: false
     },
     init: function(_tableElement, _configs){
         if(_configs) {
@@ -27,6 +28,7 @@ var dataTable = {
             dataTable.generateSearchField(_tableElement);
             dataTable.generateTableHeader(_tableElement, _return.data);
             dataTable.generateTableBody(_tableElement, _return.data);
+            dataTable.generateTableFoot(_tableElement, _return);
         });
     },
     generateSearchField: function(_tableElement){
@@ -112,37 +114,63 @@ var dataTable = {
             }
         }
 
-        console.log(fieldSettings);
-
         var allowedFields = [];
         for(var j=0; j < _data.length; j++){
+            var fieldDetails = [];
             for(var k=0; k < fieldSettings.length; k++){
-                console.log(_data[j][fieldSettings[k].field])
+                fieldDetails.push({
+                    value: _data[j][fieldSettings[k].field],
+                    columnType: fieldSettings[k].columnType
+                });
+            }
+            allowedFields.push(fieldDetails);
+        }
+        //console.log(allowedFields);
+
+        var tBody = "<tbody>";
+        if(allowedFields.length > 0){
+            for(var a = 0; a < allowedFields.length; a++){
+                tBody+="<tr>";
+                    for(var b = 0; b < allowedFields[a].length; b++){
+                        tBody+="<td>";
+                        if(allowedFields[a][b].columnType == "link"){
+                            tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].value+"</a>";
+                        }
+                        else{
+                            tBody+=allowedFields[a][b].value;
+                        }
+                        tBody+="</td>";
+                    }
+                tBody+="</tr>";
             }
         }
+        tBody += "</tbody>";
 
-        console.log(allowedFields);
-        /*
-         var tBody = "<tbody>";
-         if(allowedFields.length > 0){
-         for(var a = 0; a < allowedFields.length; a++){
-         tBody+="<tr>";
-         for(var b = 0; b < allowedFields[a].length; b++){
-         tBody+="<td>";
-         if(allowedFields[a][b].columnType == "link"){
-         tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].field+"</a>";
-         }
-         else{
-         tBody+=allowedFields[a][b].field;
-         }
-         tBody+="</td>";
-         }
-         tBody+="</tr>";
-         }
-         }
-         tBody += "</tbody>";
+        $(_tableElement).append(tBody);
+    },
+    generateTableFoot: function(_tableElement, _response){
+        var totalColumns = 0;
+        if(dataTable.configs.columns.length > 0){
+            totalColumns = dataTable.configs.columns.length;
+        }
+        else if(_response.data.length > 0){
+            totalColumns = Object.keys(_response.data[0]).length;
+        }
 
-         $(_tableElement).append(tBody);*/
+        var info = "";
+        if(dataTable.configs.showDataInfo){
+            info = "Showing "+(parseInt(dataTable.configs.page) * parseInt(dataTable.configs.perPage))+" of "+_response.totalRecords;
+        }
+
+        var tFoot = "<tfoot><tr><td colspan=\""+totalColumns+"\"</td></tr></tfoot>";
+        $(_tableElement).append(tFoot);
+    },
+    generatePagination: function(_tableElement, _totalData){
+        var paginationHtml = "";
+
+
+
+        $(paginationHtml).insertAfter(_tableElement);
     },
     set: function(_configs){
         if(_configs.search){

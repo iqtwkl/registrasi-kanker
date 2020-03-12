@@ -37,21 +37,21 @@ var dataTable = {
 
         var insertedHtml = '<div class="row">' +
             '<div class="col-sm-12 col-md-6">' +
-                '<div class="dataTables_length" id="example_length">' +
-                    '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' +
-                        '<option value="10">10</option>' +
-                        '<option value="25">25</option>' +
-                        '<option value="50">50</option>' +
-                        '<option value="100">100</option>' +
-                    '</select> entries</label>' +
-                '</div>' +
+            '<div class="dataTables_length" id="example_length">' +
+            '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' +
+            '<option value="10">10</option>' +
+            '<option value="25">25</option>' +
+            '<option value="50">50</option>' +
+            '<option value="100">100</option>' +
+            '</select> entries</label>' +
+            '</div>' +
             '</div>' +
             '<div class="col-sm-12 col-md-6">' +
-                '<div id="example_filter" class="dataTables_filter float-right">' +
-                    '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
-                '</div>' +
+            '<div id="example_filter" class="dataTables_filter float-right">' +
+            '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
             '</div>' +
-        '</div>';
+            '</div>' +
+            '</div>';
 
         element.prepend(insertedHtml);
     },
@@ -122,27 +122,27 @@ var dataTable = {
         }
 
         console.log(allowedFields);
-/*
-        var tBody = "<tbody>";
-        if(allowedFields.length > 0){
-            for(var a = 0; a < allowedFields.length; a++){
-                tBody+="<tr>";
-                    for(var b = 0; b < allowedFields[a].length; b++){
-                        tBody+="<td>";
-                        if(allowedFields[a][b].columnType == "link"){
-                            tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].field+"</a>";
-                        }
-                        else{
-                            tBody+=allowedFields[a][b].field;
-                        }
-                        tBody+="</td>";
-                    }
-                tBody+="</tr>";
-            }
-        }
-        tBody += "</tbody>";
+        /*
+         var tBody = "<tbody>";
+         if(allowedFields.length > 0){
+         for(var a = 0; a < allowedFields.length; a++){
+         tBody+="<tr>";
+         for(var b = 0; b < allowedFields[a].length; b++){
+         tBody+="<td>";
+         if(allowedFields[a][b].columnType == "link"){
+         tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].field+"</a>";
+         }
+         else{
+         tBody+=allowedFields[a][b].field;
+         }
+         tBody+="</td>";
+         }
+         tBody+="</tr>";
+         }
+         }
+         tBody += "</tbody>";
 
-        $(_tableElement).append(tBody);*/
+         $(_tableElement).append(tBody);*/
     },
     set: function(_configs){
         if(_configs.search){

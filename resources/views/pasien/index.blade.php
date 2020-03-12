@@ -8,19 +8,8 @@
     <h2>Pasien</h2>
     <hr />
 
-    <div class="table-responsive js-data-pasien" data-token="{{ csrf_token() }}" data-url="{{ route("pasien.all") }}">
-        <table class="table">
-            <thead>
-            <tr class="table-info">
-                <th>No</th>
-                <th>Nama</th>
-                <th>Tempat Lahir</th>
-                <th>Tanggal Lahir</th>
-                <th>No Rekam Medis</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
+    <div class="table-responsive">
+        <table class="table js-data-pasien" id="js-data-pasien" data-token="{{ csrf_token() }}" data-url="{{ route("pasien.all") }}">
         </table>
     </div>
 @endsection

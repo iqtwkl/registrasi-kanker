@@ -1,4 +1,5 @@
 .container-login {
+  background-color: #ddd;
   display: -webkit-box;
   display: flex;
   -ms-flex-align: center;
@@ -17,7 +18,7 @@
   background-color: #990033;
   width: 100%;
   max-width: 330px;
-  padding: 15px;
+  padding: 30px;
   margin: 0 auto;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -29,15 +30,33 @@
   padding: 3px 0;
 }
 
+form input.field {
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  font: 400 15px/18px Roboto, sans-serif;
+  box-shadow: inset 0 -1px 0 transparent;
+  box-sizing: border-box;
+  padding: 12px 4px;
+  background: 0 0;
+  width: 100%;
+  display: block;
+}
+
+form input.field:focus {
+  box-shadow: none;
+}
+
 body {
   color: #343434;
 }
 
-.table-info,
-.table-info > td,
-.table-info > th {
-  background-color: #005e65;
-  color: #fff4ff;
+.table,
+.table > td,
+.table > th {
+  color: #005e65;
+  background-color: #fff4ff;
 }
 
 .btn-dark {

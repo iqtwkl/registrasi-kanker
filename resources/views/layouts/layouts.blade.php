@@ -7,7 +7,6 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
-    <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <title>KODI ONKOLOGI BKL</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield("styled")

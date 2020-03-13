@@ -4,12 +4,14 @@ var dataTable = {
         columns:[],
         perPage: 10,
         page: 1,
-        showDataInfo: false
+        searchInput: true,
+        loading: false,
+        showDataInfo: false,
+        baseUrl: window.location.protocol.concat("//") + window.location.host
     },
     init: function(_tableElement, _configs){
         if(_configs) {
             dataTable.set(_configs);
-            console.log(_configs);
         }
 
         dataTable.fetchData(_tableElement);
@@ -20,21 +22,59 @@ var dataTable = {
         var _limit = dataTable.configs.perPage;
         var _offset = (dataTable.configs.page - 1);
 
+
+        if(dataTable.configs.loading) {
+            dataTable.generateLoading(_tableElement, true);
+        }
+
         $.ajax({
             method: "POST",
             url: _url,
             data: {search: [], limit: _limit, offset: _offset, _token: _token, sort: []}
-        }).done(function(_return){
+        })
+        .done(function(_return){
             dataTable.generateSearchField(_tableElement);
             dataTable.generateTableHeader(_tableElement, _return.data);
             dataTable.generateTableBody(_tableElement, _return.data);
             dataTable.generateTableFoot(_tableElement, _return);
+            dataTable.generatePagination(_tableElement, _return);
+
+            if(dataTable.configs.loading) {
+                dataTable.generateLoading(_tableElement, false);
+            }
         });
+    },
+    generateLoading: function(_tableElement, _show){
+        if(_show) {
+            var element = $(_tableElement);
+            if ($(_tableElement).parent('.table-responsive').length > 0) {
+                element = $(_tableElement).parent('.table-responsive');
+            }
+            var insertedHtml = '<div class="loading"><div class="loader"></div></div>';
+            element.prepend(insertedHtml);
+        }
+        else{
+            var element = $(_tableElement);
+            if ($(_tableElement).parent('.table-responsive').length > 0) {
+                element = $(_tableElement).parent('.table-responsive');
+            }
+
+            element.find(".loading").remove();
+        }
     },
     generateSearchField: function(_tableElement){
         var element = $(_tableElement);
         if($(_tableElement).parent('.table-responsive').length > 0){
             element = $(_tableElement).parent('.table-responsive');
+        }
+
+        var inputSearchHtml = "";
+        if(dataTable.configs.searchInput){
+            inputSearchHtml = '<div class="col-sm-12 col-md-6">' +
+                '<div id="example_filter" class="dataTables_filter float-right">' +
+                '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
+                '</div>' +
+                '</div>';
         }
 
         var insertedHtml = '<div class="row">' +
@@ -47,12 +87,7 @@ var dataTable = {
             '<option value="100">100</option>' +
             '</select> entries</label>' +
             '</div>' +
-            '</div>' +
-            '<div class="col-sm-12 col-md-6">' +
-            '<div id="example_filter" class="dataTables_filter float-right">' +
-            '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
-            '</div>' +
-            '</div>' +
+            '</div>' + inputSearchHtml +
             '</div>';
 
         element.prepend(insertedHtml);
@@ -61,10 +96,26 @@ var dataTable = {
         var columns = [];
         if(dataTable.configs.columns.length > 0){
             for(var i=0; i < dataTable.configs.columns.length; i++){
-                columns.push({
-                    title: dataTable.configs.columns[i].title,
-                    sort: dataTable.configs.columns[i].sort
-                });
+                if($.isArray(dataTable.configs.columns[i])){
+                    if(dataTable.configs.columns[i].length > 0) {
+                        columns.push({
+                            title: (dataTable.configs.columns[i][0].title) ? dataTable.configs.columns[i][0].title : '',
+                            sort: (dataTable.configs.columns[i][0].sort) ? dataTable.configs.columns[i][0].sort : false
+                        });
+                    }
+                    else{
+                        columns.push({
+                            title: '',
+                            sort: false
+                        });
+                    }
+                }
+                else {
+                    columns.push({
+                        title: (dataTable.configs.columns[i].title) ? dataTable.configs.columns[i].title : '',
+                        sort: (dataTable.configs.columns[i].sort) ? dataTable.configs.columns[i].sort : false
+                    });
+                }
             }
         }
         else if(_data.length > 0){
@@ -77,12 +128,9 @@ var dataTable = {
             }
         }
 
-        console.log(columns);
-
         var tHead = "<thead>" +
             "<tr>";
         for(var key in columns){
-            console.log(key);
             tHead +="<th>";
             tHead += columns[key].title;
             if(columns[key].sort){
@@ -98,10 +146,24 @@ var dataTable = {
         var fieldSettings = [];
         if(dataTable.configs.columns.length > 0){
             for(var i=0; i < dataTable.configs.columns.length; i++){
-                fieldSettings.push({
-                    field: dataTable.configs.columns[i].field,
-                    columnType: dataTable.configs.columns[i].columnType
-                });
+                console.log("column", dataTable.configs.columns[i]);
+                if($.isArray(dataTable.configs.columns[i])){
+                    var settings = [];
+                    for(var j=0; j < dataTable.configs.columns[i].length; j++){
+                        settings.push({
+                            field: (dataTable.configs.columns[i][j].field) ? dataTable.configs.columns[i][j].field : '',
+                            columnType: (dataTable.configs.columns[i][j].columnType) ? dataTable.configs.columns[i][j].columnType : {type: 'field'}
+                        });
+                    }
+
+                    fieldSettings.push(settings);
+                }
+                else {
+                    fieldSettings.push({
+                        field: (dataTable.configs.columns[i].field) ? dataTable.configs.columns[i].field : '',
+                        columnType: (dataTable.configs.columns[i].columnType) ? dataTable.configs.columns[i].columnType : {type: 'field'}
+                    });
+                }
             }
         }
         else if(_data.length > 0){
@@ -109,23 +171,53 @@ var dataTable = {
             for(var x=0; x < keys.length; x++){
                 fieldSettings.push({
                     field: keys[x],
-                    columnType: 'text'
+                    columnType:{ type: 'field' }
                 });
             }
         }
+
+        console.log("settings",fieldSettings);
 
         var allowedFields = [];
         for(var j=0; j < _data.length; j++){
             var fieldDetails = [];
             for(var k=0; k < fieldSettings.length; k++){
-                fieldDetails.push({
-                    value: _data[j][fieldSettings[k].field],
-                    columnType: fieldSettings[k].columnType
-                });
+                if($.isArray(fieldSettings[k])){
+                    var fieldsArray = [];
+                    for(var x=0; x < fieldSettings[k].length; x++){
+                        var field = fieldSettings[k][x].field;
+                        if(fieldSettings[k][x].field){
+                            if(fieldSettings[k][x].columnType.type == "field"){
+                                field = _data[j][fieldSettings[k][x].field]
+                            }
+                        }
+
+                        fieldsArray.push({
+                            value: field,
+                            columnType: fieldSettings[k][x].columnType
+                        });
+                    }
+
+                    fieldDetails.push((fieldsArray));
+                }
+                else{
+                    var field = fieldSettings[k].field;
+                    if(fieldSettings[k].field){
+                        if(fieldSettings[k].columnType.type == "field"){
+                            field = _data[j][fieldSettings[k].field]
+                        }
+                    }
+                    fieldDetails.push({
+                        value: field,
+                        columnType: fieldSettings[k].columnType
+                    });
+                }
             }
             allowedFields.push(fieldDetails);
         }
-        //console.log(allowedFields);
+
+        console.log("body", allowedFields);
+
 
         var tBody = "<tbody>";
         if(allowedFields.length > 0){
@@ -133,11 +225,47 @@ var dataTable = {
                 tBody+="<tr>";
                     for(var b = 0; b < allowedFields[a].length; b++){
                         tBody+="<td>";
-                        if(allowedFields[a][b].columnType == "link"){
-                            tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].value+"</a>";
+                        if($.isArray(allowedFields[a][b])){
+                            if(allowedFields[a][b].length > 0){
+                                console.log(allowedFields[a][b]);
+                                for(var x=0; x < allowedFields[a][b].length; x++){
+                                    if(x>0){
+                                        tBody += "&nbsp;&nbsp;";
+                                    }
+                                    if (allowedFields[a][b][x].columnType.type == "link") {
+                                        var identifier = '';
+                                        if (allowedFields[a][b][x].columnType.linkParam.type == 'column') {
+                                            identifier = (_data.length) ? _data[a][allowedFields[a][b][x].columnType.linkParam.value] : '';
+                                        }
+                                        else if (allowedFields[a][b][x].columnType.linkParam.type == 'string') {
+                                            identifier = allowedFields[a][b][x].columnType.linkParam.value;
+                                        }
+
+                                        var url = dataTable.configs.baseUrl + allowedFields[a][b][x].columnType.link + allowedFields[a][b][x].columnType.linkQuery + identifier;
+                                        tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b][x].value + "</a>";
+                                    }
+                                    else {
+                                        tBody += allowedFields[a][b].value;
+                                    }
+                                }
+                            }
                         }
-                        else{
-                            tBody+=allowedFields[a][b].value;
+                        else {
+                            if (allowedFields[a][b].columnType.type == "link") {
+                                var identifier = '';
+                                if (allowedFields[a][b].columnType.linkParam.type == 'column') {
+                                    identifier = (_data.length) ? _data[a][allowedFields[a][b].columnType.linkParam.value] : '';
+                                }
+                                else if (allowedFields[a][b].columnType.linkParam.type == 'string') {
+                                    identifier = allowedFields[a][b].columnType.linkParam.value;
+                                }
+
+                                var url = dataTable.configs.baseUrl + allowedFields[a][b].columnType.link + allowedFields[a][b].columnType.linkQuery + identifier;
+                                tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b].value + "</a>";
+                            }
+                            else {
+                                tBody += allowedFields[a][b].value;
+                            }
                         }
                         tBody+="</td>";
                     }
@@ -157,20 +285,82 @@ var dataTable = {
             totalColumns = Object.keys(_response.data[0]).length;
         }
 
-        var info = "";
-        if(dataTable.configs.showDataInfo){
-            info = "Showing "+(parseInt(dataTable.configs.page) * parseInt(dataTable.configs.perPage))+" of "+_response.totalRecords;
+        var currentData = (parseInt(dataTable.configs.page) * parseInt(dataTable.configs.perPage));
+        if((currentData > _response.data.length) || (currentData < _response.data.length)){
+            currentData = _response.data.length;
         }
 
-        var tFoot = "<tfoot><tr><td colspan=\""+totalColumns+"\"</td></tr></tfoot>";
+        var info = "";
+        if(dataTable.configs.showDataInfo){
+            info = "Showing "+currentData+" of "+_response.totalRecords;
+        }
+
+        var tFoot = "<tfoot><tr><td colspan=\""+totalColumns+"\">"+info+"</td></tr></tfoot>";
         $(_tableElement).append(tFoot);
     },
-    generatePagination: function(_tableElement, _totalData){
-        var paginationHtml = "";
+    generatePagination: function(_tableElement, _totalData) {
+        var paginationHtml = "<ul class=\"pagination pagination-sm no-margin pull-right\">";
 
+        var currentPage = dataTable.configs.page;
+        var startPage = 1;
+        var totalPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage));
+        var endPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage));
 
+        if (parseInt(totalPage) > 10) {
+            endPage = 10;
+        }
+
+        if (parseInt(currentPage) > 5) {
+            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"1\" data-element=\"" + _tableElement + "\">First</span></li>";
+        }
+
+        if (parseInt(currentPage) > 3) {
+            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) - 1) + "\">Prev</span></li>";
+        }
+
+        if (parseInt(currentPage) > 5) {
+            startPage = (parseInt(currentPage) - 4);
+            endPage = (parseInt(currentPage) + 5);
+        }
+
+        if(parseInt(endPage) > parseInt(totalPage)) {
+            endPage = totalPage;
+        }
+
+        if(parseInt(totalPage) > 1) {
+            for (var i = startPage; i <= endPage; i++) {
+                var activePage = "";
+                var clickable = "onclick=\"dataTable.setPageAt(this)\"";
+                if (i == currentPage) {
+                    activePage = "active";
+                    clickable = "";
+                }
+                paginationHtml += "<li class=\"page-item" + activePage + "\"><span class=\"page-link\" "+clickable+"  data-page=\"" + i + "\">" + i + "</span></li>";
+            }
+        }
+
+        if((parseInt(totalPage) > 10) && (parseInt(currentPage) < parseInt(totalPage))) {
+            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) + 1) + "\">Next</span></li>";
+            var activePage = "";
+            var clickable = "onclick=\"dataTable.setPageAt(this)\"";
+            if (totalPage == currentPage) {
+                activePage = "active";
+                clickable = "";
+            }
+            paginationHtml += "<li class=\"page-item " + activePage + " \"><span class=\"page-link\" " + clickable + " data-page=\"" + parseInt(totalPage) + "\">Last</span></li>";
+        }
+
+        paginationHtml += "</ul>";
 
         $(paginationHtml).insertAfter(_tableElement);
+    },
+    setPageAt: function(_obj){
+        var tableElement = $(_obj).attr("data-element");
+        var page = $(_obj).attr("data-page");
+
+        dataTable.configs.page = page;
+
+        dataTable.fetchData(tableElement);
     },
     set: function(_configs){
         if(_configs.search){
@@ -180,15 +370,29 @@ var dataTable = {
         if(_configs.columns){
             if(_configs.columns.length > 0){
                 for(var i= 0; i < _configs.columns.length; i++){
-                    var column = {
-                        title: (_configs.columns[i].title)?_configs.columns[i].title:'',
-                        field: (_configs.columns[i].field)?_configs.columns[i].field:'',
-                        sort: (_configs.columns[i].sort)?_configs.columns[i].sort:false,
-                        columnType: (_configs.columns[i].columnType)?_configs.columns[i].columnType:'',
-                        filterField: (_configs.columns[i].filterField)?(_configs.columns[i].filterField):''
-                    };
+                    if($.isArray(_configs.columns[i])){
+                        var column = [];
+                        for(var j=0; j < _configs.columns[i].length; j++){
+                            column.push({
+                                title: (_configs.columns[i][j].title) ? _configs.columns[i][j].title : '',
+                                sort: (_configs.columns[i][j].sort) ? _configs.columns[i][j].sort : false,
+                                field: (_configs.columns[i][j].field) ? _configs.columns[i][j].field : '',
+                                columnType: (_configs.columns[i][j].columnType) ? _configs.columns[i][j].columnType : ''
+                            });
+                        }
 
-                    dataTable.configs.columns.push(column);
+                        dataTable.configs.columns.push(column);
+                    }
+                    else {
+                        var column = {
+                            title: (_configs.columns[i].title) ? _configs.columns[i].title : '',
+                            sort: (_configs.columns[i].sort) ? _configs.columns[i].sort : false,
+                            field: (_configs.columns[i].field) ? _configs.columns[i].field : '',
+                            columnType: (_configs.columns[i].columnType) ? _configs.columns[i].columnType : ''
+                        };
+
+                        dataTable.configs.columns.push(column);
+                    }
                 }
             }
         }

@@ -16,7 +16,7 @@ Route::group(['prefix' => 'auth','namespace' => 'Auth'], function(){
     //Sign In User
     Route::get('login', ['middleware' => 'web', 'uses' => 'LoginController@index'])->name('login');
     Route::post('login', ['middleware' => 'web', 'uses' => 'LoginController@loginAction'])->name('login.action');
-    Route::get('auth/logout', 'LoginController@logout')->name('logout');
+    Route::get('logout', ['middleware' => 'web', 'uses' => 'LoginController@logout'])->name('logout');
 });
 
 
@@ -25,6 +25,7 @@ Route::get('/', ['middleware' => 'web', 'uses' => 'Users\UserController@index'])
 
 Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'UserController@index'])->name('users');
+    Route::get('find/{id}', ['middleware' => 'web', 'uses' => 'UserController@find'])->name('users.find');
 });
 
 Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){

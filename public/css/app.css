@@ -46,6 +46,7 @@ form input.field {
 
 form input.field:focus {
   box-shadow: none;
+  background-color: transparent;
 }
 
 body {

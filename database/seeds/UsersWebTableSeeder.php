@@ -11,7 +11,7 @@ class UsersWebTableSeeder extends Seeder
      */
     public function run()
     {
-        $contents = json_decode(file_get_contents('database\seeds\UserData.json'));
+        $contents = json_decode(file_get_contents(storage('database/UserData.json')));
         foreach($contents as $content) {
             DB::table('users')->insert([
                 'id' => $content->id_user,

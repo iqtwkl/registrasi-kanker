@@ -20,7 +20,7 @@ class CreatePasienTable extends Migration
     public function up()
     {
         Schema::create('pasien', function (Blueprint $table) {
-            $table->integer("id");
+            $table->uuid("id");
             $table->string("kode_rs");
             $table->string("no_rekam_medis");
             $table->string("id_rs");

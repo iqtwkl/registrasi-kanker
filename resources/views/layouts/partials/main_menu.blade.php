@@ -93,7 +93,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('rs') }}">
                                     <i class="fa fa-hospital-alt"></i>
                                     Rumah Sakit
                                 </a>

@@ -13,7 +13,7 @@ class RSWebTableSeeder extends Seeder
     {
         $contents = json_decode(file_get_contents('database\seeds\RSData.json'));
         foreach($contents as $content) {
-            DB::table('users')->insert([
+            DB::table('rumah_sakit')->insert([
                 'id' => $content->id,
                 'kode' => $content->kode,
                 'nama' => $content->nama,

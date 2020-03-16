@@ -168,6 +168,7 @@ return [
 
         App\Modules\Users\Providers\UsersProvider::class,
         App\Modules\Pasiens\Providers\PasiensProvider::class,
+        App\Modules\RumahSakit\Providers\RumahSakitProvider::class,
 
         /*
          * Application Service Providers...

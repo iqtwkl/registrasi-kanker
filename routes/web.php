@@ -32,7 +32,9 @@ Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
 });
 
-
+Route::group(['prefix' => 'rs','namespace' => 'RS'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'RSController@index'])->name('rs');
+});
 
 ///AJAX
 Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){
@@ -41,4 +43,8 @@ Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){
 
 Route::group(['prefix' => 'pasien-ajax','namespace' => 'Pasien'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getAll'])->name('pasien.all');
+});
+
+Route::group(['prefix' => 'rs-ajax','namespace' => 'RS'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'RSAjaxController@getAll'])->name('rs.all');
 });

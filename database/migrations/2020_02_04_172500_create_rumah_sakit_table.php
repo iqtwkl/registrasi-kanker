@@ -20,7 +20,7 @@ class CreateRumahSakitTable extends Migration
     public function up()
     {
         Schema::create('rumah_sakit', function (Blueprint $table) {
-            $table->uuid("id");
+            $table->integer("id");
             $table->string("kode");
             $table->string("nama");
             $table->text("alamat");

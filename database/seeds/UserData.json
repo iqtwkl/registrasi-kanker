@@ -1,0 +1,342 @@
+[
+    {
+        "id_user": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "nama_user": "diar",
+        "password": "21232f297a57a5a743894a0e4a801fc3",
+        "email": "admin@admin.com",
+        "foto": "diar.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "0",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "be867a19-1c59-4c93-a51b-5731340818e5",
+        "nama_user": "RS Awal Bros Panam Pekanbaru",
+        "password": "9f0ef817a963e37fd68ca1713d224485",
+        "email": "RSAwalBrosPanam@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "9e9f03db-5461-4822-b6c2-0843ddafa04f",
+        "nama_user": "RS Bhayangkara Tk. I Jakarta",
+        "password": "424ff91e020ab76987d9290d4d18fa10",
+        "email": "RSBhayangkara@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "c05d8ebe-c9d6-43da-8790-9ce6897eb6bc",
+        "nama_user": "RS Moh. Hoesin Palembang",
+        "password": "75c03128fd10d71c6eb7961a62e46604",
+        "email": "MohHoesinPalembang@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "cb76b03f-b311-4a27-aea5-7e35a0d832be",
+        "nama_user": "RS Muhammadiyah Palembang",
+        "password": "beb408b15abf3e29e6ef5efd29ba6279",
+        "email": "MuhammadiyahPalembang@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "ba6f1c3c-36ad-4153-a15a-8abb21c8342d",
+        "nama_user": "RS Persahabatan Jakarta",
+        "password": "665f6e9663e54110c3af2f0378d78c13",
+        "email": "PersahabatanJakarta@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "5df45b2a-f5f1-4497-b31c-2adb9e5c2568",
+        "nama_user": "RS Ryacudu Lampung Utara",
+        "password": "214b1f48b45390d043fee35b0d0f5b43",
+        "email": "RSRyacuduLampung@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "d8942932-e368-4ef2-83f9-b60615672cf5",
+        "nama_user": "RS Sanglah Bali",
+        "password": "050d62e7e847706925f68073132e8999",
+        "email": "SanglahBali@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "0674ed8e-2721-444e-bcfc-ab355d0466dc",
+        "nama_user": "RS.Immanuel, Bandung",
+        "password": "d32b36363bb39f1428f17e3baeba23ec",
+        "email": "ImmanuelBandung@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "bcb3760c-dcec-4c61-98d1-e637e2dcd392",
+        "nama_user": "RSAD TK II PELAMONIA Makassar",
+        "password": "ee6020a5d3f5b95f9de7e84fa2d59a45",
+        "email": "PELAMONIAMakassar@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "16fb99ae-9a3c-4789-8c71-6ea016365d8c",
+        "nama_user": "RSCM Jakarta",
+        "password": "54d94a220cbd5d7417c6d09ce5abb1e4",
+        "email": "RSCMJakarta@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "f8a55a53-f7e2-416b-a972-b6ab4bcfbbcb",
+        "nama_user": "RSDK (Kariadi) Semarang",
+        "password": "e7dee7c75ad679d194586f3dfd688fad",
+        "email": "RSDKkariadi@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "75d38e89-b59b-43a5-8b3a-ee872a32fc9d",
+        "nama_user": "RSHAM Medan",
+        "password": "fa50542e1c4ea2788660bcc55c6b5722",
+        "email": "RSHAMMedan@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "711d6cca-6a6a-4f3f-b38e-464a3047a1ef",
+        "nama_user": "RSHS Bandung",
+        "password": "ea1b32cceee347be996654ac95bca786",
+        "email": "RSHSBandung@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "3c3810bb-a075-41b3-8fe1-5a8ad9c04cef",
+        "nama_user": "RSKD Jakarta",
+        "password": "61968f82727ef751e45030669dbb5018",
+        "email": "RSKDJakarta@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "3ad49d8e-6cdd-4314-b749-7e7966c32512",
+        "nama_user": "RSU Haji Surabaya",
+        "password": "bdb6c97761be4658be9629a66ad359ed",
+        "email": "RSUHajiSurabaya@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "7d86ffa5-f51f-43ee-b6fb-1d1cc0c2efc5",
+        "nama_user": "RSU prop. NTB",
+        "password": "3b4a888623a0e738b6ce5e7447348658",
+        "email": "RSUNTB@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "0e80b19c-787d-482e-a708-51dfd6a7dcb9",
+        "nama_user": "RSUD Abdul Wahab Syahranie Samarinda",
+        "password": "63f3e2cbe70ac701252a71b77f9c5526",
+        "email": "AbdulWahabSamarinda@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "4f7856ea-b82e-4cf1-8ec3-cc9d747fafe3",
+        "nama_user": "RSUD ARIFIN AHMAD Pekanbaru Riau",
+        "password": "e6b45b3c892b3ad8dad59d9ba0c7e977",
+        "email": "ARIFINAHMADRiau@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "77cb8113-a5aa-42bf-aa02-8773ca2596ae",
+        "nama_user": "RSUD dr MARGONO Purwokerto",
+        "password": "b86cec6ab33d2f75519d53784572fccc",
+        "email": "MARGONOPurwokerto@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "97b371ca-5496-4003-b6c6-a109532050e4",
+        "nama_user": "RSUD dr Moewardi Solo",
+        "password": "ffc1ed2e8be15baee265837209b0899f",
+        "email": "MoewardiSolo@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "ba3b3be8-341a-4865-905b-b990dedc7615",
+        "nama_user": "RSUD Dr Soedono Madiun",
+        "password": "3aaa6429b5b0eeaed59b0bb0d8e9e104",
+        "email": "SoedonoMadiun@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "c61544d8-cb36-4bbe-8971-89b5d5295536",
+        "nama_user": "RSUD Dr. Saiful Anwar Malang",
+        "password": "c2eaf43866ad25090f604d3a53715c4f",
+        "email": "SaifulAnwarMalang@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "c3304f04-9f14-49d5-88c7-0faa9a09fe88",
+        "nama_user": "RSUD Dr. Soetomo Surabaya",
+        "password": "8c9f3190400f2462c5dc960fb37614c6",
+        "email": "SoetomoSurabaya@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "1272554c-b495-4e39-95e9-cdb8d96f3748",
+        "nama_user": "Rsud Indrasari Rengat Riau.",
+        "password": "557752905ac99e11e78fdb75e953fbc1",
+        "email": "Rsudindrasari@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "bfcfb620-1bd6-42e7-8423-2b2258dd55f9",
+        "nama_user": "RSUD Lawang Kab. Malang",
+        "password": "19fdeb9295b9cc24aaa730bdf113810a",
+        "email": "RSUDLawang@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "eca64ff5-56fe-415a-b083-309ca138b8ad",
+        "nama_user": "RSUD Tenriawaru Bone SulSel",
+        "password": "7bda7f59bd0ec9230b3d3bcd697753bc",
+        "email": "TenriawaruBone@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "a3036147-d862-4dcb-abf6-3505bbf87ad4",
+        "nama_user": "RSUD Ulin Banjarmasin",
+        "password": "1e16a02e7783f00ab5d52ad078d66777",
+        "email": "UlinBanjarmasin@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "d9f48c6c-56ac-4e19-9fd7-6881c6b57cbb",
+        "nama_user": "RSUD Waled Cirebon",
+        "password": "00b2faa9877e0e968fc19016f5c97c6b",
+        "email": "WaledCirebon@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "187589b5-c616-4acb-812a-f690606b21b6",
+        "nama_user": "RSUP Dr. M. Djamil Padang",
+        "password": "1d1bc7c3f5d2bf48fd45f4b16ba6f40f",
+        "email": "MDjamilPadang@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "5ba6ff3d-5ecb-4450-a9f9-45759d853daf",
+        "nama_user": "RSUP dr. Sardjito Jogja",
+        "password": "3f71e92442726c2a1e98b14fa9ace64c",
+        "email": "SardjitoJogja@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "8e5cea01-5349-442b-aa19-3c902ad597ba",
+        "nama_user": "RSUZA Aceh",
+        "password": "c0564a639dc82d4955c67bc6fd74bf55",
+        "email": "RSUZAAceh@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "114e265f-e9a6-4507-be17-c35e076635dc",
+        "nama_user": "RSWS Makassar",
+        "password": "7151d1240858146a82165b0cb6c3e872",
+        "email": "RSWSMakassar@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    },
+    {
+        "id_user": "cbd66e52-25a4-45eb-86cf-98e3825991df",
+        "nama_user": "Rumkital Dr Ramelan Surabaya",
+        "password": "ba1954637996034fa573c5c3f9311470",
+        "email": "RamelanSurabaya@admin.com",
+        "foto": "no_photo.png",
+        "parent": "cda92de8-2162-4e73-a180-e3ea76d2a1cf",
+        "hak_akses": "1",
+        "modified": "0000-00-00"
+    }
+]

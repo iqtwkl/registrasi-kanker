@@ -17,7 +17,7 @@ class AnamnesisWebTableSeeder extends Seeder
                 "id"=> $content->id_anamnesis,
                 "id_pasien"=> $content->id_pasien,
                 "nama_pasien"=> $content->nama_pasien,
-                "kunjungan"=> $content->kunjungan,
+                "Kunjungan"=> $content->kunjungan,
                 "tgl_periksa"=> $content->tgl_periksa,
                 "medrec"=> $content->medrec,
                 "Aa1"=> intval($content->Aa1),
@@ -416,7 +416,7 @@ class AnamnesisWebTableSeeder extends Seeder
                 "Tc2"=> intval($content->Tc2),
                 "La"=> intval($content->La),
                 "user_id"=> $content->user_id,
-                "modified"=> $content->modified,
+                "Modified"=> $content->modified,
             ]);
         }
     }

@@ -32,6 +32,10 @@ Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
 });
 
+Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
+});
+
 Route::group(['prefix' => 'rs','namespace' => 'RS'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'RSController@index'])->name('rs');
 });
@@ -47,4 +51,8 @@ Route::group(['prefix' => 'pasien-ajax','namespace' => 'Pasien'], function(){
 
 Route::group(['prefix' => 'rs-ajax','namespace' => 'RS'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'RSAjaxController@getAll'])->name('rs.all');
+});
+
+Route::group(['prefix' => 'anamnesis-ajax','namespace' => 'Anamnesis'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@getAll'])->name('anamnesis.all');
 });

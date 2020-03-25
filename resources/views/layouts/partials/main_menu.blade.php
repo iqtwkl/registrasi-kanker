@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('anamnesis') }}">
                         <i class="fa fa-book-medical"></i>
                         <span>Anamnesis</span>
                     </a>

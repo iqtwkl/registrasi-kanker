@@ -31,6 +31,7 @@ class PemeriksaanFisikAjaxController extends Controller
         $sort = $request->has('sort')?$request->input('sort'):array();
 
         $searchArr = ["name" => $search, "email" => $search];
+        $sort = ['tglPeriksa', 'DESC'];
         $result = $this->pemeriksaanFisikContract->getAll($searchArr, $offset, $limit, $sort);
 
         return response($result);

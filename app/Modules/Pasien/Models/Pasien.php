@@ -21,6 +21,8 @@ class Pasien extends Model implements IPasien
 
     public $incrementing = false;
 
+    public $keyType = 'string';
+
     /**
      * The attributes that are mass assignable.
      *

@@ -11,15 +11,22 @@ $(document).ready(function(){
     var configs = {
         columns:[
             {
-                title: 'ID',
-                field: 'id',
+                title: 'Nama',
+                field: 'nama_pasien',
                 columnType: {
                     type: 'field'
                 }
             },
             {
-                title: 'Nama',
-                field: 'nama_pasien',
+                title: 'Kunjungan',
+                field: 'Kunjungan',
+                columnType: {
+                    type: 'field'
+                }
+            },
+            {
+                title: 'Tanggal Periksa',
+                field: 'tgl_periksa',
                 columnType: {
                     type: 'field'
                 }

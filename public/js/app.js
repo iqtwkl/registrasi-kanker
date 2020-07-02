@@ -19554,14 +19554,20 @@ $(document).ready(function () {
 $(document).ready(function () {
   var configs = {
     columns: [{
-      title: 'ID',
-      field: 'id',
+      title: 'Nama',
+      field: 'nama_pasien',
       columnType: {
         type: 'field'
       }
     }, {
-      title: 'Nama',
-      field: 'nama_pasien',
+      title: 'Kunjungan',
+      field: 'Kunjungan',
+      columnType: {
+        type: 'field'
+      }
+    }, {
+      title: 'Tanggal Periksa',
+      field: 'tgl_periksa',
       columnType: {
         type: 'field'
       }
@@ -24999,14 +25005,20 @@ $(document).ready(function () {
 $(document).ready(function () {
   var configs = {
     columns: [{
-      title: 'ID',
-      field: 'id',
+      title: 'Nama',
+      field: 'nama',
       columnType: {
         type: 'field'
       }
     }, {
-      title: 'Nama',
-      field: 'nama',
+      title: 'No Rekam Medis',
+      field: 'no_rekam_medis',
+      columnType: {
+        type: 'field'
+      }
+    }, {
+      title: 'Domisili',
+      field: 'kabupaten',
       columnType: {
         type: 'field'
       }
@@ -25323,14 +25335,20 @@ $(document).ready(function () {
 $(document).ready(function () {
   var configs = {
     columns: [{
-      title: 'ID',
-      field: 'id',
+      title: 'Nama',
+      field: ['pasien', 'nama'],
       columnType: {
         type: 'field'
       }
     }, {
-      title: 'Nama',
-      field: ['pasien', 'nama'],
+      title: 'Kunjungan',
+      field: 'kunjungan',
+      columnType: {
+        type: 'field'
+      }
+    }, {
+      title: 'No Rekam Medis',
+      field: 'medrec',
       columnType: {
         type: 'field'
       }

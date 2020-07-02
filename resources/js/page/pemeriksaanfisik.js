@@ -6,17 +6,24 @@
  */
 $(document).ready(function(){
     var configs = {
-        columns:[
+        columns:[            
             {
-                title: 'ID',
-                field: 'id',
+                title: 'Nama',
+                field: ['pasien', 'nama'],
                 columnType: {
                     type: 'field'
                 }
             },
             {
-                title: 'Nama',
-                field: ['pasien', 'nama'],
+                title: 'Kunjungan',
+                field: 'kunjungan',
+                columnType: {
+                    type: 'field'
+                }
+            },
+            {
+                title: 'No Rekam Medis',
+                field: 'medrec',
                 columnType: {
                     type: 'field'
                 }

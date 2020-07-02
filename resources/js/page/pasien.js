@@ -3,17 +3,24 @@
  */
 $(document).ready(function(){
     var configs = {
-        columns:[
+        columns:[            
             {
-                title: 'ID',
-                field: 'id',
+                title: 'Nama',
+                field: 'nama',
                 columnType: {
                     type: 'field'
                 }
             },
             {
-                title: 'Nama',
-                field: 'nama',
+                title: 'No Rekam Medis',
+                field: 'no_rekam_medis',
+                columnType: {
+                    type: 'field'
+                }
+            },
+            {
+                title: 'Domisili',
+                field: 'kabupaten',
                 columnType: {
                     type: 'field'
                 }

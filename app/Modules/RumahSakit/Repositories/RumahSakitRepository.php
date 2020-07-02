@@ -52,13 +52,8 @@ class RumahSakitRepository implements IRumahSakitRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-<<<<<<< HEAD
-        $result = $this->model->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
-        $count = $this->model->whereRaw($condition)->count();
-=======
         $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
         $count = $this->model->query()->selectRaw("count(*) as total")->whereRaw($condition)->first();
->>>>>>> origin/zul
 
 
         return ["totalRecords" => $count->total, "data" => $result];

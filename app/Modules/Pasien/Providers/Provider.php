@@ -6,7 +6,7 @@
  * Time: 16:45
  */
 
-namespace App\Modules\Pasiens\Providers;
+namespace App\Modules\Pasien\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

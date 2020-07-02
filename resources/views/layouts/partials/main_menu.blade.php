@@ -93,11 +93,7 @@
                                 </a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="{{ route('rs') }}">
-=======
                                 <a href="{{ route('rumah-sakit') }}">
->>>>>>> origin/zul
                                     <i class="fa fa-hospital-alt"></i>
                                     Rumah Sakit
                                 </a>

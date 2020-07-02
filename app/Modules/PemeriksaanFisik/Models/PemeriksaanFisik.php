@@ -8,7 +8,7 @@
 
 namespace App\Modules\PemeriksaanFisik\Models;
 
-use App\Modules\PemeriksaanFisik\PemeriksaanFisikTrait;
+use App\Modules\PemeriksaanFisik\Traits\PemeriksaanFisikTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class PemeriksaanFisik extends Model implements IPemeriksaanFisik{

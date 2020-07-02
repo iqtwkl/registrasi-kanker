@@ -6,7 +6,7 @@
  * Time: 10:13 AM
  */
 
-namespace App\Modules\PemeriksaanFisik;
+namespace App\Modules\PemeriksaanFisik\Traits;
 
 trait PemeriksaanFisikTrait{
     public function getId(){

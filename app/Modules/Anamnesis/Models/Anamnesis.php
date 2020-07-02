@@ -8,7 +8,8 @@
 
 namespace App\Modules\Anamnesis\Models;
 
-use App\Modules\Anamnesis\AnamnesisTrait;
+use App\Modules\Anamnesis\Traits\AnamnesisTrait;
+use Illuminate\Database\Eloquent\Model;
 
 class Anamnesis extends Model implements IAnamnesis{
     use AnamnesisTrait;

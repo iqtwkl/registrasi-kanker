@@ -32,14 +32,6 @@ Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
 });
 
-<<<<<<< HEAD
-Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
-    Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
-});
-
-Route::group(['prefix' => 'rs','namespace' => 'RS'], function(){
-    Route::get('', ['middleware' => 'web', 'uses' => 'RSController@index'])->name('rs');
-=======
 Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'AgamaController@index'])->name('agama');
 });
@@ -53,7 +45,7 @@ Route::group(['prefix' => 'dirujuk','namespace' => 'Dirujuk'], function(){
 });
 
 Route::group(['prefix' => 'pekerjaan','namespace' => 'Pekerjaan'], function(){
-    Route::get('', ['middleware' => 'web', 'uses' => 'PekerjaanController@index'])->name('perkerjaan');
+    Route::get('', ['middleware' => 'web', 'uses' => 'PekerjaanController@index'])->name('pekerjaan');
 });
 
 Route::group(['prefix' => 'pemeriksaan-fisik','namespace' => 'PemeriksaanFisik'], function(){
@@ -70,7 +62,6 @@ Route::group(['prefix' => 'rumah-sakit','namespace' => 'RumahSakit'], function()
 
 Route::group(['prefix' => 'status-pernikahan','namespace' => 'StatusPernikahan'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'StatusPernikahanController@index'])->name('status-pernikahan');
->>>>>>> origin/zul
 });
 
 ///AJAX
@@ -84,12 +75,6 @@ Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){
 
 Route::group(['prefix' => 'pasien-ajax','namespace' => 'Pasien'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getAll'])->name('pasien.all');
-<<<<<<< HEAD
-});
-
-Route::group(['prefix' => 'rs-ajax','namespace' => 'RS'], function(){
-    Route::post('list', ['middleware' => 'web', 'uses' => 'RSAjaxController@getAll'])->name('rs.all');
-=======
     Route::post('getById', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.getById');
     Route::post('store', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.store');
     Route::post('update', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.update');
@@ -102,13 +87,10 @@ Route::group(['prefix' => 'agama-ajax','namespace' => 'Agama'], function(){
     Route::post('store', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@store'])->name('agama.store');
     Route::post('update', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@update'])->name('agama.update');
     Route::post('remove', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@remove'])->name('agama.remove');
->>>>>>> origin/zul
 });
 
 Route::group(['prefix' => 'anamnesis-ajax','namespace' => 'Anamnesis'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@getAll'])->name('anamnesis.all');
-<<<<<<< HEAD
-=======
     Route::post('getById', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@getById'])->name('anamnesis.getById');
     Route::post('store', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@store'])->name('anamnesis.store');
     Route::post('update', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@update'])->name('anamnesis.update');
@@ -161,5 +143,4 @@ Route::group(['prefix' => 'status-pernikahan-ajax','namespace' => 'StatusPernika
     Route::post('store', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.store');
     Route::post('update', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.update');
     Route::post('remove', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.remove');
->>>>>>> origin/zul
 });

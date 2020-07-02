@@ -5,7 +5,7 @@
 @endsection
 
 @section("content")
-    <h2>User</h2>
+    <h2>Rumah Sakit</h2>
     <hr />
     <div class="table-responsive">
         <table id="js-table-rumah-sakit" class="table js-data-rumah-sakit" data-token="{{ csrf_token() }}" data-url="{{ route("rumah-sakit.all") }}">

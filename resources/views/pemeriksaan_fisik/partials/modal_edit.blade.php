@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal-edit-pemerikaan-fisik"  data-id="" data-url="{{ route('pemerikaan-fisik.getById') }}" data-token="{{ csrf_token() }}">
+<div class="modal fade" id="modal-edit-pemerikaan-fisik"  data-id="" data-url="{{ route('pemeriksaan-fisik.getById') }}" data-token="{{ csrf_token() }}">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                @include("pemeriksaan_fisk.partials.form")
+                @include("pemeriksaan_fisik.partials.form")
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>

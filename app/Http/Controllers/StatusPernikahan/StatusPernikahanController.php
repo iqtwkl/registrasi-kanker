@@ -6,7 +6,7 @@
  * Time: 12:37 AM
  */
 
-namespace App\Http\Controllers\StatusPerkawinan;
+namespace App\Http\Controllers\StatusPernikahan;
 
 use App\Http\Controllers\Controller;
 

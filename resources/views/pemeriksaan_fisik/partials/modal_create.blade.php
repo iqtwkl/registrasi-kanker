@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                @include("pemeriksaan-fisik.partials.form")
+                @include("pemeriksaan_fisik.partials.form")
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>

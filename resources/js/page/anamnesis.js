@@ -19,7 +19,7 @@ $(document).ready(function(){
             },
             {
                 title: 'Nama',
-                field: 'nama',
+                field: 'nama_pasien',
                 columnType: {
                     type: 'field'
                 }

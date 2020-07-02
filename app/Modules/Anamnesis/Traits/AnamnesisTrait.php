@@ -6,7 +6,7 @@
  * Time: 8:41 AM
  */
 
-namespace App\Modules\Anamnesis;
+namespace App\Modules\Anamnesis\Traits;
 
 trait AnamnesisTrait{
     public function getId(){

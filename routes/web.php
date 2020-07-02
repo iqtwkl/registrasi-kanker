@@ -45,7 +45,7 @@ Route::group(['prefix' => 'dirujuk','namespace' => 'Dirujuk'], function(){
 });
 
 Route::group(['prefix' => 'pekerjaan','namespace' => 'Pekerjaan'], function(){
-    Route::get('', ['middleware' => 'web', 'uses' => 'PekerjaanController@index'])->name('perkerjaan');
+    Route::get('', ['middleware' => 'web', 'uses' => 'PekerjaanController@index'])->name('pekerjaan');
 });
 
 Route::group(['prefix' => 'pemeriksaan-fisik','namespace' => 'PemeriksaanFisik'], function(){

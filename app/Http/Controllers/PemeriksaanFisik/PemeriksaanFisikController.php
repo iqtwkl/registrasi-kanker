@@ -6,11 +6,11 @@
  * Time: 12:35 AM
  */
 
-namespace App\Http\Controllers\pemeriksaanFisik;
+namespace App\Http\Controllers\PemeriksaanFisik;
 
 use App\Http\Controllers\Controller;
 
-class pemeriksaanFisikController extends Controller
+class PemeriksaanFisikController extends Controller
 {
     public function __construct()
     {

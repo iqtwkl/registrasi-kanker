@@ -24,6 +24,9 @@ class CreateRumahSakitTable extends Migration
             $table->string("kode");
             $table->string("nama");
             $table->text("alamat");
+            $table->timestamps();
+            $table->string('created_by', 36);
+            $table->string('last_updated_by', 36);
         });
     }
 

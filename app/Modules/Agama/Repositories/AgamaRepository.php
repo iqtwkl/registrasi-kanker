@@ -20,14 +20,28 @@ class AgamaRepository implements IAgamaRepository{
 
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array()){
         $condition = "1=1";
+        $filter = [];
         if(count($search) > 0) {
             foreach ($search as $key => $value) {
-                if ($key == 'search_key') {
+                if (in_array($key,['nama'])) {
                     if (!empty($value) && trim($value) != '') {
-                        $condition .= " and (LOWER(name) like '%" . strtolower($value) . "%') ";
+                        $filter[] = " (LOWER(".$key.") like '%" . strtolower($value) . "%') ";
                     }
                 }
             }
+        }
+
+        if(count($filter) > 0){
+            $condition .= " and (";
+            $i=0;
+            foreach($filter as $k => $item){
+                if($i > 0){
+                    $condition .= " or ";
+                }
+                $condition .= $item;
+                $i++;
+            }
+            $condition .= ")  ";
         }
 
         $orderByRaw = ' 1 asc';
@@ -38,11 +52,11 @@ class AgamaRepository implements IAgamaRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-        $result = $this->model->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit);
-        $count = $this->model->whereRaw($condition)->count();
+        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
+        $count = $this->model->query()->selectRaw("count(*) as total")->whereRaw($condition)->first();
 
 
-        return response(["totalRecords" => $count, "data" => $result]);
+        return ["totalRecords" => $count->total, "data" => $result];
     }
 
     public function getById($id){
@@ -54,10 +68,10 @@ class AgamaRepository implements IAgamaRepository{
     }
 
     public function update(array $data, $id){
-        return $this->model->find($id)->update($data);
+        return $this->model->where('id',$id)->update($data);
     }
 
     public function remove($id){
-        return $this->model->find($id)->forceDelete();
+        return $this->model->destroy($id);
     }
 }

@@ -22,7 +22,7 @@ class User extends Authenticatable implements IUser
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'parent', 'hak_akses'
+        'name', 'email', 'password', 'parent', 'hak_akses', 'created_by', 'last_updated_by'
     ];
 
     /**

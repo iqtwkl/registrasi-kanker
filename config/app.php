@@ -166,9 +166,22 @@ return [
          * Package Service Providers...
          */
 
+<<<<<<< HEAD
         App\Modules\Users\Providers\UsersProvider::class,
         App\Modules\Pasiens\Providers\PasiensProvider::class,
         App\Modules\RumahSakit\Providers\RumahSakitProvider::class,
+=======
+        App\Modules\Users\Providers\Provider::class,
+        App\Modules\Pasiens\Providers\Provider::class,
+        App\Modules\Agama\Providers\Provider::class,
+        App\Modules\Anamnesis\Providers\Provider::class,
+        App\Modules\Dirujuk\Providers\Provider::class,
+        App\Modules\Pekerjaan\Providers\Provider::class,
+        App\Modules\PemeriksaanFisik\Providers\Provider::class,
+        App\Modules\Pendidikan\Providers\Provider::class,
+        App\Modules\RumahSakit\Providers\Provider::class,
+        App\Modules\StatusPernikahan\Providers\Provider::class,
+>>>>>>> origin/zul
 
         /*
          * Application Service Providers...

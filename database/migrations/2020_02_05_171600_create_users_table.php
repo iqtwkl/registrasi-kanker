@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('parent');
             $table->integer('hak_akses');
             $table->timestamps();
+            $table->string('created_by', 36);
+            $table->string('last_updated_by', 36);
         });
     }
 

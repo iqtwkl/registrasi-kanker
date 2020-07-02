@@ -32,27 +32,134 @@ Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
 });
 
+<<<<<<< HEAD
 Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
 });
 
 Route::group(['prefix' => 'rs','namespace' => 'RS'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'RSController@index'])->name('rs');
+=======
+Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'AgamaController@index'])->name('agama');
+});
+
+Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
+});
+
+Route::group(['prefix' => 'dirujuk','namespace' => 'Dirujuk'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'DirujukController@index'])->name('dirujuk');
+});
+
+Route::group(['prefix' => 'pekerjaan','namespace' => 'Pekerjaan'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'PekerjaanController@index'])->name('perkerjaan');
+});
+
+Route::group(['prefix' => 'pemeriksaan-fisik','namespace' => 'PemeriksaanFisik'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@index'])->name('pemeriksaan-fisik');
+});
+
+Route::group(['prefix' => 'pendidikan','namespace' => 'Pendidikan'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'PendidikanController@index'])->name('pendidikan');
+});
+
+Route::group(['prefix' => 'rumah-sakit','namespace' => 'RumahSakit'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'RumahSakitController@index'])->name('rumah-sakit');
+});
+
+Route::group(['prefix' => 'status-pernikahan','namespace' => 'StatusPernikahan'], function(){
+    Route::get('', ['middleware' => 'web', 'uses' => 'StatusPernikahanController@index'])->name('status-pernikahan');
+>>>>>>> origin/zul
 });
 
 ///AJAX
 Route::group(['prefix' => 'users-ajax','namespace' => 'Users'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'UserAjaxController@getAll'])->name('users.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'UserAjaxController@getById'])->name('users.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'UserAjaxController@getById'])->name('users.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'UserAjaxController@getById'])->name('users.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'UserAjaxController@getById'])->name('users.remove');
 });
 
 Route::group(['prefix' => 'pasien-ajax','namespace' => 'Pasien'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getAll'])->name('pasien.all');
+<<<<<<< HEAD
 });
 
 Route::group(['prefix' => 'rs-ajax','namespace' => 'RS'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'RSAjaxController@getAll'])->name('rs.all');
+=======
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'PasienAjaxController@getById'])->name('pasien.remove');
+});
+
+Route::group(['prefix' => 'agama-ajax','namespace' => 'Agama'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@getAll'])->name('agama.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@getById'])->name('agama.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@store'])->name('agama.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@update'])->name('agama.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'AgamaAjaxController@remove'])->name('agama.remove');
+>>>>>>> origin/zul
 });
 
 Route::group(['prefix' => 'anamnesis-ajax','namespace' => 'Anamnesis'], function(){
     Route::post('list', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@getAll'])->name('anamnesis.all');
+<<<<<<< HEAD
+=======
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@getById'])->name('anamnesis.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@store'])->name('anamnesis.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@update'])->name('anamnesis.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'AnamnesisAjaxController@remove'])->name('anamnesis.remove');
+});
+
+Route::group(['prefix' => 'dirujuk-ajax','namespace' => 'Dirujuk'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'DirujukAjaxController@getAll'])->name('dirujuk.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'DirujukAjaxController@getById'])->name('dirujuk.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'DirujukAjaxController@getById'])->name('dirujuk.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'DirujukAjaxController@getById'])->name('dirujuk.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'DirujukAjaxController@getById'])->name('dirujuk.remove');
+});
+
+Route::group(['prefix' => 'pekerjaan-ajax','namespace' => 'Pekerjaan'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'PekerjaanAjaxController@getAll'])->name('pekerjaan.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'PekerjaanAjaxController@getById'])->name('pekerjaan.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'PekerjaanAjaxController@getById'])->name('pekerjaan.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'PekerjaanAjaxController@getById'])->name('pekerjaan.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'PekerjaanAjaxController@getById'])->name('pekerjaan.remove');
+});
+
+Route::group(['prefix' => 'pemeriksaan-fisik-ajax','namespace' => 'PemeriksaanFisik'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getAll'])->name('pemeriksaan-fisik.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik.remove');
+});
+
+Route::group(['prefix' => 'pendidikan-ajax','namespace' => 'Pendidikan'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'PendidikanAjaxController@getAll'])->name('pendidikan.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'PendidikanAjaxController@getById'])->name('pendidikan.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'PendidikanAjaxController@getById'])->name('pendidikan.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'PendidikanAjaxController@getById'])->name('pendidikan.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'PendidikanAjaxController@getById'])->name('pendidikan.remove');
+});
+
+Route::group(['prefix' => 'rumah-sakit-ajax','namespace' => 'RumahSakit'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'RumahSakitAjaxController@getAll'])->name('rumah-sakit.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'RumahSakitAjaxController@getById'])->name('rumah-sakit.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'RumahSakitAjaxController@getById'])->name('rumah-sakit.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'RumahSakitAjaxController@getById'])->name('rumah-sakit.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'RumahSakitAjaxController@getById'])->name('rumah-sakit.remove');
+});
+
+Route::group(['prefix' => 'status-pernikahan-ajax','namespace' => 'StatusPernikahan'], function(){
+    Route::post('list', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getAll'])->name('status-pernikahan.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.getById');
+    Route::post('store', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.store');
+    Route::post('update', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.update');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'StatusPernikahanAjaxController@getById'])->name('status-pernikahan.remove');
+>>>>>>> origin/zul
 });

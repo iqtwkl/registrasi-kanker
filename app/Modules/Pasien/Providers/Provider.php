@@ -15,7 +15,7 @@ use App\Modules\Pasien\Repositories\PasienRepository;
 use App\Modules\Pasien\Contracts\PasienContract;
 use App\Modules\Pasien\Services\PasienService;
 
-class PasiensProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

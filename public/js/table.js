@@ -16,6 +16,22 @@ var dataTable = {
 
         dataTable.fetchData(_tableElement);
     },
+    reload: function(_tableElement){
+        dataTable.clean(_tableElement);
+        dataTable.fetchData(_tableElement);
+    },
+    clean: function(_tableElement){
+        var element = $(_tableElement);
+        if($(_tableElement).parent('.table-responsive').length > 0){
+            element = $(_tableElement).parent('.table-responsive');
+        }
+
+        element.find(".table-search").remove();
+        element.find(".pagination").remove();
+        element.find("thead").remove();
+        element.find("tbody").remove();
+        element.find("tfoot").remove();
+    },
     fetchData: function(_tableElement){
         var _url = $(_tableElement).attr('data-url');
         var _token = $(_tableElement).attr('data-token');
@@ -77,7 +93,7 @@ var dataTable = {
                 '</div>';
         }
 
-        var insertedHtml = '<div class="row">' +
+        var insertedHtml = '<div class="row table-search">' +
             '<div class="col-sm-12 col-md-6">' +
             '<div class="dataTables_length" id="example_length">' +
             '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' +
@@ -244,6 +260,18 @@ var dataTable = {
                                         var url = dataTable.configs.baseUrl + allowedFields[a][b][x].columnType.link + allowedFields[a][b][x].columnType.linkQuery + identifier;
                                         tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b][x].value + "</a>";
                                     }
+                                    else if(allowedFields[a][b][x].columnType.type == "modal"){
+                                        var identifier = '';
+                                        if (allowedFields[a][b][x].columnType.modalParam.type == 'column') {
+                                            identifier = (_data.length) ? _data[a][allowedFields[a][b][x].columnType.modalParam.value] : '';
+                                        }
+                                        else if (allowedFields[a][b][x].columnType.modalParam.type == 'string') {
+                                            identifier = allowedFields[a][b][x].columnType.modalParam.value;
+                                        }
+
+                                        tBody += "<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#"+ allowedFields[a][b][x].columnType.target +"\" " +
+                                                 "data-id=\""+identifier+"\">" + allowedFields[a][b][x].value + "</button>";
+                                    }
                                     else {
                                         tBody += allowedFields[a][b].value;
                                     }
@@ -262,6 +290,18 @@ var dataTable = {
 
                                 var url = dataTable.configs.baseUrl + allowedFields[a][b].columnType.link + allowedFields[a][b].columnType.linkQuery + identifier;
                                 tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b].value + "</a>";
+                            }
+                            else if(allowedFields[a][b].columnType.type == "modal"){
+                                var identifier = '';
+                                if (allowedFields[a][b].columnType.modalParam.type == 'column') {
+                                    identifier = (_data.length) ? _data[a][allowedFields[a][b].columnType.modalParam.value] : '';
+                                }
+                                else if (allowedFields[a][b].columnType.modalParam.type == 'string') {
+                                    identifier = allowedFields[a][b].columnType.modalParam.value;
+                                }
+
+                                tBody += "<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#"+ allowedFields[a][b].columnType.target +"\" " +
+                                "data-id=\""+identifier+"\">" + allowedFields[a][b].value + "</button>";
                             }
                             else {
                                 tBody += allowedFields[a][b].value;

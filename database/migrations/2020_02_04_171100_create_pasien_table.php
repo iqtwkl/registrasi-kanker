@@ -61,6 +61,9 @@ class CreatePasienTable extends Migration
             $table->string("kecamatan_o");
             $table->string("provinsi_o");
             $table->string("kabupaten_o");
+            $table->timestamps();
+            $table->string('created_by', 36);
+            $table->string('last_updated_by', 36);
         });
     }
 

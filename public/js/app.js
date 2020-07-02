@@ -19317,10 +19317,370 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/data/table.js":
+/***/ "./resources/js/global.js":
+/*!********************************!*\
+  !*** ./resources/js/global.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Created by User2 on 4/7/2020.
+ */
+function ShowMessageBox(title, message, status, btn1text, tableClass) {
+  var icon = 'ui-icon-info';
+
+  if (status == 0) {
+    icon = 'ui-icon-alert';
+  } else if (status == 1) {
+    icon = 'ui-icon-circle-check';
+  }
+
+  $("#dialog-icon").addClass(icon);
+  $("#lblMessage").html(message);
+  $("#dialog").dialog({
+    resizable: false,
+    draggable: false,
+    title: title,
+    modal: true,
+    width: '400px',
+    height: 'auto',
+    bgiframe: false,
+    hide: {
+      effect: 'scale',
+      duration: 400
+    },
+    show: {
+      effect: 'scale',
+      duration: 400
+    },
+    buttons: [{
+      text: btn1text,
+      "class": '',
+      click: function click() {
+        if (typeof tableClass === "undefined") {
+          $("#dialog").dialog('close');
+        } else {
+          dataTable.reload(tableClass);
+          $("#dialog").dialog('close');
+        }
+      }
+    }]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/page/agama.js":
 /*!************************************!*\
-  !*** ./resources/js/data/table.js ***!
+  !*** ./resources/js/page/agama.js ***!
   \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Created by User2 on 4/7/2020.
+ */
+
+/**
+ * Created by User2 on 3/30/2020.
+ */
+$(document).ready(function () {
+  var configs = {
+    columns: [{
+      title: 'ID',
+      field: 'id',
+      columnType: {
+        type: 'field'
+      }
+    }, {
+      title: 'Nama',
+      field: 'nama',
+      columnType: {
+        type: 'field'
+      }
+    }, [{
+      title: 'Action',
+      field: 'Edit',
+      columnType: {
+        type: 'modal',
+        target: 'modal-edit-agama',
+        modalParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }, {
+      title: 'Action',
+      field: 'Delete',
+      columnType: {
+        type: 'modal',
+        target: 'modal-delete-agama',
+        modalParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }]]
+  };
+
+  if ($('#js-table-agama').hasClass('js-data-agama')) {
+    dataTable.init(".js-data-agama", configs);
+  }
+
+  $('#modal-create-agama').on('show.bs.modal', function (e) {
+    var formElement = $(this);
+    var idElement = formElement.find('input#id');
+    var namaElement = formElement.find('input#nama');
+    idElement.val("");
+    namaElement.val("");
+  });
+  $(".js-agama-save-btn").click(function () {
+    var _token = $(this).attr('data-token');
+
+    var _url = $(this).attr('data-url');
+
+    var formElement = $('#modal-create-agama');
+    var namaElement = formElement.find('input#nama');
+
+    var _nama = namaElement.val();
+
+    $.ajax({
+      method: "POST",
+      url: _url,
+      data: {
+        nama: _nama,
+        _token: _token
+      }
+    }).done(function (_return) {
+      $("#modal-create-agama").modal("hide");
+      ShowMessageBox("Success", "Data successfully Saved!", 1, 'OK', '.js-data-agama');
+    });
+  });
+  $('#modal-edit-agama').on('show.bs.modal', function (e) {
+    var id = e.relatedTarget.dataset.id;
+    $(this).attr('data-id', id);
+
+    var _url = $(this).attr('data-url');
+
+    var _token = $(this).attr('data-token');
+
+    var formElement = $(this);
+    var idElement = formElement.find('input#id');
+    var namaElement = formElement.find('input#nama');
+    $.ajax({
+      method: "POST",
+      url: _url,
+      data: {
+        id: id,
+        _token: _token
+      }
+    }).done(function (_return) {
+      idElement.val(_return.data.id);
+      namaElement.val(_return.data.nama);
+    });
+  });
+  $(".js-agama-update-btn").click(function () {
+    var _token = $(this).attr('data-token');
+
+    var _url = $(this).attr('data-url');
+
+    var formElement = $('#modal-edit-agama');
+    var idElement = formElement.find('input#id');
+    var namaElement = formElement.find('input#nama');
+
+    var _id = idElement.val();
+
+    var _nama = namaElement.val();
+
+    $.ajax({
+      method: "POST",
+      url: _url,
+      data: {
+        id: _id,
+        nama: _nama,
+        _token: _token
+      }
+    }).done(function (_return) {
+      $("#modal-edit-agama").modal("hide");
+      ShowMessageBox("Success", "Data successfully Updated!", 1, 'OK', '.js-data-agama');
+    });
+  });
+  $('#modal-delete-agama').on('show.bs.modal', function (e) {
+    var id = e.relatedTarget.dataset.id;
+    $(this).attr('data-id', id);
+  });
+  $('.js-agama-remove-btn').click(function () {
+    var _token = $(this).attr('data-token');
+
+    var _url = $(this).attr('data-url');
+
+    var _id = $('#modal-delete-agama').attr('data-id');
+
+    $.ajax({
+      method: "POST",
+      url: _url,
+      data: {
+        id: _id,
+        _token: _token
+      }
+    }).done(function (_return) {
+      $("#modal-delete-agama").modal("hide");
+      ShowMessageBox("Success", "Data successfully Deleted!", 1, 'OK', '.js-data-agama');
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/page/pasien.js":
+/*!*************************************!*\
+  !*** ./resources/js/page/pasien.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Created by User2 on 3/30/2020.
+ */
+$(document).ready(function () {
+  var configs = {
+    columns: [{
+      title: 'ID',
+      field: 'id',
+      columnType: {
+        type: 'field'
+      }
+    }, {
+      title: 'Nama',
+      field: 'nama',
+      columnType: {
+        type: 'field'
+      }
+    }, [{
+      title: 'Action',
+      field: 'Edit',
+      columnType: {
+        type: 'modal',
+        target: 'modal-edit-user',
+        modalParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }, {
+      title: 'Action',
+      field: 'Delete',
+      columnType: {
+        type: 'modal',
+        target: 'modal-delete-user',
+        modalParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }]]
+  };
+
+  if ($('#js-table-pasien').hasClass('js-data-pasien')) {
+    dataTable.init(".js-data-pasien", configs);
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/page/users.js":
+/*!************************************!*\
+  !*** ./resources/js/page/users.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Created by User2 on 3/23/2020.
+ */
+$(document).ready(function () {
+  if ($('#js-table-users').hasClass('js-data-users')) {
+    var configs = {
+      columns: [{
+        title: 'ID',
+        field: 'id',
+        columnType: {
+          type: 'field'
+        }
+      }, {
+        title: 'Nama',
+        field: 'nama',
+        columnType: {
+          type: 'field'
+        }
+      }, [{
+        title: 'Action',
+        field: 'Edit',
+        columnType: {
+          type: 'modal',
+          target: 'modal-edit-user',
+          modalParam: {
+            type: 'column',
+            value: 'id'
+          }
+        }
+      }, {
+        title: 'Action',
+        field: 'Delete',
+        columnType: {
+          type: 'modal',
+          target: 'modal-delete-user',
+          modalParam: {
+            type: 'column',
+            value: 'id'
+          }
+        }
+      }]]
+    };
+
+    if ($('#js-table-users').hasClass('js-data-users')) {
+      dataTable.init(".js-data-users", configs);
+    }
+  }
+
+  $('#modal-edit-user').on('show.bs.modal', function (e) {
+    var id = e.relatedTarget.dataset.id;
+    $(this).attr('data-id', id);
+
+    var _url = $(this).attr('data-url');
+
+    var _token = $(this).attr('data-token');
+
+    $.ajax({
+      method: "POST",
+      url: _url,
+      data: {
+        id: id,
+        _token: _token
+      }
+    }).done(function (_return) {
+      console.log(_return);
+      $('#id_user').val(_return.data.id);
+      $('#nama_user').val(_return.data.nama);
+      $('#email').val(_return.data.email);
+      $('#hak_akses').val(_return.data.hak_akses);
+    });
+  });
+  $('#modal-delete-user').on('show.bs.modal', function (e) {
+    var id = e.relatedTarget.dataset.id;
+    $(this).attr('data-id', id);
+  });
+});
+
+function PreviewImage(obj) {}
+
+/***/ }),
+
+/***/ "./resources/js/plugins/table.js":
+/*!***************************************!*\
+  !*** ./resources/js/plugins/table.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -19329,12 +19689,15 @@ var dataTable = {
     search: null,
     columns: [],
     perPage: 10,
-    page: 1
+    page: 1,
+    searchInput: true,
+    loading: false,
+    showDataInfo: false,
+    baseUrl: window.location.protocol.concat("//") + window.location.host
   },
   init: function init(_tableElement, _configs) {
     if (_configs) {
       dataTable.set(_configs);
-      console.log(_configs);
     }
 
     dataTable.fetchData(_tableElement);
@@ -19347,6 +19710,10 @@ var dataTable = {
     var _limit = dataTable.configs.perPage;
 
     var _offset = dataTable.configs.page - 1;
+
+    if (dataTable.configs.loading) {
+      dataTable.generateLoading(_tableElement, true);
+    }
 
     $.ajax({
       method: "POST",
@@ -19362,7 +19729,33 @@ var dataTable = {
       dataTable.generateSearchField(_tableElement);
       dataTable.generateTableHeader(_tableElement, _return.data);
       dataTable.generateTableBody(_tableElement, _return.data);
+      dataTable.generateTableFoot(_tableElement, _return);
+      dataTable.generatePagination(_tableElement, _return);
+
+      if (dataTable.configs.loading) {
+        dataTable.generateLoading(_tableElement, false);
+      }
     });
+  },
+  generateLoading: function generateLoading(_tableElement, _show) {
+    if (_show) {
+      var element = $(_tableElement);
+
+      if ($(_tableElement).parent('.table-responsive').length > 0) {
+        element = $(_tableElement).parent('.table-responsive');
+      }
+
+      var insertedHtml = '<div class="loading"><div class="loader"></div></div>';
+      element.prepend(insertedHtml);
+    } else {
+      var element = $(_tableElement);
+
+      if ($(_tableElement).parent('.table-responsive').length > 0) {
+        element = $(_tableElement).parent('.table-responsive');
+      }
+
+      element.find(".loading").remove();
+    }
   },
   generateSearchField: function generateSearchField(_tableElement) {
     var element = $(_tableElement);
@@ -19371,7 +19764,13 @@ var dataTable = {
       element = $(_tableElement).parent('.table-responsive');
     }
 
-    var insertedHtml = '<div class="row">' + '<div class="col-sm-12 col-md-6">' + '<div class="dataTables_length" id="example_length">' + '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' + '<option value="10">10</option>' + '<option value="25">25</option>' + '<option value="50">50</option>' + '<option value="100">100</option>' + '</select> entries</label>' + '</div>' + '</div>' + '<div class="col-sm-12 col-md-6">' + '<div id="example_filter" class="dataTables_filter float-right">' + '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' + '</div>' + '</div>' + '</div>';
+    var inputSearchHtml = "";
+
+    if (dataTable.configs.searchInput) {
+      inputSearchHtml = '<div class="col-sm-12 col-md-6">' + '<div id="example_filter" class="dataTables_filter float-right">' + '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' + '</div>' + '</div>';
+    }
+
+    var insertedHtml = '<div class="row">' + '<div class="col-sm-12 col-md-6">' + '<div class="dataTables_length" id="example_length">' + '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' + '<option value="10">10</option>' + '<option value="25">25</option>' + '<option value="50">50</option>' + '<option value="100">100</option>' + '</select> entries</label>' + '</div>' + '</div>' + inputSearchHtml + '</div>';
     element.prepend(insertedHtml);
   },
   generateTableHeader: function generateTableHeader(_tableElement, _data) {
@@ -19379,10 +19778,24 @@ var dataTable = {
 
     if (dataTable.configs.columns.length > 0) {
       for (var i = 0; i < dataTable.configs.columns.length; i++) {
-        columns.push({
-          title: dataTable.configs.columns[i].title,
-          sort: dataTable.configs.columns[i].sort
-        });
+        if ($.isArray(dataTable.configs.columns[i])) {
+          if (dataTable.configs.columns[i].length > 0) {
+            columns.push({
+              title: dataTable.configs.columns[i][0].title ? dataTable.configs.columns[i][0].title : '',
+              sort: dataTable.configs.columns[i][0].sort ? dataTable.configs.columns[i][0].sort : false
+            });
+          } else {
+            columns.push({
+              title: '',
+              sort: false
+            });
+          }
+        } else {
+          columns.push({
+            title: dataTable.configs.columns[i].title ? dataTable.configs.columns[i].title : '',
+            sort: dataTable.configs.columns[i].sort ? dataTable.configs.columns[i].sort : false
+          });
+        }
       }
     } else if (_data.length > 0) {
       var keys = Object.keys(_data[0]);
@@ -19395,11 +19808,9 @@ var dataTable = {
       }
     }
 
-    console.log(columns);
     var tHead = "<thead>" + "<tr>";
 
     for (var key in columns) {
-      console.log(key);
       tHead += "<th>";
       tHead += columns[key].title;
 
@@ -19418,10 +19829,29 @@ var dataTable = {
 
     if (dataTable.configs.columns.length > 0) {
       for (var i = 0; i < dataTable.configs.columns.length; i++) {
-        fieldSettings.push({
-          field: dataTable.configs.columns[i].field,
-          columnType: dataTable.configs.columns[i].columnType
-        });
+        console.log("column", dataTable.configs.columns[i]);
+
+        if ($.isArray(dataTable.configs.columns[i])) {
+          var settings = [];
+
+          for (var j = 0; j < dataTable.configs.columns[i].length; j++) {
+            settings.push({
+              field: dataTable.configs.columns[i][j].field ? dataTable.configs.columns[i][j].field : '',
+              columnType: dataTable.configs.columns[i][j].columnType ? dataTable.configs.columns[i][j].columnType : {
+                type: 'field'
+              }
+            });
+          }
+
+          fieldSettings.push(settings);
+        } else {
+          fieldSettings.push({
+            field: dataTable.configs.columns[i].field ? dataTable.configs.columns[i].field : '',
+            columnType: dataTable.configs.columns[i].columnType ? dataTable.configs.columns[i].columnType : {
+              type: 'field'
+            }
+          });
+        }
       }
     } else if (_data.length > 0) {
       var keys = Object.keys(_data[0]);
@@ -19429,41 +19859,227 @@ var dataTable = {
       for (var x = 0; x < keys.length; x++) {
         fieldSettings.push({
           field: keys[x],
-          columnType: 'text'
+          columnType: {
+            type: 'field'
+          }
         });
       }
     }
 
-    console.log(fieldSettings);
+    console.log("settings", fieldSettings);
     var allowedFields = [];
 
     for (var j = 0; j < _data.length; j++) {
+      var fieldDetails = [];
+
       for (var k = 0; k < fieldSettings.length; k++) {
-        console.log(_data[j][fieldSettings[k].field]);
+        if ($.isArray(fieldSettings[k])) {
+          var fieldsArray = [];
+
+          for (var x = 0; x < fieldSettings[k].length; x++) {
+            var field = fieldSettings[k][x].field;
+
+            if (fieldSettings[k][x].field) {
+              if (fieldSettings[k][x].columnType.type == "field") {
+                field = _data[j][fieldSettings[k][x].field];
+              }
+            }
+
+            fieldsArray.push({
+              value: field,
+              columnType: fieldSettings[k][x].columnType
+            });
+          }
+
+          fieldDetails.push(fieldsArray);
+        } else {
+          var field = fieldSettings[k].field;
+
+          if (fieldSettings[k].field) {
+            if (fieldSettings[k].columnType.type == "field") {
+              field = _data[j][fieldSettings[k].field];
+            }
+          }
+
+          fieldDetails.push({
+            value: field,
+            columnType: fieldSettings[k].columnType
+          });
+        }
+      }
+
+      allowedFields.push(fieldDetails);
+    }
+
+    console.log("body", allowedFields);
+    var tBody = "<tbody>";
+
+    if (allowedFields.length > 0) {
+      for (var a = 0; a < allowedFields.length; a++) {
+        tBody += "<tr>";
+
+        for (var b = 0; b < allowedFields[a].length; b++) {
+          tBody += "<td>";
+
+          if ($.isArray(allowedFields[a][b])) {
+            if (allowedFields[a][b].length > 0) {
+              console.log(allowedFields[a][b]);
+
+              for (var x = 0; x < allowedFields[a][b].length; x++) {
+                if (x > 0) {
+                  tBody += "&nbsp;&nbsp;";
+                }
+
+                if (allowedFields[a][b][x].columnType.type == "link") {
+                  var identifier = '';
+
+                  if (allowedFields[a][b][x].columnType.linkParam.type == 'column') {
+                    identifier = _data.length ? _data[a][allowedFields[a][b][x].columnType.linkParam.value] : '';
+                  } else if (allowedFields[a][b][x].columnType.linkParam.type == 'string') {
+                    identifier = allowedFields[a][b][x].columnType.linkParam.value;
+                  }
+
+                  var url = dataTable.configs.baseUrl + allowedFields[a][b][x].columnType.link + allowedFields[a][b][x].columnType.linkQuery + identifier;
+                  tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b][x].value + "</a>";
+                } else if (allowedFields[a][b][x].columnType.type == "modal") {
+                  var identifier = '';
+
+                  if (allowedFields[a][b][x].columnType.modalParam.type == 'column') {
+                    identifier = _data.length ? _data[a][allowedFields[a][b][x].columnType.modalParam.value] : '';
+                  } else if (allowedFields[a][b][x].columnType.modalParam.type == 'string') {
+                    identifier = allowedFields[a][b][x].columnType.modalParam.value;
+                  }
+
+                  tBody += "<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#" + allowedFields[a][b][x].columnType.target + "\" " + "data-id=\"" + identifier + "\">" + allowedFields[a][b][x].value + "</button>";
+                } else {
+                  tBody += allowedFields[a][b].value;
+                }
+              }
+            }
+          } else {
+            if (allowedFields[a][b].columnType.type == "link") {
+              var identifier = '';
+
+              if (allowedFields[a][b].columnType.linkParam.type == 'column') {
+                identifier = _data.length ? _data[a][allowedFields[a][b].columnType.linkParam.value] : '';
+              } else if (allowedFields[a][b].columnType.linkParam.type == 'string') {
+                identifier = allowedFields[a][b].columnType.linkParam.value;
+              }
+
+              var url = dataTable.configs.baseUrl + allowedFields[a][b].columnType.link + allowedFields[a][b].columnType.linkQuery + identifier;
+              tBody += "<a href=\"" + url + "\" class=\"btn btn-primary\">" + allowedFields[a][b].value + "</a>";
+            } else if (allowedFields[a][b].columnType.type == "modal") {
+              var identifier = '';
+
+              if (allowedFields[a][b].columnType.modalParam.type == 'column') {
+                identifier = _data.length ? _data[a][allowedFields[a][b].columnType.modalParam.value] : '';
+              } else if (allowedFields[a][b].columnType.modalParam.type == 'string') {
+                identifier = allowedFields[a][b].columnType.modalParam.value;
+              }
+
+              tBody += "<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#" + allowedFields[a][b].columnType.target + "\" " + "data-id=\"" + identifier + "\">" + allowedFields[a][b].value + "</button>";
+            } else {
+              tBody += allowedFields[a][b].value;
+            }
+          }
+
+          tBody += "</td>";
+        }
+
+        tBody += "</tr>";
       }
     }
 
-    console.log(allowedFields);
-    /*
-     var tBody = "<tbody>";
-     if(allowedFields.length > 0){
-     for(var a = 0; a < allowedFields.length; a++){
-     tBody+="<tr>";
-     for(var b = 0; b < allowedFields[a].length; b++){
-     tBody+="<td>";
-     if(allowedFields[a][b].columnType == "link"){
-     tBody+="<a href=\""+allowedFields[a][b].link+"\" class=\"btn btn-primary\">"+allowedFields[a][b].field+"</a>";
-     }
-     else{
-     tBody+=allowedFields[a][b].field;
-     }
-     tBody+="</td>";
-     }
-     tBody+="</tr>";
-     }
-     }
-     tBody += "</tbody>";
-       $(_tableElement).append(tBody);*/
+    tBody += "</tbody>";
+    $(_tableElement).append(tBody);
+  },
+  generateTableFoot: function generateTableFoot(_tableElement, _response) {
+    var totalColumns = 0;
+
+    if (dataTable.configs.columns.length > 0) {
+      totalColumns = dataTable.configs.columns.length;
+    } else if (_response.data.length > 0) {
+      totalColumns = Object.keys(_response.data[0]).length;
+    }
+
+    var currentData = parseInt(dataTable.configs.page) * parseInt(dataTable.configs.perPage);
+
+    if (currentData > _response.data.length || currentData < _response.data.length) {
+      currentData = _response.data.length;
+    }
+
+    var info = "";
+
+    if (dataTable.configs.showDataInfo) {
+      info = "Showing " + currentData + " of " + _response.totalRecords;
+    }
+
+    var tFoot = "<tfoot><tr><td colspan=\"" + totalColumns + "\">" + info + "</td></tr></tfoot>";
+    $(_tableElement).append(tFoot);
+  },
+  generatePagination: function generatePagination(_tableElement, _totalData) {
+    var paginationHtml = "<ul class=\"pagination pagination-sm no-margin pull-right\">";
+    var currentPage = dataTable.configs.page;
+    var startPage = 1;
+    var totalPage = parseInt(_totalData) / parseInt(dataTable.configs.perPage);
+    var endPage = parseInt(_totalData) / parseInt(dataTable.configs.perPage);
+
+    if (parseInt(totalPage) > 10) {
+      endPage = 10;
+    }
+
+    if (parseInt(currentPage) > 5) {
+      paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"1\" data-element=\"" + _tableElement + "\">First</span></li>";
+    }
+
+    if (parseInt(currentPage) > 3) {
+      paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) - 1) + "\">Prev</span></li>";
+    }
+
+    if (parseInt(currentPage) > 5) {
+      startPage = parseInt(currentPage) - 4;
+      endPage = parseInt(currentPage) + 5;
+    }
+
+    if (parseInt(endPage) > parseInt(totalPage)) {
+      endPage = totalPage;
+    }
+
+    if (parseInt(totalPage) > 1) {
+      for (var i = startPage; i <= endPage; i++) {
+        var activePage = "";
+        var clickable = "onclick=\"dataTable.setPageAt(this)\"";
+
+        if (i == currentPage) {
+          activePage = "active";
+          clickable = "";
+        }
+
+        paginationHtml += "<li class=\"page-item" + activePage + "\"><span class=\"page-link\" " + clickable + "  data-page=\"" + i + "\">" + i + "</span></li>";
+      }
+    }
+
+    if (parseInt(totalPage) > 10 && parseInt(currentPage) < parseInt(totalPage)) {
+      paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) + 1) + "\">Next</span></li>";
+      var activePage = "";
+      var clickable = "onclick=\"dataTable.setPageAt(this)\"";
+
+      if (totalPage == currentPage) {
+        activePage = "active";
+        clickable = "";
+      }
+
+      paginationHtml += "<li class=\"page-item " + activePage + " \"><span class=\"page-link\" " + clickable + " data-page=\"" + parseInt(totalPage) + "\">Last</span></li>";
+    }
+
+    paginationHtml += "</ul>";
+    $(paginationHtml).insertAfter(_tableElement);
+  },
+  setPageAt: function setPageAt(_obj) {
+    var tableElement = $(_obj).attr("data-element");
+    var page = $(_obj).attr("data-page");
+    dataTable.configs.page = page;
+    dataTable.fetchData(tableElement);
   },
   set: function set(_configs) {
     if (_configs.search) {
@@ -19473,14 +20089,28 @@ var dataTable = {
     if (_configs.columns) {
       if (_configs.columns.length > 0) {
         for (var i = 0; i < _configs.columns.length; i++) {
-          var column = {
-            title: _configs.columns[i].title ? _configs.columns[i].title : '',
-            field: _configs.columns[i].field ? _configs.columns[i].field : '',
-            sort: _configs.columns[i].sort ? _configs.columns[i].sort : false,
-            columnType: _configs.columns[i].columnType ? _configs.columns[i].columnType : '',
-            filterField: _configs.columns[i].filterField ? _configs.columns[i].filterField : ''
-          };
-          dataTable.configs.columns.push(column);
+          if ($.isArray(_configs.columns[i])) {
+            var column = [];
+
+            for (var j = 0; j < _configs.columns[i].length; j++) {
+              column.push({
+                title: _configs.columns[i][j].title ? _configs.columns[i][j].title : '',
+                sort: _configs.columns[i][j].sort ? _configs.columns[i][j].sort : false,
+                field: _configs.columns[i][j].field ? _configs.columns[i][j].field : '',
+                columnType: _configs.columns[i][j].columnType ? _configs.columns[i][j].columnType : ''
+              });
+            }
+
+            dataTable.configs.columns.push(column);
+          } else {
+            var column = {
+              title: _configs.columns[i].title ? _configs.columns[i].title : '',
+              sort: _configs.columns[i].sort ? _configs.columns[i].sort : false,
+              field: _configs.columns[i].field ? _configs.columns[i].field : '',
+              columnType: _configs.columns[i].columnType ? _configs.columns[i].columnType : ''
+            };
+            dataTable.configs.columns.push(column);
+          }
         }
       }
     }
@@ -19512,15 +20142,19 @@ var dataTable = {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/data/table.js ./resources/sass/app.scss ***!
-  \******************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/global.js ./resources/js/plugins/table.js ./resources/js/page/users.js ./resources/js/page/pasien.js ./resources/js/page/agama.js ./resources/sass/app.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\data\table.js */"./resources/js/data/table.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\global.js */"./resources/js/global.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\plugins\table.js */"./resources/js/plugins/table.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\users.js */"./resources/js/page/users.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pasien.js */"./resources/js/page/pasien.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\agama.js */"./resources/js/page/agama.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -23,6 +23,8 @@ class CreateAgamaTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->timestamps();
+            $table->string('created_by');
+            $table->string('last_updated_by');
         });
     }
 

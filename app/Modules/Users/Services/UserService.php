@@ -14,6 +14,7 @@ use App\Http\Requests\Users\UpdatePasswordRequest;
 use App\Http\Requests\Users\UpdateRequest;
 use App\Modules\Users\Contracts\UserContract;
 use App\Modules\Users\Repositories\IUserRepository;
+use Illuminate\Support\Facades\Auth;
 
 class UserService implements UserContract{
 
@@ -32,20 +33,37 @@ class UserService implements UserContract{
     }
 
     public function store(StoreRequest $request){
-        $data = [];
+        $data = [
+            'name' => $request->input("name"),
+            'email' => $request->input("email"),
+            'password' => $request->input("password"),
+            'parent' => $request->input("parent"),
+            'hak_akses' => $request->input("hak_akses"),
+            'created_by' => Auth::user()->getAuthIdentifier(),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->store($data);
     }
 
     public function update(UpdateRequest $request){
         $id = $request->input("id");
-        $data = [];
+        $data = [
+            'name' => $request->input("name"),
+            'email' => $request->input("email"),
+            'password' => $request->input("password"),
+            'parent' => $request->input("parent"),
+            'hak_akses' => $request->input("hak_akses"),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->update($data, $id);
     }
 
     public function updatePassword(UpdatePasswordRequest $request)
     {
         $id = $request->input("id");
-        $data = [];
+        $data = [
+            'password' => $request->input("password")
+        ];
         return $this->repository->update($data, $id);
     }
 

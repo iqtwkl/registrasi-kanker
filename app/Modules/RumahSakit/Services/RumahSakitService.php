@@ -13,6 +13,7 @@ use App\Http\Requests\RumahSakit\StoreRequest;
 use App\Http\Requests\RumahSakit\UpdateRequest;
 use App\Modules\RumahSakit\Contracts\RumahSakitContract;
 use App\Modules\RumahSakit\Repositories\IRumahSakitRepository;
+use Illuminate\Support\Facades\Auth;
 
 class RumahSakitService implements RumahSakitContract{
 
@@ -31,13 +32,24 @@ class RumahSakitService implements RumahSakitContract{
     }
 
     public function store(StoreRequest $request){
-        $data = [];
+        $data = [
+            'kode' => $request->input('kode'),
+            'nama' => $request->input('nama'),
+            'alamat' => $request->input('alamat'),
+            'created_by' => Auth::user()->getAuthIdentifier(),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->store($data);
     }
 
     public function update(UpdateRequest $request){
         $id = $request->input("id");
-        $data = [];
+        $data = [
+            'kode' => $request->input('kode'),
+            'nama' => $request->input('nama'),
+            'alamat' => $request->input('alamat'),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->update($data, $id);
     }
 

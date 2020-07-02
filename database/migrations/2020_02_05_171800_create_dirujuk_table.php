@@ -23,6 +23,8 @@ class CreateDirujukTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->timestamps();
+            $table->string('created_by', 36);
+            $table->string('last_updated_by', 36);
         });
     }
 

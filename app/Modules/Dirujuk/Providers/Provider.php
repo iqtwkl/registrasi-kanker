@@ -15,7 +15,7 @@ use App\Modules\Dirujuk\Repositories\DirujukRepository;
 use App\Modules\Dirujuk\Contracts\DirujukContract;
 use App\Modules\Dirujuk\Services\DirujukService;
 
-class DirujukProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

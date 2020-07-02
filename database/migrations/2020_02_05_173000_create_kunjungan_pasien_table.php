@@ -24,6 +24,8 @@ class CreateKunjunganPasienTable extends Migration
             $table->string('id_pasien');
             $table->string('kunjungan_ke');
             $table->timestamps();
+            $table->string('created_by', 36);
+            $table->string('last_updated_by', 36);
         });
     }
 

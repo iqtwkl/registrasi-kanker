@@ -16,7 +16,7 @@ class PemeriksaanFisikWebTableSeeder extends Seeder
             DB::table('pemeriksaan_fisik')->insert([
                 "id"=> $content->id_pemeriksaan_fisik,
                 "id_pasien"=> $content->id_pasien,
-                "Kunjungan"=> intval($content->kunjungan),
+                "kunjungan"=> intval($content->kunjungan),
                 "tglPeriksa"=> $content->tgl_periksa,
                 "td" => intval($content->td),
                 "td2" => intval($content->td2),

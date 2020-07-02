@@ -15,7 +15,7 @@ use App\Modules\Pendidikan\Repositories\PendidikanRepository;
 use App\Modules\Pendidikan\Contracts\PendidikanContract;
 use App\Modules\Pendidikan\Services\PendidikanService;
 
-class PendidikanProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

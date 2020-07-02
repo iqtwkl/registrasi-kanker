@@ -49,4 +49,8 @@ interface IPasien{
     public function getKecamatanO();
     public function getKabupatenO();
     public function getProvinsiO();
+    public function getCreatedBy();
+    public function getCreatedAt();
+    public function getLastUpdatedBy();
+    public function getUpdatedAt();
 }

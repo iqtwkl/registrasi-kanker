@@ -15,7 +15,7 @@ use App\Modules\Pekerjaan\Repositories\PekerjaanRepository;
 use App\Modules\Pekerjaan\Contracts\PekerjaanContract;
 use App\Modules\Pekerjaan\Services\PekerjaanService;
 
-class PekerjaanProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

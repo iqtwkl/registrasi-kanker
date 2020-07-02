@@ -44,13 +44,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('anamnesis') }}">
                         <i class="fa fa-book-medical"></i>
                         <span>Anamnesis</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('pemeriksaan-fisik') }}">
                         <i class="fa fa-stethoscope"></i>
                         <span>Pemeriksaan Fisik</span>
                     </a>
@@ -93,9 +93,39 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('rumah-sakit') }}">
                                     <i class="fa fa-hospital-alt"></i>
                                     Rumah Sakit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('agama') }}">
+                                    <i class=""></i>
+                                    Agama
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('dirujuk') }}">
+                                    <i class=""></i>
+                                    Dirujuk
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('pekerjaan') }}">
+                                    <i class=""></i>
+                                    Pekerjaan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('pendidikan') }}">
+                                    <i class=""></i>
+                                    Pendidikan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('status-pernikahan') }}">
+                                    <i class=""></i>
+                                    Status Pernikahan
                                 </a>
                             </li>
                         </ul>

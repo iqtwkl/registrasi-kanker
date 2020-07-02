@@ -13,4 +13,8 @@ interface IRumahSakit{
     public function getKodeRs();
     public function getNama();
     public function getAlamat();
+    public function getCreatedAt();
+    public function getCreatedBy();
+    public function getUpdatedAt();
+    public function getLastUpdatedBy();
 }

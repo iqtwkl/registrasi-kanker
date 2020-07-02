@@ -15,7 +15,7 @@ use App\Modules\RumahSakit\Repositories\RumahSakitRepository;
 use App\Modules\RumahSakit\Contracts\RumahSakitContract;
 use App\Modules\RumahSakit\Services\RumahSakitService;
 
-class RumahSakitProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

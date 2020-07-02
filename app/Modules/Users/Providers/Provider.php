@@ -15,7 +15,7 @@ use App\Modules\Users\Repositories\UserRepository;
 use App\Modules\Users\Contracts\UserContract;
 use App\Modules\Users\Services\UserService;
 
-class UsersProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

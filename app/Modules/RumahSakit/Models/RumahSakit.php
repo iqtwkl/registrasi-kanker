@@ -27,7 +27,7 @@ class RumahSakit extends Model implements IRumahSakit
      * @var array
      */
     protected $fillable = [
-        'id', 'kode', 'nama', 'alamat'
+        'id', 'kode', 'nama', 'alamat', 'created_by', 'last_updated_by'
     ];
 
     /**

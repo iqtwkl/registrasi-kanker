@@ -31,13 +31,20 @@ class PendidikanService implements PendidikanContract{
     }
 
     public function store(StoreRequest $request){
-        $data = [];
+        $data = [
+            'nama' => $request->input('nama'),
+            'created_by' => Auth::user()->getAuthIdentifier(),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->store($data);
     }
 
     public function update(UpdateRequest $request){
         $id = $request->input("id");
-        $data = [];
+        $data = [
+            'nama' => $request->input('nama'),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->update($data, $id);
     }
 

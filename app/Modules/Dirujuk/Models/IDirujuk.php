@@ -10,5 +10,14 @@ namespace App\Modules\Dirujuk\Models;
 
 interface IDirujuk{
     public function getId();
+
     public function getNama();
+
+    public function getCreatedBy();
+
+    public function getCreatedAt();
+
+    public function getLastUpdatedBy();
+
+    public function getUpdatedAt();
 }

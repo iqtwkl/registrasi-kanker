@@ -27,7 +27,7 @@ class Pendidikan extends Model implements IPendidikan
      * @var array
      */
     protected $fillable = [
-        'id', 'nama'
+        'id', 'nama', 'created_by', 'last_updated_by'
     ];
 
     /**

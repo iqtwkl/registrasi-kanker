@@ -10,5 +10,14 @@ namespace App\Modules\Pekerjaan\Models;
 
 interface IPekerjaan{
     public function getId();
+
     public function getNama();
+
+    public function getCreatedBy();
+
+    public function getCreatedAt();
+
+    public function getLastUpdatedBy();
+
+    public function getUpdatedAt();
 }

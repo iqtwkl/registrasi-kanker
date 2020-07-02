@@ -13,6 +13,7 @@ use App\Http\Requests\Agama\StoreRequest;
 use App\Http\Requests\Agama\UpdateRequest;
 use App\Modules\Agama\Contracts\AgamaContract;
 use App\Modules\Agama\Repositories\IAgamaRepository;
+use Illuminate\Support\Facades\Auth;
 
 class AgamaService implements AgamaContract{
 
@@ -31,13 +32,20 @@ class AgamaService implements AgamaContract{
     }
 
     public function store(StoreRequest $request){
-        $data = [];
+        $data = [
+            'nama' => $request->input('nama'),
+            'created_by' => Auth::user()->getAuthIdentifier(),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->store($data);
     }
 
     public function update(UpdateRequest $request){
         $id = $request->input("id");
-        $data = [];
+        $data = [
+            'nama' => $request->input('nama'),
+            'last_updated_by' => Auth::user()->getAuthIdentifier()
+        ];
         return $this->repository->update($data, $id);
     }
 

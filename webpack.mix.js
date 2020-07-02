@@ -13,10 +13,22 @@ const mix = require('laravel-mix');
 
 mix.js([
         'resources/js/app.js',
-        'resources/js/data/table.js'
+        'resources/js/global.js',
+        'resources/js/plugins/table.js',
+        'resources/js/page/users.js',
+        'resources/js/page/pasien.js',
+        'resources/js/page/agama.js',
+        'resources/js/page/anamnesis.js',
+        'resources/js/page/dirujuk.js',
+        'resources/js/page/pekerjaan.js',
+        'resources/js/page/pemeriksaanfisik.js',
+        'resources/js/page/pendidikan.js',
+        'resources/js/page/rumahsakit.js',
+        'resources/js/page/statuspernikahan.js'
     ], 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copyDirectory('resources/img', 'public/img')
     .styles([
-        'resources/css/sidebar.css'
+        'resources/css/sidebar.css',
+        'resources/css/plugins/table.css'
     ], 'public/css/all.css');

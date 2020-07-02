@@ -10,5 +10,14 @@ namespace App\Modules\Pendidikan\Models;
 
 interface IPendidikan{
     public function getId();
+
     public function getNama();
+
+    public function getCreatedBy();
+
+    public function getCreatedAt();
+
+    public function getLastUpdatedBy();
+
+    public function getUpdatedAt();
 }

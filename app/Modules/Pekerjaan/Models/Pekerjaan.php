@@ -27,7 +27,7 @@ class Pekerjaan extends Model implements IPekerjaan
      * @var array
      */
     protected $fillable = [
-        'id', 'nama'
+        'id', 'nama', 'created_by', 'last_updated_by'
     ];
 
     /**

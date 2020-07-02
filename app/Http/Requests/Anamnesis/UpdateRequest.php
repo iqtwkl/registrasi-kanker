@@ -6,7 +6,7 @@
  * Time: 16:28
  */
 
-namespace App\Http\Requests\Users\Amamnesis;
+namespace App\Http\Requests\Anamnesis;
 
 use Illuminate\Foundation\Http\FormRequest;
 

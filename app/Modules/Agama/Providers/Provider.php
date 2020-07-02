@@ -15,7 +15,7 @@ use App\Modules\Agama\Repositories\AgamaRepository;
 use App\Modules\Agama\Contracts\AgamaContract;
 use App\Modules\Agama\Services\AgamaService;
 
-class AgamaProvider extends ServiceProvider{
+class Provider extends ServiceProvider{
     public function boot(){
 
     }

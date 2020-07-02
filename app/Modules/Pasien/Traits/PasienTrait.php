@@ -181,4 +181,8 @@ trait PasienTrait{
     public function getUpdatedAt(){
         return $this->updated_at;
     }
+
+    public function getPemeriksaanFisik() {
+        return $this->hasMany('App\Modules\PemeriksaanFisik\Model\PemeriksaanFisik');
+    }
 }

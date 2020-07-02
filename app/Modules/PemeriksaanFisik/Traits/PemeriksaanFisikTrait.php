@@ -8,6 +8,7 @@
 
 namespace App\Modules\PemeriksaanFisik\Traits;
 
+
 trait PemeriksaanFisikTrait{
     public function getId(){
         return $this->id;
@@ -17,6 +18,9 @@ trait PemeriksaanFisikTrait{
         return $this->id_pasien;
     }
 
+    public function pasien() {
+        return $this->belongsTo('App\Modules\Pasien\Models\Pasien','id_pasien','id');
+    }
     public function getKunjungan(){
         return $this->kunjungan;
     }

@@ -219,9 +219,21 @@ var dataTable = {
                 else{
                     var field = fieldSettings[k].field;
                     if(fieldSettings[k].field){
-                        if(fieldSettings[k].columnType.type == "field"){
-                            field = _data[j][fieldSettings[k].field]
-                        }
+                        if($.isArray(fieldSettings[k].field)) {                            
+                            for(iField=0; iField < fieldSettings[k].field.length; iField++) {
+                                if(fieldSettings[k].columnType.type == "field"){
+                                    if(iField == 0) {
+                                        field = _data[j][fieldSettings[k].field[iField]];
+                                    } else {
+                                        field = field[fieldSettings[k].field[iField]];
+                                    }
+                                }    
+                            }
+                        } else {
+                            if(fieldSettings[k].columnType.type == "field"){
+                                field = _data[j][fieldSettings[k].field];
+                            }
+                        }                        
                     }
                     fieldDetails.push({
                         value: field,

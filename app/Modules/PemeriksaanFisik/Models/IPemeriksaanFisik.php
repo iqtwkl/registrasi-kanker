@@ -11,6 +11,7 @@ namespace App\Modules\PemeriksaanFisik\Models;
 interface IPemeriksaanFisik{
     public function getId();
     public function getIdPasien();
+    public function pasien();
     public function getKunjungan();
     public function getTglPeriksa();
     public function getTd();

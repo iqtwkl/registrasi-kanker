@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/bootstrap/cache
 /storage/*.key
 /vendor
 .env
@@ -10,7 +11,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/bootstrap/cache/
 
 
 # Editor directories and files

@@ -176,6 +176,7 @@ return [
         App\Modules\Pendidikan\Providers\Provider::class,
         App\Modules\RumahSakit\Providers\Provider::class,
         App\Modules\StatusPernikahan\Providers\Provider::class,
+        App\Modules\PemeriksaanPenunjang\Providers\Provider::class,
 
         /*
          * Application Service Providers...

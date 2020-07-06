@@ -56,7 +56,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('pemeriksaan-penunjang') }}">
                         <i class="fa fa-syringe"></i>
                         <span>Pemeriksaan Penunjang</span>
                     </a>

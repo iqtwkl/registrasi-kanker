@@ -225,7 +225,11 @@ var dataTable = {
                                     if(iField == 0) {
                                         field = _data[j][fieldSettings[k].field[iField]];
                                     } else {
-                                        field = field[fieldSettings[k].field[iField]];
+                                        if(field != null) {
+                                            field = field[fieldSettings[k].field[iField]];
+                                        } else {
+                                            field = "-";
+                                        }
                                     }
                                 }    
                             }

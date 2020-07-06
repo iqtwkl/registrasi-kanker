@@ -25,7 +25,8 @@ mix.js([
         'resources/js/page/pendidikan.js',
         'resources/js/page/rumahsakit.js',
         'resources/js/page/statuspernikahan.js',
-        'resources/js/page/pemeriksaanpenunjang.js'
+        'resources/js/page/pemeriksaanpenunjang.js',
+        'resources/js/page/diagnosa.js'
     ], 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copyDirectory('resources/img', 'public/img')

@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="diagnosa">
                         <i class="fa fa-diagnoses"></i>
                         <span>Diagnosis</span>
                     </a>

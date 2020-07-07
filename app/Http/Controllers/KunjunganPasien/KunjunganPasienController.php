@@ -2,15 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Zuliansyah
- * Date: 4/6/2020
- * Time: 12:31 AM
+ * Date: 7/7/2020
+ * Time: 8:50 PM
  */
 
-namespace App\Http\Controllers\Dirujuk;
+namespace App\Http\Controllers\KunjunganPasien;
 
 use App\Http\Controllers\Controller;
 
-class DirujukController extends Controller{
+class KunjunganPasienController extends Controller{
     public function __construct(){
         $this->middleware('auth');
     }
@@ -18,12 +18,12 @@ class DirujukController extends Controller{
 
     public function index()
     {
-        return view('dirujuk.index');
+        return view('kunjungan_pasien.index');
     }
 
     public function create()
     {
-        return view('users.create');
+        return view('kunjungan_pasien.create');
     }
 
     public function store()
@@ -33,7 +33,7 @@ class DirujukController extends Controller{
 
     public function edit()
     {
-        return view('users.edit');
+        return view('kunjungan_pasien.edit');
     }
 
     public function update()

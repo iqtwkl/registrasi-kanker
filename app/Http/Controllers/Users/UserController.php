@@ -24,4 +24,29 @@ class UserController extends Controller
     public function find($id){
         dump($id);
     }
+
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function store()
+    {
+
+    }
+
+    public function edit()
+    {
+        return view('users.edit');
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function delete()
+    {
+
+    }
 }

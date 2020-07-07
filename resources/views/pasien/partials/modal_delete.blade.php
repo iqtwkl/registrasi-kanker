@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Deleten</h4>
+                <h4 class="modal-title">Delete</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="@lang('form.close')">
                     <span aria-hidden="true">&times;</span>
                 </button>

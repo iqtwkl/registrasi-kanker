@@ -8,13 +8,15 @@
 
 namespace App\Modules\Pasien\Traits;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 trait PasienTrait{
     public function getId(){
         return $this->id;
     }
 
-    public function getKodeRs(){
-        return $this->kode_rs;
+    public function rumahSakit(){
+        return $this->belongsTo('App\Modules\RumahSakit\Models\RumahSakit', 'kode_rs', 'kode');
     }
 
     public function getNoRekamMedis(){

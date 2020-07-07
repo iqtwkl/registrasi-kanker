@@ -10,7 +10,7 @@ namespace App\Modules\Pasien\Models;
 
 interface IPasien{
     public function getId();
-    public function getKodeRs();
+    public function rumahSakit();
     public function getNoRekamMedis();
     public function getIdRs();
     public function getNama();

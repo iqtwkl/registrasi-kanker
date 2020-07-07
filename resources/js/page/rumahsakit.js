@@ -8,8 +8,8 @@ $(document).ready(function(){
     var configs = {
         columns:[
             {
-                title: 'ID',
-                field: 'id',
+                title: 'Kode',
+                field: 'kode',
                 columnType: {
                     type: 'field'
                 }

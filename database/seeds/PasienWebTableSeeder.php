@@ -20,7 +20,6 @@ class PasienWebTableSeeder extends Seeder
                 'no_rekam_medis' => $content->noRekamMedis,
                 'tempat_lahir' => $content->tempatLahir,
                 'tgl_lahir' => date("Y-m-d", strtotime($content->tglLahir)),
-                'id_rs' => $content->id_rs,
                 'nama_orang_tua' => $content->namaOrangTua,
                 'pendidikan' => is_null($content->pendidikan) ? "0": $content->pendidikan,
                 'pekerjaan' => is_null($content->pekerjaan) ? "0": $content->pekerjaan,

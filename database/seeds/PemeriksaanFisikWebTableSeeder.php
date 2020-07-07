@@ -23,7 +23,6 @@ class PemeriksaanFisikWebTableSeeder extends Seeder
                 "nadi" => intval($content->nadi),
                 "tb" => intval($content->tb),
                 "bb" => intval($content->bb),
-                "medrec"=> $content->medrec,
                 "kesadaran" => $content->kesadaran,
                 "ks1"=> intval($content->ks1),
                 "ks2"=> intval($content->ks2),

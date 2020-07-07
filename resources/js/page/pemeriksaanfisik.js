@@ -23,7 +23,7 @@ $(document).ready(function(){
             },
             {
                 title: 'No Rekam Medis',
-                field: 'medrec',
+                field: ['pasien','no_rekam_medis'],
                 columnType: {
                     type: 'field'
                 }

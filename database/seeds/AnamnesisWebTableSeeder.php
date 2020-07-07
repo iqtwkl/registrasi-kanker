@@ -19,7 +19,6 @@ class AnamnesisWebTableSeeder extends Seeder
                 "nama_pasien"=> $content->nama_pasien,
                 "Kunjungan"=> $content->kunjungan,
                 "tgl_periksa"=> $content->tgl_periksa,
-                "medrec"=> $content->medrec,
                 "aa1"=> intval($content->Aa1),
                 "aa2"=> intval($content->Aa2),
                 "aa3"=> intval($content->Aa3),

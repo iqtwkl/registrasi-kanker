@@ -52,7 +52,7 @@ class PemeriksaanFisikRepository implements IPemeriksaanFisikRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->with('pasien:id,nama')->get();
+        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->with('pasien:id,nama,no_rekam_medis')->get();
         $count = $this->model->query()->selectRaw("count(*) as total")->whereRaw($condition)->first();
 
 

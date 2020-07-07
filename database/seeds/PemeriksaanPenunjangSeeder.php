@@ -18,7 +18,6 @@ class PemeriksaanPenunjangSeeder extends Seeder
                 "id_pasien"=> $content->id_pasien,
                 "kunjungan"=> intval($content->kunjungan),
                 "tglPeriksa"=> $content->tgl_periksa,
-                "medrec"=> $content->medrec,
                 "a1"=> 	$content->a1,  
                 "a2"=> 	$content->a2,
                 "a3"=> 	$content->a3,

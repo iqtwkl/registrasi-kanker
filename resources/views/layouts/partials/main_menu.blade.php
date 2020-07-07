@@ -68,7 +68,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="terapi">
                         <i class="fa fa-procedures"></i>
                         <span>Terapi</span>
                     </a>

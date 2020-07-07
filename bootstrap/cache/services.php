@@ -40,10 +40,11 @@
     36 => 'App\\Modules\\StatusPernikahan\\Providers\\Provider',
     37 => 'App\\Modules\\PemeriksaanPenunjang\\Providers\\Provider',
     38 => 'App\\Modules\\Diagnosa\\Providers\\Provider',
-    39 => 'App\\Providers\\AppServiceProvider',
-    40 => 'App\\Providers\\AuthServiceProvider',
-    41 => 'App\\Providers\\EventServiceProvider',
-    42 => 'App\\Providers\\RouteServiceProvider',
+    39 => 'App\\Modules\\Terapi\\Providers\\Provider',
+    40 => 'App\\Providers\\AppServiceProvider',
+    41 => 'App\\Providers\\AuthServiceProvider',
+    42 => 'App\\Providers\\EventServiceProvider',
+    43 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -73,10 +74,11 @@
     23 => 'App\\Modules\\StatusPernikahan\\Providers\\Provider',
     24 => 'App\\Modules\\PemeriksaanPenunjang\\Providers\\Provider',
     25 => 'App\\Modules\\Diagnosa\\Providers\\Provider',
-    26 => 'App\\Providers\\AppServiceProvider',
-    27 => 'App\\Providers\\AuthServiceProvider',
-    28 => 'App\\Providers\\EventServiceProvider',
-    29 => 'App\\Providers\\RouteServiceProvider',
+    26 => 'App\\Modules\\Terapi\\Providers\\Provider',
+    27 => 'App\\Providers\\AppServiceProvider',
+    28 => 'App\\Providers\\AuthServiceProvider',
+    29 => 'App\\Providers\\EventServiceProvider',
+    30 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

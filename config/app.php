@@ -178,6 +178,7 @@ return [
         App\Modules\StatusPernikahan\Providers\Provider::class,
         App\Modules\PemeriksaanPenunjang\Providers\Provider::class,
         App\Modules\Diagnosa\Providers\Provider::class,
+        App\Modules\Terapi\Providers\Provider::class,
 
         /*
          * Application Service Providers...

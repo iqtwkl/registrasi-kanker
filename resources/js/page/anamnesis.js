@@ -12,7 +12,7 @@ $(document).ready(function(){
         columns:[
             {
                 title: 'Nama',
-                field: 'nama_pasien',
+                field: ['pasien','nama'],
                 columnType: {
                     type: 'field'
                 }

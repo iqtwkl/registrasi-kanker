@@ -17,7 +17,7 @@ interface IAnamnesis{
 
     public function getTglPeriksa();
 
-    public function getMedrec();
+    public function pasien();
 
     public function getAa1();
 

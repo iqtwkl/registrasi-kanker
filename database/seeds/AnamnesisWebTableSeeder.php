@@ -16,7 +16,6 @@ class AnamnesisWebTableSeeder extends Seeder
             DB::table('anamnesis')->insert([
                 "id"=> $content->id_anamnesis,
                 "id_pasien"=> $content->id_pasien,
-                "nama_pasien"=> $content->nama_pasien,
                 "Kunjungan"=> $content->kunjungan,
                 "tgl_periksa"=> $content->tgl_periksa,
                 "aa1"=> intval($content->Aa1),

@@ -20,9 +20,6 @@ trait PemeriksaanPenunjangTrait {
     public function getTglPeriksa(){
         return $this->tgl_periksa;
     }
-    public function getMedrec(){
-        return $this->medrec;
-    }
     public function getA1(){
         return $this->a1;
     }

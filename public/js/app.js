@@ -19555,7 +19555,7 @@ $(document).ready(function () {
   var configs = {
     columns: [{
       title: 'Nama',
-      field: 'nama_pasien',
+      field: ['pasien', 'nama'],
       columnType: {
         type: 'field'
       }

@@ -7,7 +7,6 @@ interface IPemeriksaanPenunjang {
     public function pasien();
     public function getKunjungan();
     public function getTglPeriksa();
-    public function getMedrec();
     public function getA1();
     public function getA2();
     public function getA3();

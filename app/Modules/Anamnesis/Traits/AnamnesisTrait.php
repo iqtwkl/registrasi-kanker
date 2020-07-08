@@ -25,8 +25,8 @@ trait AnamnesisTrait{
         return $this->tgl_periksa;
     }
 
-    public function getMedrec(){
-        return $this->medrec;
+    public function pasien(){
+        return $this->belongsTo('App\Modules\Pasien\Models\Pasien','id_pasien','id');
     }
 
     public function getAa1(){

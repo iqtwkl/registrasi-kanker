@@ -52,7 +52,7 @@ class AnamnesisRepository implements IAnamnesisRepository{
         }
 
         $skip = intval($limit) * intval($offset);
-        $result = $this->model->query()->whereRaw($condition)->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
+        $result = $this->model->query()->whereRaw($condition)->with('pasien:id,nama,no_rekam_medis')->orderByRaw($orderByRaw)->skip($skip)->take($limit)->get();
         $count = $this->model->query()->selectRaw("count(*) as total")->whereRaw($condition)->first();
 
 

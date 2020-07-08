@@ -25204,7 +25204,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   urls = document.URL.split('/');
   url = '/pasien';
-  if (urls[urls.length - 1] == 'public') url = '/public/pasien';
+  if (urls[urls.length - 2] == 'public') url = '/public/pasien';
   var configs = {
     columns: [{
       title: 'Nama',

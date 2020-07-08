@@ -2,6 +2,10 @@
  * Created by User2 on 3/30/2020.
  */
 $(document).ready(function(){
+    urls = document.URL.split('/');
+    url = '/pasien';
+    if(urls[urls.length-1] == 'public') 
+        url = '/public/pasien';
     var configs = {
         columns:[            
             {
@@ -29,7 +33,7 @@ $(document).ready(function(){
                 title: 'Rumah Sakit',
                 field: ['rumah_sakit','nama'],
                 columnType: {
-                    type: 'field'
+                    type: 'field' 
                 }
             },
             [
@@ -38,7 +42,7 @@ $(document).ready(function(){
                     field: 'View',
                     columnType: {
                         type: 'link',
-                        link: '/pasien',
+                        link: url,
                         linkQuery: '/find/',
                         linkParam: {
                             type: 'column',

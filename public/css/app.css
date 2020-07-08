@@ -59,12 +59,7 @@ body {
   background-color: #fff4ff;
 }
 
-.btn-dark {
-  color: #fff;
-  background-color: #990033;
-  border-color: #990033;
-}
-
+.btn-dark,
 .list-group-item-action.active {
   color: #fff;
   background-color: #990033;

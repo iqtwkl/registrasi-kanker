@@ -99,7 +99,7 @@ $(document).ready(function(){
         var idElement = formElement.find('input#id');
         var kodeElement = formElement.find('input#kode');
         var namaElement = formElement.find('input#nama');
-        var alamatElement = formElement.find('input#alamat');
+        var alamatElement = formElement.find('textarea#alamat');
 
         $.ajax({
             method: "POST",

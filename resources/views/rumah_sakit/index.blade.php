@@ -10,6 +10,12 @@
     <div class="table-responsive">
         <table id="js-table-rumah-sakit" class="table js-data-rumah-sakit" data-token="{{ csrf_token() }}" data-url="{{ route("rumah-sakit.all") }}">
         </table>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-rumah-sakit" data-id="1">Create</button>
+            </div>
+        </div>
+        <br />
     </div>
 
     <!-- Start Modal -->

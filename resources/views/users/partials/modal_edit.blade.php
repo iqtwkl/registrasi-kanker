@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>
-                <button type="button" class="btn btn-primary">@lang('form.save')</button>
+                <button type="button" class="btn btn-primary js-user-update-btn" data-url="{{ route('users.update') }}" data-token="{{ csrf_token() }}">@lang('form.save')</button>
             </div>
         </div>
         <!-- /.modal-content -->

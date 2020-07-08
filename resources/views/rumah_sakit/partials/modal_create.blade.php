@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>
-                <button type="button" class="btn btn-primary">@lang('form.save')</button>
+                <button type="button" class="btn btn-primary js-rumah-sakit-save-btn" data-url="{{ route('rumah-sakit.store') }}" data-token="{{ csrf_token() }}">@lang('form.save')</button>
             </div>
         </div>
         <!-- /.modal-content -->

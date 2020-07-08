@@ -23,10 +23,6 @@ trait PasienTrait{
         return $this->no_rekam_medis;
     }
 
-    public function getIdRs(){
-        return $this->id_rs;
-    }
-
     public function getNama(){
         return $this->nama;
     }
@@ -52,11 +48,23 @@ trait PasienTrait{
     }
 
     public function getHamil(){
-        return $this->hamil;
+        $hamil = '-';
+        if ($this->hamil == 1) {
+            $hamil = 'ya';
+        } else if ($this->hamil == 2) {
+            $hamil = 'tidak';
+        }
+        return $hamil;
     }
 
     public function getMenyusui(){
-        return $this->menyusui;
+        $menyusui = '-';
+        if ($this->menyusui == 1) {
+            $menyusui = 'ya';
+        } else if ($this->menyusui == 2) {
+            $menyusui = 'tidak';
+        }
+        return $menyusui;
     }
 
     public function getRujuk(){
@@ -84,7 +92,7 @@ trait PasienTrait{
     }
 
     public function getAsing(){
-        return $this->asing;
+        return $this->asing == '' ? 'WNI' : 'Asing';
     }
 
     public function getDaerah(){
@@ -118,7 +126,7 @@ trait PasienTrait{
         return $this->kelurahan;
 
     }
-    public function getKecamanatan(){
+    public function getKecamatan(){
         return $this->kecamatan;
     }
     public function getKabupaten(){

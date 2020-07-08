@@ -9,12 +9,16 @@
 namespace App\Http\Controllers\Pasien;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Pasien\Contracts\PasienContract;
 
 class PasienController extends Controller
 {
-    public function __construct()
+    private $pasienContract;
+
+    public function __construct(PasienContract $pasienContract)
     {
         $this->middleware('auth');
+        $this->pasienContract = $pasienContract;
     }
 
     public function index()
@@ -25,6 +29,12 @@ class PasienController extends Controller
     public function create()
     {
         return view('users.create');
+    }
+
+    public function find($id)
+    {
+        $data = $this->pasienContract->getById($id);
+        return view('pasien.view',['id' => $id, 'profile' => $data]);
     }
 
     public function store()

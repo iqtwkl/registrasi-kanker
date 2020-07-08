@@ -12,7 +12,6 @@ interface IPasien{
     public function getId();
     public function rumahSakit();
     public function getNoRekamMedis();
-    public function getIdRs();
     public function getNama();
     public function getNamaOrangTua();
     public function getTempatLahir();
@@ -36,7 +35,7 @@ interface IPasien{
     public function getKodeTelpon();
     public function getTelepon();
     public function getKelurahan();
-    public function getKecamanatan();
+    public function getKecamatan();
     public function getKabupaten();
     public function getProvinsi();
     public function getJalanO();

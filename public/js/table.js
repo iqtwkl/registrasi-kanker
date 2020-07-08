@@ -265,7 +265,7 @@ var dataTable = {
                                         tBody += "&nbsp;&nbsp;";
                                     }
                                     if (allowedFields[a][b][x].columnType.type == "link") {
-                                        var identifier = '';
+                                        var identifier = '';                                        
                                         if (allowedFields[a][b][x].columnType.linkParam.type == 'column') {
                                             identifier = (_data.length) ? _data[a][allowedFields[a][b][x].columnType.linkParam.value] : '';
                                         }

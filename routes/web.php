@@ -30,6 +30,7 @@ Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
 
 Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
+    Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'PasienController@find'])->name('pasien.find');
 });
 
 Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){

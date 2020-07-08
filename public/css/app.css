@@ -65,3 +65,9 @@ body {
   border-color: #990033;
 }
 
+.list-group-item-action.active {
+  color: #fff;
+  background-color: #990033;
+  border-color: #990033;
+}
+

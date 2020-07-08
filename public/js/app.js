@@ -25229,6 +25229,18 @@ $(document).ready(function () {
       }
     }, [{
       title: 'Action',
+      field: 'View',
+      columnType: {
+        type: 'link',
+        link: '/pasien',
+        linkQuery: '/find/',
+        linkParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }, {
+      title: 'Action',
       field: 'Edit',
       columnType: {
         type: 'modal',

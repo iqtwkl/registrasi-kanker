@@ -60,7 +60,7 @@ class PasienRepository implements IPasienRepository{
     }
 
     public function getById($id){
-        return $this->model->find($id);
+        return $this->model->with('rumahSakit')->find($id);
     }
 
     public function store(array $data){

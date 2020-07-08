@@ -33,7 +33,6 @@
     @include('pasien.partials.modal_delete')
     <!-- End Modal -->
 @endsection
-
 @section('scripts')
 <script type="text/javascript">
 </script>

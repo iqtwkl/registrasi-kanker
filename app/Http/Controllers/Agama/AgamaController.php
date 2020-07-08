@@ -9,12 +9,13 @@
 namespace App\Http\Controllers\Agama;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Agama\StoreRequest;
+use App\Http\Requests\Agama\UpdateRequest;
 
 class AgamaController extends Controller{
     public function __construct(){
         $this->middleware('auth');
     }
-
 
     public function index()
     {

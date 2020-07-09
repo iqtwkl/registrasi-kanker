@@ -13,6 +13,7 @@ use App\Http\Requests\StatusPernikahan\StoreRequest;
 use App\Http\Requests\StatusPernikahan\UpdateRequest;
 use App\Modules\StatusPernikahan\Contracts\StatusPernikahanContract;
 use App\Modules\StatusPernikahan\Repositories\IStatusPernikahanRepository;
+use Illuminate\Support\Facades\Auth;
 
 class StatusPernikahanService implements StatusPernikahanContract{
 

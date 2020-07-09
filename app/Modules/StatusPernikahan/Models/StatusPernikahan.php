@@ -15,7 +15,7 @@ class StatusPernikahan extends Model implements IStatusPernikahan
 {
     use StatusPernikahanTrait;
 
-    protected $table = "status_perkawinan";
+    protected $table = "status_pernikahan";
 
     public $primaryKey = "id";
 

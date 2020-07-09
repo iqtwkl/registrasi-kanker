@@ -1,4 +1,4 @@
-<form id="form-agama">
+<form id="form-status-pernikahan">
     <input type="hidden" id="id" name="id" value="">
     <div class="form-group">
         <label for="nama">Nama</label>

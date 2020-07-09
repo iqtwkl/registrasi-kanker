@@ -13,6 +13,7 @@ use App\Http\Requests\Pekerjaan\StoreRequest;
 use App\Http\Requests\Pekerjaan\UpdateRequest;
 use App\Modules\Pekerjaan\Contracts\PekerjaanContract;
 use App\Modules\Pekerjaan\Repositories\IPekerjaanRepository;
+use Illuminate\Support\Facades\Auth;
 
 class PekerjaanService implements PekerjaanContract{
 

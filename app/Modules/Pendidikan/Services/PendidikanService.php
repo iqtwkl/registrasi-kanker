@@ -13,6 +13,7 @@ use App\Http\Requests\Pendidikan\StoreRequest;
 use App\Http\Requests\Pendidikan\UpdateRequest;
 use App\Modules\Pendidikan\Contracts\PendidikanContract;
 use App\Modules\Pendidikan\Repositories\IPendidikanRepository;
+use Illuminate\Support\Facades\Auth;
 
 class PendidikanService implements PendidikanContract{
 

@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                @include("users.partials.form")
+                @include("users.partials.form", ["is_create" => true])
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>

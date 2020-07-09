@@ -10,6 +10,12 @@
     <div class="table-responsive">
         <table class="table js-data-users"  id="js-table-users" data-token="{{ csrf_token() }}" data-url="{{ route("users.all") }}">
         </table>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-user" data-id="1">Create</button>
+            </div>
+        </div>
+        <br />
     </div>
 
     <!-- Start Modal -->

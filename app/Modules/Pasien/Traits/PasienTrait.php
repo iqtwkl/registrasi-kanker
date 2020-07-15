@@ -47,24 +47,26 @@ trait PasienTrait{
         return $this->pekerjaan;
     }
 
-    public function getHamil(){
-        $hamil = '-';
+    public function getHamil(){        
         if ($this->hamil == 1) {
-            $hamil = 'ya';
+            $this->hamil = 'ya';
         } else if ($this->hamil == 2) {
-            $hamil = 'tidak';
+            $this->hamil = 'tidak';
+        } else {
+            $this->hamil = '-';
         }
-        return $hamil;
+        return $this->hamil;
     }
 
-    public function getMenyusui(){
-        $menyusui = '-';
+    public function getMenyusui(){        
         if ($this->menyusui == 1) {
-            $menyusui = 'ya';
+            $this->menyusui = 'ya';
         } else if ($this->menyusui == 2) {
-            $menyusui = 'tidak';
+            $this->menyusui = 'tidak';
+        } else {
+            $this->menyusui = '-';
         }
-        return $menyusui;
+        return $this->menyusui;
     }
 
     public function getRujuk(){
@@ -92,7 +94,8 @@ trait PasienTrait{
     }
 
     public function getAsing(){
-        return $this->asing == '' ? 'WNI' : 'Asing';
+        $this->asing = $this->asing == '' ? 'WNI' : 'Asing';
+        return $this->asing;
     }
 
     public function getDaerah(){
@@ -192,7 +195,15 @@ trait PasienTrait{
         return $this->updated_at;
     }
 
-    public function getPemeriksaanFisik() {
-        return $this->hasMany('App\Modules\PemeriksaanFisik\Model\PemeriksaanFisik');
+    public function pemeriksaanFisik() {
+        return $this->hasMany('App\Modules\PemeriksaanFisik\Model\PemeriksaanFisik', 'id_pasien', 'id');
+    }
+
+    public function anamnesis() {
+        return $this->hasMany('App\Modules\Anamnesis\Models\Anamnesis', 'id_pasien', 'id');
+    }
+    
+    public function latestAnamnesis() {
+        return $this->anamnesis()->orderBy('modified')->first();
     }
 }

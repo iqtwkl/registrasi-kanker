@@ -124,6 +124,8 @@ interface IAnamnesis{
     public function getAn1();
 
     public function getAn2();
+    
+    public function getAn3();
 
     public function getBa1();
 

@@ -10,15 +10,18 @@ namespace App\Http\Controllers\Pasien;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Pasien\Contracts\PasienContract;
+use App\Modules\Anamnesis\Contracts\AnamnesisContract;
 
 class PasienController extends Controller
 {
     private $pasienContract;
+    private $anamnesisContract;
 
-    public function __construct(PasienContract $pasienContract)
+    public function __construct(PasienContract $pasienContract, AnamnesisContract $anamnesisContract)
     {
         $this->middleware('auth');
         $this->pasienContract = $pasienContract;
+        $this->anamnesisContract = $anamnesisContract;
     }
 
     public function index()
@@ -33,8 +36,9 @@ class PasienController extends Controller
 
     public function find($id)
     {
-        $data = $this->pasienContract->getById($id);
-        return view('pasien.view',['id' => $id, 'profile' => $data]);
+        $pasien = $this->pasienContract->getById($id);
+        $anamnesis = $pasien->latestAnamnesis();
+        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis]);
     }
 
     public function store()

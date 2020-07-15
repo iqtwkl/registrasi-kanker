@@ -4,89 +4,89 @@
     <div class="form-group col-md-3">
         <label for="">Nama</label>
         <div>
-            <strong>{{  $profile->getNama() ?? '' }}</strong>
+            <strong>{{  $pasien->getNama() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-3">
         <label for="">Nomor Rekam Medis</label>
         <div>
-            <strong>{{  $profile->getNoRekamMedis() ?? '' }}</strong>
+            <strong>{{  $pasien->getNoRekamMedis() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-3">
         <label for="">Rumah Sakit</label>
         <div>
-            <strong>{{  $profile->rumahSakit->nama }}</strong>
+            <strong>{{  $pasien->rumahSakit->nama }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-3">
         <label for="">Dirujuk Dari</label>
         <div>
-            <strong>{{  $profile->getRujuk() ?? '' }}</strong>
+            <strong>{{  $pasien->getRujuk() ?? '' }}</strong>
         </div>                                        
     </div>
 </div>
 <div class="form-group">
     <label for="">Nama Orang Tua</label>
     <div>
-        <strong>{{  $profile->getNamaOrangTua() ?? '' }}</strong>
+        <strong>{{  $pasien->getNamaOrangTua() ?? '' }}</strong>
     </div>                                        
 </div>                            
 <div class="form-row">
     <div class="form-group col-md-3">
         <label for="">Tempat Lahir</label>
         <div>
-            <strong>{{  $profile->getTempatLahir() ?? '' }}</strong>
+            <strong>{{  $pasien->getTempatLahir() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-9">
         <label for="">Tanggal Lahir</label>
         <div>
-            <strong>{{  $profile->getTanggalLahir() ?? '' }}</strong>
+            <strong>{{  $pasien->getTanggalLahir() ?? '' }}</strong>
         </div>                                        
     </div>
 </div>
 <div class="form-group">
     <label for="">Pendidikan</label>
     <div>
-        <strong>{{  $profile->getPendidikan() }}</strong>
+        <strong>{{  $pasien->getPendidikan() }}</strong>
     </div>                                        
 </div>
 <div class="form-group">
     <label for="">Pekerjaan</label>
     <div>
-        <strong>{{  $profile->getPekerjaan() }}</strong>
+        <strong>{{  $pasien->getPekerjaan() }}</strong>
     </div>                                        
 </div>
 <div class="form-group">
     <label for="">Agama</label>
     <div>
-        <strong>{{  $profile->getAgama() }}</strong>
+        <strong>{{  $pasien->getAgama() }}</strong>
     </div>                                        
 </div>
 <div class="form-group">
     <label for="">Perkawinan</label>
     <div>
-        <strong>{{  $profile->getPerkawinan() }}</strong>
+        <strong>{{  $pasien->getPerkawinan() }}</strong>
     </div>                                        
 </div>
 <div class="form-group">
     <label for="">Jumlah Anak</label>
     <div>
-        <strong>{{  $profile->getAnak() }}</strong>
+        <strong>{{  $pasien->getAnak() }}</strong>
     </div>                                        
 </div>                                
 <div class="form-row">
     <div class="form-group col-md-6">
         <label for="">Suku</label>
         <div>
-            <strong>{{  $profile->getSuku() ?? '' }}</strong>
+            <strong>{{  $pasien->getSuku() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-6">
         <label for="">Kewarganegaraan</label>
         <div>
-            <strong>{{  $profile->getAsing() }}</strong>
+            <strong>{{  $pasien->getAsing() }}</strong>
         </div>                                        
     </div>
 </div>
@@ -94,39 +94,39 @@
     <div class="form-group col-md-6">
         <label for="">Sedang Hamil</label>
         <div>
-            <strong>{{  $profile->getHamil() ?? '' }}</strong>
+            <strong>{{  $pasien->getHamil() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-6">
         <label for="">Sedang Menyusui</label>
         <div>
-            <strong>{{  $profile->getMenyusui() ?? '' }}</strong>
+            <strong>{{  $pasien->getMenyusui() ?? '' }}</strong>
         </div>                                        
     </div>
 </div>
 <div class="form-group">
     <label for="">Alamat</label>
     <div>
-        <strong>{{  $profile->getJalan() }}</strong>
+        <strong>{{  $pasien->getJalan() }}</strong>
     </div> 
 </div>
 <div class="form-row">
     <div class="form-group col-md-4">
         <label for="inputZip">RT</label>
         <div>
-            <strong>{{  $profile->getRt() }}</strong>
+            <strong>{{  $pasien->getRt() }}</strong>
         </div>
     </div>
     <div class="form-group col-md-4">
         <label for="">RW</label>
         <div>
-            <strong>{{  $profile->getRw() }}</strong>
+            <strong>{{  $pasien->getRw() }}</strong>
         </div>
     </div>
     <div class="form-group col-md-4">
         <label for="inputZip">Kelurahan</label>
         <div>
-            <strong>{{  $profile->getKelurahan() }}</strong>
+            <strong>{{  $pasien->getKelurahan() }}</strong>
         </div>
     </div>                              
 </div>                                
@@ -134,19 +134,19 @@
     <div class="form-group col-md-4">
         <label for="inputState">Kecamatan</label>
         <div>
-            <strong>{{  $profile->getKecamatan() }}</strong>
+            <strong>{{  $pasien->getKecamatan() }}</strong>
         </div>
     </div>                                    
     <div class="form-group col-md-4">
         <label for="">Kota / Kab</label>
         <div>
-            <strong>{{  $profile->getKabupaten() }}</strong>
+            <strong>{{  $pasien->getKabupaten() }}</strong>
         </div>
     </div>
     <div class="form-group col-md-4">
         <label for="inputState">Provinsi</label>
         <div>
-            <strong>{{  $profile->getProvinsi() }}</strong>
+            <strong>{{  $pasien->getProvinsi() }}</strong>
         </div>
     </div>                                    
 </div>
@@ -154,13 +154,13 @@
     <div class="form-group col-md-6">
         <label for="">No Telp</label>
         <div>
-            <strong>{{ $profile->getKodeTelpon() ?? '' }}-{{ $profile->getTelepon() ?? '' }}</strong>
+            <strong>{{ $pasien->getKodeTelpon() ?? '' }}-{{ $pasien->getTelepon() ?? '' }}</strong>
         </div>                                        
     </div>
     <div class="form-group col-md-6">
         <label for="">No Handphone</label>
         <div>
-            <strong>{{  $profile->getNo() }}</strong>
+            <strong>{{  $pasien->getNo() }}</strong>
         </div>                                        
     </div>
 </div>

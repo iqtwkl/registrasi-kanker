@@ -62,13 +62,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="diagnosa">
+                    <a href="{{ route('diagnosa') }}">
                         <i class="fa fa-diagnoses"></i>
                         <span>Diagnosis</span>
                     </a>
                 </li>
                 <li>
-                    <a href="terapi">
+                    <a href="{{ route('terapi') }}">
                         <i class="fa fa-procedures"></i>
                         <span>Terapi</span>
                     </a>

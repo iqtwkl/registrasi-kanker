@@ -52,4 +52,7 @@ interface IPasien{
     public function getCreatedAt();
     public function getLastUpdatedBy();
     public function getUpdatedAt();
+    public function pemeriksaanFisik();
+    public function anamnesis();
+    public function latestAnamnesis();
 }

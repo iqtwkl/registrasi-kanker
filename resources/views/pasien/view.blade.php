@@ -13,7 +13,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('pasien') }}">Pasien</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ $profile->nama }}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{ $pasien->nama }}</li>
             </ol>
         </nav>
     </div>
@@ -59,8 +59,7 @@
                 <div class="tab-pane fade" id="anamnesis" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Anamnesis</h5>
-                            <hr/>
+                            @include('anamnesis.partials.detail')
                         </div>
                     </div>
                 </div>

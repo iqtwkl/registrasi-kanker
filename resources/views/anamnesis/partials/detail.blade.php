@@ -754,458 +754,231 @@
 <div> <!-- Neoplasma Rongga Mulut -->
     <div class="form-row" align="center"><h6> Neoplasma Rongga Mulut </h6></div><hr>
     <!-- CA. SARIAWAN SUKAR SEMBUH -->
-    <tr> 
-        <td width="160">Sariawan Sukar Sembuh </td>
-        <td> : </td>
-        <td width="120"><input id="Ca1_anamnesis1" type="radio" name="Ca1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Ca1_anamnesis2" type="radio" name="Ca1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Ca2_anamnesis1" type="radio" name="Ca2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Ca2_anamnesis2" type="radio" name="Ca2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Ca2_anamnesis3" type="radio" name="Ca2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Ca3_anamnesis1" type="radio" name="Ca3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Ca3_anamnesis2" type="radio" name="Ca3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Ca3_anamnesis3" type="radio" name="Ca3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CF. LUKA BERGAUNG -->
-        <td>Luka Bergaung </td>
-        <td> : </td>
-        <td><input id="Cf1_anamnesis1" type="radio" name="Cf1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Cf1_anamnesis2" type="radio" name="Cf1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Cf2_anamnesis1" type="radio" name="Cf2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Cf2_anamnesis2" type="radio" name="Cf2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Cf2_anamnesis3" type="radio" name="Cf2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Cf3_anamnesis1" type="radio" name="Cf3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Cf3_anamnesis2" type="radio" name="Cf3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Cf3_anamnesis3" type="radio" name="Cf3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CD. NYERI PADA LESI -->
-        <td>Nyeri Pada Lesi </td>
-        <td> : </td>
-        <td><input id="Cd1_anamnesis1" type="radio" name="Cd1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Cd1_anamnesis2" type="radio" name="Cd1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Cd2_anamnesis1" type="radio" name="Cd2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Cd2_anamnesis2" type="radio" name="Cd2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Cd2_anamnesis3" type="radio" name="Cd2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Cd3_anamnesis1" type="radio" name="Cd3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Cd3_anamnesis2" type="radio" name="Cd3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Cd3_anamnesis3" type="radio" name="Cd3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CB. PENDARAHAN LOKAL -->
-        <td>Perdarahan Lokal </td>
-        <td> : </td>
-        <td><input id="Cb1_anamnesis1" type="radio" name="Cb1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Cb1_anamnesis2" type="radio" name="Cb1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Cb2_anamnesis1" type="radio" name="Cb2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Cb2_anamnesis2" type="radio" name="Cb2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Cb2_anamnesis3" type="radio" name="Cb2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Cb3_anamnesis1" type="radio" name="Cb3" value="1" data-md-icheck="0 - 6 Bulan"></td>
-        <td><input id="Cb3_anamnesis2" type="radio" name="Cb3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Cb3_anamnesis3" type="radio" name="Cb3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CG. Gerak Lidah Terbatas -->
-        <td width="160">Gerak Lidah Terbatas </td>
-        <td> : </td>
-        <td width="120"><input id="Cg1_anamnesis1" type="radio" name="Cg1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Cg1_anamnesis2" type="radio" name="Cg1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Cg2_anamnesis1" type="radio" name="Cg2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Cg2_anamnesis2" type="radio" name="Cg2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Cg2_anamnesis3" type="radio" name="Cg2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Cg3_anamnesis1" type="radio" name="Cg3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Cg3_anamnesis2" type="radio" name="Cg3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Cg3_anamnesis3" type="radio" name="Cg3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CC. KESULITAN MENELAN -->
-        <td>Sulit/Nyeri Menelan </td>
-        <td> : </td>
-        <td><input id="Cc1_anamnesis1" type="radio" name="Cc1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Cc1_anamnesis2" type="radio" name="Cc1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-<!--                                          <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Cc2_anamnesis1" type="radio" name="Cc2" value="1" data-md-icheck > Kanan</td>
-        <td><input id="Cc2_anamnesis2" type="radio" name="Cc2" value="2" data-md-icheck > Kiri</td>
-        <td><input id="Cc2_anamnesis3" type="radio" name="Cc2" value="3" data-md-icheck > Bilateral</td>
-        </tr>-->
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Cc3_anamnesis1" type="radio" name="Cc3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Cc3_anamnesis2" type="radio" name="Cc3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Cc3_anamnesis3" type="radio" name="Cc3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <tr> <!-- CE. SULIT BERBICARA -->
-        <td>Sulit Berbicara </td>
-        <td> : </td>
-        <td><input id="Ce1_anamnesis1" type="radio" name="Ce1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Ce1_anamnesis2" type="radio" name="Ce1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-<!--                                          <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Ce2_anamnesis1" type="radio" name="Ce2" value="1" data-md-icheck > Kanan</td>
-        <td><input id="Ce2_anamnesis2" type="radio" name="Ce2" value="2" data-md-icheck > Kiri</td>
-        <td><input id="Ce2_anamnesis3" type="radio" name="Ce2" value="3" data-md-icheck > Bilateral</td>
-        </tr>-->
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Ce3_anamnesis1" type="radio" name="Ce3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Ce3_anamnesis2" type="radio" name="Ce3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Ce3_anamnesis3" type="radio" name="Ce3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <!-- DI. Sesak Nafas -->
-        <tr> 
-        <td>Sesak Nafas </td>
-        <td> : </td>
-        <td><input id="Ch1_anamnesis1" type="radio" name="Ch1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Ch1_anamnesis2" type="radio" name="Ch1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Ch2_anamnesis1" type="radio" name="Ch2" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Ch2_anamnesis2" type="radio" name="Ch2" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Ch2_anamnesis3" type="radio" name="Ch2" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-        <!-- DI. Benjolan di Leher -->
-        <tr> 
-        <td>Benjolan di Leher </td>
-        <td> : </td>
-        <td><input id="Ci1_anamnesis1" type="radio" name="Ci1" value="1" data-md-icheck="Ya"> </td>
-        <td><input id="Ci1_anamnesis2" type="radio" name="Ci1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Ci2_anamnesis1" type="radio" name="Ci2" value="1" data-md-icheck="Kanan"> </td>
-        <td><input id="Ci2_anamnesis2" type="radio" name="Ci2" value="2" data-md-icheck="Kiri"> </td>
-        <td><input id="Ci2_anamnesis3" type="radio" name="Ci2" value="3" data-md-icheck="Bilateral"> </td>
-        </tr>
-        <tr>
-        <td>Lama </td>
-        <td> : </td>
-        <td><input id="Ci3_anamnesis1" type="radio" name="Ci3" value="1" data-md-icheck="0 - 6 Bulan"> </td>
-        <td><input id="Ci3_anamnesis2" type="radio" name="Ci3" value="2" data-md-icheck="6 - 12 Bulan"> </td>
-        <td><input id="Ci3_anamnesis3" type="radio" name="Ci3" value="3" data-md-icheck="> 12 Bulan"> </td>
-        </tr>
-        <hr/>
-    </tbody></table>
+    <div class="form-group">
+      <label for='""'>Sariawan Sukar Sembuh  : </label>
+      <strong>{{ $anamnesis->getCa1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCa2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCa3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Luka Bergaung  : </label>
+      <strong>{{ $anamnesis->getCf1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCf2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCf3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Nyeri Pada Lesi  : </label>
+      <strong>{{ $anamnesis->getCd1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCd2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCd3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Perdarahan Lokal  : </label>
+      <strong>{{ $anamnesis->getCb1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCb2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCb3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Gerak Lidah Terbatas  : </label>
+      <strong>{{ $anamnesis->getCg1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCg2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCg3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sulit/Nyeri Menelan  : </label>
+      <strong>{{ $anamnesis->getCc1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCc3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sulit Berbicara  : </label>
+      <strong>{{ $anamnesis->getCe1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCe3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sesak Nafas  : </label>
+      <strong>{{ $anamnesis->getCh1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCh2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Benjolan di Leher  : </label>
+      <strong>{{ $anamnesis->getCi1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getCi2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama  : </label>
+      <strong>{{ $anamnesis->getCi3() }}</strong>
+    </div>
+    <hr/>
 </div>
 <div> <!-- Neoplasma Hipofaring  -->
-    <div class="form-row" align="center"><h3> Neoplasma Hipofaring  </h3></div><hr>
-    <table width="100%">
-        <tbody><tr>
-        <td width="140">Nyeri Tenggorok </td>
-        <td> : </td>
-        <td width="120"><input id="Md1_anamnesis1" type="radio" name="Md1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Md1_anamnesis2" type="radio" name="Md1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Md2_anamnesis1" type="radio" name="Md2" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Md2_anamnesis2" type="radio" name="Md2" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Md2_anamnesis3" type="radio" name="Md2" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-        <tr>
-        <td width="140">Sulit Menelan </td>
-        <td> : </td>
-        <td width="120"><input id="Ma1_anamnesis1" type="radio" name="Ma1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Ma1_anamnesis2" type="radio" name="Ma1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Ma2_anamnesis1" type="radio" name="Ma2" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Ma2_anamnesis2" type="radio" name="Ma2" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Ma2_anamnesis3" type="radio" name="Ma2" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-        <tr>
-        <td width="140">Batuk Bercampur Darah </td>
-        <td> : </td>
-        <td width="120"><input id="Mf1_anamnesis1" type="radio" name="Mf1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Mf1_anamnesis2" type="radio" name="Mf1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Mf2_anamnesis1" type="radio" name="Mf2" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Mf2_anamnesis2" type="radio" name="Mf2" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Mf2_anamnesis3" type="radio" name="Mf2" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-        <tr>
-        <td width="140">Suara Serak </td>
-        <td> : </td>
-        <td width="120"><input id="Mb1_anamnesis1" type="radio" name="Mb1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Mb1_anamnesis2" type="radio" name="Mb1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Mb2_anamnesis1" type="radio" name="Mb2" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Mb2_anamnesis2" type="radio" name="Mb2" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Mb2_anamnesis3" type="radio" name="Mb2" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-        <tr>
-        <td width="140">Sesak Nafas </td>
-        <td> : </td>
-        <td width="120"><input id="Me1_anamnesis1" type="radio" name="Me1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Me1_anamnesis2" type="radio" name="Me1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <!--
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Me2_anamnesis1" type="radio" name="Me2" value="1" data-md-icheck > Kiri </td>
-        <td><input id="Me2_anamnesis2" type="radio" name="Me2" value="2" data-md-icheck > Kanan </td>
-        <td> </td>
-        </tr>
-        -->
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Me3_anamnesis1" type="radio" name="Me3" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Me3_anamnesis2" type="radio" name="Me3" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Me3_anamnesis3" type="radio" name="Me3" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-        <tr>
-        <td width="140">Benjolan di Leher </td>
-        <td> : </td>
-        <td width="120"><input id="Mc1_anamnesis1" type="radio" name="Mc1" value="1" data-md-icheck="Ya"> </td>
-        <td width="120"><input id="Mc1_anamnesis2" type="radio" name="Mc1" value="2" data-md-icheck="Tidak"> </td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Mc2_anamnesis1" type="radio" name="Mc2" value="1" data-md-icheck="Kanan">  </td>
-        <td><input id="Mc2_anamnesis2" type="radio" name="Mc2" value="2" data-md-icheck="Kiri">  </td>
-        <td><input id="Mc2_anamnesis3" type="radio" name="Mc2" value="3" data-md-icheck="Bilateral">  </td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Mc3_anamnesis1" type="radio" name="Mc3" value="1" data-md-icheck="0-6 Bulan">  </td>
-        <td><input id="Mc3_anamnesis2" type="radio" name="Mc3" value="2" data-md-icheck="6-12 Bulan">  </td>
-        <td><input id="Mc3_anamnesis3" type="radio" name="Mc3" value="3" data-md-icheck="> 12 Bulan">  </td>
-        </tr>
-        <hr/>
-    </tbody></table>
+    <div class="form-row" align="center"><h6> Neoplasma Hipofaring  </h6></div><hr>
+    <div class="form-group">
+      <label for='""'>Nyeri Tenggorok  : </label>
+      <strong>{{ $anamnesis->getMd1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMd2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sulit Menelan  : </label>
+      <strong>{{ $anamnesis->getMa1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMa2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Batuk Bercampur Darah  : </label>
+      <strong>{{ $anamnesis->getMf1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMf2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Suara Serak  : </label>
+      <strong>{{ $anamnesis->getMb1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMb2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sesak Nafas  : </label>
+      <strong>{{ $anamnesis->getMe1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMe3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Benjolan di Leher  : </label>
+      <strong>{{ $anamnesis->getMc1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getMc2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getMc3() }}</strong>
+    </div>
+    <hr/>
 </div>
 <div> <!-- Neoplasma LARING -->
-    <div align="center"><h3> Neoplasma Laring </h3></div><hr>
-    <table width="100%">
-        <tbody><tr> <!-- FA. SUARA SERAK -->
-        <td width="140">Suara Serak </td>
-        <td> : </td>
-        <td width="120"><input id="Fa1_anamnesis1" type="radio" name="Fa1" value="1" data-md-icheck=""> Ya</td>
-        <td width="120"><input id="Fa1_anamnesis2" type="radio" name="Fa1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fa2_anamnesis1" type="radio" name="Fa2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fa2_anamnesis2" type="radio" name="Fa2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Fa2_anamnesis3" type="radio" name="Fa2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <tr> <!-- FD. NYERI MENELAN -->
-        <td>Nyeri Menelan </td>
-        <td> : </td>
-        <td><input id="Fd1_anamnesis1" type="radio" name="Fd1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fd1_anamnesis2" type="radio" name="Fd1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fd2_anamnesis1" type="radio" name="Fd2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fd2_anamnesis2" type="radio" name="Fd2" value="2" data-md-icheck=""> 6-12 Bulan</td>
-        <td><input id="Fd2_anamnesis3" type="radio" name="Fd2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <tr> <!-- FE. SULIT MENELAN -->
-        <td>Sulit Menelan </td>
-        <td> : </td>
-        <td><input id="Fe1_anamnesis1" type="radio" name="Fe1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fe1_anamnesis2" type="radio" name="Fe1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fe2_anamnesis1" type="radio" name="Fe2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fe2_anamnesis2" type="radio" name="Fe2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Fe2_anamnesis3" type="radio" name="Fe2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <tr> <!-- FF. TERSEDAK -->
-        <td>Tersedak </td>
-        <td> : </td>
-        <td><input id="Ff1_anamnesis1" type="radio" name="Ff1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Ff1_anamnesis2" type="radio" name="Ff1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Ff2_anamnesis1" type="radio" name="Ff2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Ff2_anamnesis2" type="radio" name="Ff2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Ff2_anamnesis3" type="radio" name="Ff2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <tr> <!-- FH. BATUK BERDARAH -->
-        <td>Batuk Berdarah</td>
-        <td> : </td>
-        <td><input id="Fh1_anamnesis1" type="radio" name="Fh1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fh1_anamnesis2" type="radio" name="Fh1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fh2_anamnesis1" type="radio" name="Fh2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fh2_anamnesis2" type="radio" name="Fh2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Fh2_anamnesis3" type="radio" name="Fh2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <!-- <tr> FI. LUDAH CAMPUR DARAH
-        <td>Ludah Campur Darah</td>
-        <td> : </td>
-        <td><input id="Fi1_anamnesis1" type="radio" name="Fi1" value="1" data-md-icheck > Ya</td>
-        <td><input id="Fi1_anamnesis2" type="radio" name="Fi1" value="2" data-md-icheck > Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fi2_anamnesis1" type="radio" name="Fi2" value="1" data-md-icheck > 0-6 Bulan </td>
-        <td><input id="Fi2_anamnesis2" type="radio" name="Fi2" value="2" data-md-icheck > 6-12 Bulan </td>
-        <td><input id="Fi2_anamnesis3" type="radio" name="Fi2" value="3" data-md-icheck > >12 Bulan </td>
-        </tr>
-        <hr/> -->
-        <tr> <!-- FC. SESAK NAFAS -->
-        <td>Sesak Nafas </td>
-        <td> : </td>
-        <td><input id="Fc1_anamnesis1" type="radio" name="Fc1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fc1_anamnesis2" type="radio" name="Fc1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fc2_anamnesis1" type="radio" name="Fc2" value="1" data-md-icheck=""> 0-6 Bulan</td>
-        <td><input id="Fc2_anamnesis2" type="radio" name="Fc2" value="2" data-md-icheck=""> 6-12 Bulan</td>
-        <td><input id="Fc2_anamnesis3" type="radio" name="Fc2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-        <tr> <!-- FB. NAFAS BUNYI -->
-        <td>Nafas Bunyi </td>
-        <td> : </td>
-        <td><input id="Fb1_anamnesis1" type="radio" name="Fb1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fb1_anamnesis2" type="radio" name="Fb1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fb2_anamnesis1" type="radio" name="Fb2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fb2_anamnesis2" type="radio" name="Fb2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Fb2_anamnesis3" type="radio" name="Fb2" value="3" data-md-icheck=""> &gt;12 Bulan</td>
-        </tr>
-        <hr/>
-        <tr> <!-- FG. BENJOLAN PADA LEHER -->
-        <td>Benjolan di Leher </td>
-        <td> : </td>
-        <td><input id="Fg1_anamnesis1" type="radio" name="Fg1" value="1" data-md-icheck=""> Ya</td>
-        <td><input id="Fg1_anamnesis2" type="radio" name="Fg1" value="2" data-md-icheck=""> Tidak</td>
-        <td>&nbsp;</td>
-        </tr>
-        <tr>
-        <td>Lokasi </td>
-        <td> : </td>
-        <td><input id="Fg3_anamnesis1" type="radio" name="Fg3" value="1" data-md-icheck=""> Kanan</td>
-        <td><input id="Fg3_anamnesis2" type="radio" name="Fg3" value="2" data-md-icheck=""> Kiri </td>
-        <td><input id="Fg3_anamnesis3" type="radio" name="Fg3" value="3" data-md-icheck=""> Bilateral </td>
-        </tr>
-        <tr>
-        <td>Lama Keluhan </td>
-        <td> : </td>
-        <td><input id="Fg2_anamnesis1" type="radio" name="Fg2" value="1" data-md-icheck=""> 0-6 Bulan </td>
-        <td><input id="Fg2_anamnesis2" type="radio" name="Fg2" value="2" data-md-icheck=""> 6-12 Bulan </td>
-        <td><input id="Fg2_anamnesis3" type="radio" name="Fg2" value="3" data-md-icheck=""> &gt;12 Bulan </td>
-        </tr>
-        <hr/>
-    </tbody></table>
+    <div class="form-row" align="center"><h6> Neoplasma Laring </h6></div><hr>
+    <div class="form-group">
+      <label for='""'>Suara Serak  : </label>
+      <strong>{{ $anamnesis->getFa1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFa2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Nyeri Menelan  : </label>
+      <strong>{{ $anamnesis->getFd1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFd2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sulit Menelan  : </label>
+      <strong>{{ $anamnesis->getFe1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFe2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Tersedak  : </label>
+      <strong>{{ $anamnesis->getFf1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFf2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Batuk Berdarah : </label>
+      <strong>{{ $anamnesis->getFh1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFh2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Sesak Nafas  : </label>
+      <strong>{{ $anamnesis->getFc1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFc2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Nafas Bunyi  : </label>
+      <strong>{{ $anamnesis->getFb1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFb2() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Benjolan di Leher  : </label>
+      <strong>{{ $anamnesis->getFg1() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lokasi  : </label>
+      <strong>{{ $anamnesis->getFg3() }}</strong>
+    </div>
+    <div class="form-group">
+      <label for='""'>Lama Keluhan  : </label>
+      <strong>{{ $anamnesis->getFg2() }}</strong>
+    </div>
+    <hr/>
 </div>
 <div> <!-- Neoplasma 1/3 Proksimal ESOFAGUS -->
     <div align="center"><h3> Neoplasma 1/3 Proksimal  Esofagus </h3></div><hr>

@@ -204,6 +204,6 @@ trait PasienTrait{
     }
     
     public function latestAnamnesis() {
-        return $this->anamnesis()->orderBy('modified')->first();
+        return $this->anamnesis()->orderBy('Tgl_periksa')->first();
     }
 }

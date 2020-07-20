@@ -1605,26 +1605,60 @@ trait AnamnesisTrait{
     }
 
     public function getGa1(){
+        switch($this->Ga1){
+            case '1': $this->Ga1 = 'Ya'; break;
+            case '2': $this->Ga1 = 'Tidak'; break;
+            default: $this->Ga1 = '-';
+        }
         return $this->Ga1;
     }
 
     public function getGa2(){
+        switch($this->Ga2){
+            case '1': $this->Ga2 = 'Kanan'; break;
+            case '2': $this->Ga2 = 'Kiri'; break;
+            case '3': $this->Ga2 = 'Bilateral'; break;
+            default: $this->Ga2 = '-';
+        }
         return $this->Ga2;
     }
 
     public function getGa3(){
+        switch($this->Ga3){
+            case '1': $this->Ga3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ga3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ga3 = '> 12 Bulan'; break;
+            default: $this->Ga3 = '-';
+        }
         return $this->Ga3;
     }
 
     public function getGb1(){
+        switch($this->Gb1){
+            case '1': $this->Gb1 = 'Ya'; break;
+            case '2': $this->Gb1 = 'Tidak'; break;
+            default: $this->Gb1 = '-';
+        }
         return $this->Gb1;
     }
 
     public function getGb2(){
+        switch($this->Gb2){
+            case '1': $this->Gb2 = 'Kanan'; break;
+            case '2': $this->Gb2 = 'Kiri'; break;
+            case '3': $this->Gb2 = 'Bilateral'; break;
+            default: $this->Gb2 = '-';
+        }
         return $this->Gb2;
     }
 
     public function getGb3(){
+        switch($this->Gb3){
+            case '1': $this->Gb3 = '0 - 6 Bulan'; break;
+            case '2': $this->Gb3 = '6 - 12 Bulan'; break;
+            case '3': $this->Gb3 = '> 12 Bulan'; break;
+            default: $this->Gb3 = '-';
+        }
         return $this->Gb3;
     }
 
@@ -1633,22 +1667,50 @@ trait AnamnesisTrait{
     }
 
     public function getGd1(){
+        switch($this->Gd1){
+            case '1': $this->Gd1 = 'Ya'; break;
+            case '2': $this->Gd1 = 'Tidak'; break;
+            default: $this->Gd1 = '-';
+        }
         return $this->Gd1;
     }
 
     public function getGd2(){
+        switch($this->Gd2){
+            case '1': $this->Gd2 = '0 - 6 Bulan'; break;
+            case '2': $this->Gd2 = '6 - 12 Bulan'; break;
+            case '3': $this->Gd2 = '> 12 Bulan'; break;
+            default: $this->Gd2 = '-';
+        }
         return $this->Gd2;
     }
 
     public function getGe1(){
+        switch($this->Ge1){
+            case '1': $this->Ge1 = 'Ya'; break;
+            case '2': $this->Ge1 = 'Tidak'; break;
+            default: $this->Ge1 = '-';
+        }
         return $this->Ge1;
     }
 
     public function getGe2(){
+        switch($this->Ge2){
+            case '1': $this->Ge2 = 'Kanan'; break;
+            case '2': $this->Ge2 = 'Kiri'; break;
+            case '3': $this->Ge2 = 'Bilateral'; break;
+            default: $this->Ge2 = '-';
+        }
         return $this->Ge2;
     }
 
     public function getGe3(){
+        switch($this->Ge3){
+            case '1': $this->Ge3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ge3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ge3 = '> 12 Bulan'; break;
+            default: $this->Ge3 = '-';
+        }
         return $this->Ge3;
     }
 
@@ -1661,10 +1723,22 @@ trait AnamnesisTrait{
     }
 
     public function getGg1(){
+        switch($this->Gg1){
+            case '1': $this->Gg1 = 'Ya'; break;
+            case '2': $this->Gg1 = 'Tidak'; break;
+            default: $this->Gg1 = '-';
+        }
         return $this->Gg1;
     }
 
     public function getGg2(){
+        switch($this->Gg2){
+            case '1': $this->Gg2 = 'Kanan'; break;
+            case '2': $this->Gg2 = 'Kiri'; break;
+            case '3': $this->Gg2 = 'Bilateral'; break;
+            case '4': $this->Gg2 = 'Lainnya'; break;
+            default: $this->Gg2 = '-';
+        }
         return $this->Gg2;
     }
 
@@ -1672,15 +1746,33 @@ trait AnamnesisTrait{
         return $this->Gg2Lainnya;
     }
 
-    public function getGg3(){
+        public function getGg3(){
+        switch($this->Gg3){
+            case '1': $this->Gg3 = '0 - 6 Bulan'; break;
+            case '2': $this->Gg3 = '6 - 12 Bulan'; break;
+            case '3': $this->Gg3 = '> 12 Bulan'; break;
+            default: $this->Gg3 = '-';
+        }
         return $this->Gg3;
     }
 
+
     public function getGh1(){
+        switch($this->Gh1){
+            case '1': $this->Gh1 = 'Ya'; break;
+            case '2': $this->Gh1 = 'Tidak'; break;
+            default: $this->Gh1 = '-';
+        }
         return $this->Gh1;
     }
 
     public function getGh2(){
+        switch($this->Gh2){
+            case '1': $this->Gh2 = '0 - 6 Bulan'; break;
+            case '2': $this->Gh2 = '6 - 12 Bulan'; break;
+            case '3': $this->Gh2 = '> 12 Bulan'; break;
+            default: $this->Gh2 = '-';
+        }
         return $this->Gh2;
     }
 
@@ -1805,110 +1897,263 @@ trait AnamnesisTrait{
     }
 
     public function getIa1(){
+        switch($this->Ia1){
+            case '1': $this->Ia1 = 'Ya'; break;
+            case '2': $this->Ia1 = 'Tidak'; break;
+            default: $this->Ia1 = '-';
+        }
         return $this->Ia1;
     }
 
     public function getIa2(){
+        switch($this->Ia2){
+            case '1': $this->Ia2 = 'Kanan'; break;
+            case '2': $this->Ia2 = 'Kiri'; break;
+            case '3': $this->Ia2 = 'Bilateral'; break;
+            default: $this->Ia2 = '-';
+        }
         return $this->Ia2;
     }
 
     public function getIa3(){
+        switch($this->Ia3){
+            case '1': $this->Ia3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ia3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ia3 = '> 12 Bulan'; break;
+            default: $this->Ia3 = '-';
+        }
         return $this->Ia3;
     }
 
     public function getIb1(){
+        switch($this->Ib1){
+            case '1': $this->Ib1 = 'Ya'; break;
+            case '2': $this->Ib1 = 'Tidak'; break;
+            default: $this->Ib1 = '-';
+        }
         return $this->Ib1;
     }
 
     public function getIb2(){
+        switch($this->Ib2){
+            case '1': $this->Ib2 = 'Kanan'; break;
+            case '2': $this->Ib2 = 'Kiri'; break;
+            case '3': $this->Ib2 = 'Bilateral'; break;
+            default: $this->Ib2 = '-';
+        }
         return $this->Ib2;
     }
 
     public function getIb3(){
+        switch($this->Ib3){
+            case '1': $this->Ib3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ib3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ib3 = '> 12 Bulan'; break;
+            default: $this->Ib3 = '-';
+        }
         return $this->Ib3;
     }
 
     public function getIc1(){
+        switch($this->Ic1){
+            case '1': $this->Ic1 = 'Ya'; break;
+            case '2': $this->Ic1 = 'Tidak'; break;
+            default: $this->Ic1 = '-';
+        }
         return $this->Ic1;
     }
 
     public function getIc2(){
+        switch($this->Ic2){
+            case '1': $this->Ic2 = 'Kanan'; break;
+            case '2': $this->Ic2 = 'Kiri'; break;
+            case '3': $this->Ic2 = 'Bilateral'; break;
+            default: $this->Ic2 = '-';
+        }
         return $this->Ic2;
     }
 
     public function getIc3(){
+        switch($this->Ic3){
+            case '1': $this->Ic3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ic3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ic3 = '> 12 Bulan'; break;
+            default: $this->Ic3 = '-';
+        }
         return $this->Ic3;
     }
 
     public function getId1(){
+        switch($this->Id1){
+            case '1': $this->Id1 = 'Ya'; break;
+            case '2': $this->Id1 = 'Tidak'; break;
+            default: $this->Id1 = '-';
+        }
         return $this->Id1;
     }
 
     public function getId2(){
+        switch($this->Id2){
+            case '1': $this->Id2 = 'Kanan'; break;
+            case '2': $this->Id2 = 'Kiri'; break;
+            case '3': $this->Id2 = 'Bilateral'; break;
+            default: $this->Id2 = '-';
+        }
         return $this->Id2;
     }
 
     public function getId3(){
+        switch($this->Id3){
+            case '1': $this->Id3 = '0 - 6 Bulan'; break;
+            case '2': $this->Id3 = '6 - 12 Bulan'; break;
+            case '3': $this->Id3 = '> 12 Bulan'; break;
+            default: $this->Id3 = '-';
+        }
         return $this->Id3;
     }
 
     public function getIe1(){
+        switch($this->Ie1){
+            case '1': $this->Ie1 = 'Ya'; break;
+            case '2': $this->Ie1 = 'Tidak'; break;
+            default: $this->Ie1 = '-';
+        }
         return $this->Ie1;
     }
 
     public function getIe2(){
+        switch($this->Ie2){
+            case '1': $this->Ie2 = 'Kanan'; break;
+            case '2': $this->Ie2 = 'Kiri'; break;
+            case '3': $this->Ie2 = 'Bilateral'; break;
+            default: $this->Ie2 = '-';
+        }
         return $this->Ie2;
     }
 
     public function getIe3(){
+        switch($this->Ie3){
+            case '1': $this->Ie3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ie3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ie3 = '> 12 Bulan'; break;
+            default: $this->Ie3 = '-';
+        }
         return $this->Ie3;
     }
 
     public function getIf1(){
+        switch($this->If1){
+            case '1': $this->If1 = 'Ya'; break;
+            case '2': $this->If1 = 'Tidak'; break;
+            default: $this->If1 = '-';
+        }
         return $this->If1;
     }
 
     public function getIf2(){
+        switch($this->If2){
+            case '1': $this->If2 = 'Kanan'; break;
+            case '2': $this->If2 = 'Kiri'; break;
+            case '3': $this->If2 = 'Bilateral'; break;
+            default: $this->If2 = '-';
+        }
         return $this->If2;
     }
 
     public function getIf3(){
+        switch($this->If3){
+            case '1': $this->If3 = '0 - 6 Bulan'; break;
+            case '2': $this->If3 = '6 - 12 Bulan'; break;
+            case '3': $this->If3 = '> 12 Bulan'; break;
+            default: $this->If3 = '-';
+        }
         return $this->If3;
     }
 
     public function getIg1(){
+        switch($this->Ig1){
+            case '1': $this->Ig1 = 'Ya'; break;
+            case '2': $this->Ig1 = 'Tidak'; break;
+            default: $this->Ig1 = '-';
+        }
         return $this->Ig1;
     }
 
     public function getIg2(){
+        switch($this->Ig2){
+            case '1': $this->Ig2 = 'Kanan'; break;
+            case '2': $this->Ig2 = 'Kiri'; break;
+            case '3': $this->Ig2 = 'Bilateral'; break;
+            default: $this->Ig2 = '-';
+        }
         return $this->Ig2;
     }
 
     public function getIg3(){
+        switch($this->Ig3){
+            case '1': $this->Ig3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ig3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ig3 = '> 12 Bulan'; break;
+            default: $this->Ig3 = '-';
+        }
         return $this->Ig3;
     }
 
     public function getIh1(){
+        switch($this->Ih1){
+            case '1': $this->Ih1 = 'Ya'; break;
+            case '2': $this->Ih1 = 'Tidak'; break;
+            default: $this->Ih1 = '-';
+        }
         return $this->Ih1;
     }
 
     public function getIh2(){
+        switch($this->Ih2){
+            case '1': $this->Ih2 = 'Kanan'; break;
+            case '2': $this->Ih2 = 'Kiri'; break;
+            case '3': $this->Ih2 = 'Bilateral'; break;
+            default: $this->Ih2 = '-';
+        }
         return $this->Ih2;
     }
 
     public function getIh3(){
+        switch($this->Ih3){
+            case '1': $this->Ih3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ih3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ih3 = '> 12 Bulan'; break;
+            default: $this->Ih3 = '-';
+        }
         return $this->Ih3;
     }
 
     public function getIi1(){
+        switch($this->Ii1){
+            case '1': $this->Ii1 = 'Ya'; break;
+            case '2': $this->Ii1 = 'Tidak'; break;
+            default: $this->Ii1 = '-';
+        }
         return $this->Ii1;
     }
 
     public function getIi2(){
+        switch($this->Ii2){
+            case '1': $this->Ii2 = 'Kanan'; break;
+            case '2': $this->Ii2 = 'Kiri'; break;
+            case '3': $this->Ii2 = 'Bilateral'; break;
+            default: $this->Ii2 = '-';
+        }
         return $this->Ii2;
     }
 
     public function getIi3(){
+        switch($this->Ii3){
+            case '1': $this->Ii3 = '0 - 6 Bulan'; break;
+            case '2': $this->Ii3 = '6 - 12 Bulan'; break;
+            case '3': $this->Ii3 = '> 12 Bulan'; break;
+            default: $this->Ii3 = '-';
+        }
         return $this->Ii3;
     }
 
@@ -2351,94 +2596,221 @@ trait AnamnesisTrait{
     }
 
     public function getNa1(){
+        switch($this->Na1){
+            case '1': $this->Na1 = 'Ya'; break;
+            case '2': $this->Na1 = 'Tidak'; break;
+            default: $this->Na1 = '-';
+        }
         return $this->Na1;
     }
 
     public function getNa2(){
+        switch($this->Na2){
+            case '1': $this->Na2 = '0 - 6 Bulan'; break;
+            case '2': $this->Na2 = '6 - 12 Bulan'; break;
+            case '3': $this->Na2 = '> 12 Bulan'; break;
+            default: $this->Na2 = '-';
+        }
         return $this->Na2;
     }
 
     public function getNb1(){
+        switch($this->Nb1){
+            case '1': $this->Nb1 = 'Ya'; break;
+            case '2': $this->Nb1 = 'Tidak'; break;
+            default: $this->Nb1 = '-';
+        }
         return $this->Nb1;
     }
 
     public function getNb2(){
+        switch($this->Nb2){
+            case '1': $this->Nb2 = '0 - 6 Bulan'; break;
+            case '2': $this->Nb2 = '6 - 12 Bulan'; break;
+            case '3': $this->Nb2 = '> 12 Bulan'; break;
+            default: $this->Nb2 = '-';
+        }
         return $this->Nb2;
     }
 
     public function getNc1(){
+        switch($this->Nc1){
+            case '1': $this->Nc1 = 'Ya'; break;
+            case '2': $this->Nc1 = 'Tidak'; break;
+            default: $this->Nc1 = '-';
+        }
         return $this->Nc1;
     }
 
     public function getNc2(){
+        switch($this->Nc2){
+            case '1': $this->Nc2 = '0 - 6 Bulan'; break;
+            case '2': $this->Nc2 = '6 - 12 Bulan'; break;
+            case '3': $this->Nc2 = '> 12 Bulan'; break;
+            default: $this->Nc2 = '-';
+        }
         return $this->Nc2;
     }
 
     public function getNd1(){
+        switch($this->Nd1){
+            case '1': $this->Nd1 = 'Ya'; break;
+            case '2': $this->Nd1 = 'Tidak'; break;
+            default: $this->Nd1 = '-';
+        }
         return $this->Nd1;
     }
 
     public function getNd2(){
+        switch($this->Nd2){
+            case '1': $this->Nd2 = 'Kanan'; break;
+            case '2': $this->Nd2 = 'Kiri'; break;
+            case '3': $this->Nd2 = 'Bilateral'; break;
+            default: $this->Nd2 = '-';
+        }
         return $this->Nd2;
     }
 
     public function getNd3(){
+        switch($this->Nd3){
+            case '1': $this->Nd3 = '0 - 6 Bulan'; break;
+            case '2': $this->Nd3 = '6 - 12 Bulan'; break;
+            case '3': $this->Nd3 = '> 12 Bulan'; break;
+            default: $this->Nd3 = '-';
+        }
         return $this->Nd3;
     }
 
     public function getNe1(){
+        switch($this->Ne1){
+            case '1': $this->Ne1 = 'Ya'; break;
+            case '2': $this->Ne1 = 'Tidak'; break;
+            default: $this->Ne1 = '-';
+        }
         return $this->Ne1;
     }
 
     public function getNe2(){
+        switch($this->Ne2){
+            case '1': $this->Ne2 = '0 - 6 Bulan'; break;
+            case '2': $this->Ne2 = '6 - 12 Bulan'; break;
+            case '3': $this->Ne2 = '> 12 Bulan'; break;
+            default: $this->Ne2 = '-';
+        }
         return $this->Ne2;
     }
 
     public function getOa1(){
+        switch($this->Oa1){
+            case '1': $this->Oa1 = 'Ya'; break;
+            case '2': $this->Oa1 = 'Tidak'; break;
+            default: $this->Oa1 = '-';
+        }
         return $this->Oa1;
     }
 
     public function getOa2(){
+        switch($this->Oa2){
+            case '1': $this->Oa2 = '0 - 6 Bulan'; break;
+            case '2': $this->Oa2 = '6 - 12 Bulan'; break;
+            case '3': $this->Oa2 = '> 12 Bulan'; break;
+            default: $this->Oa2 = '-';
+        }
         return $this->Oa2;
     }
 
     public function getOb1(){
+        switch($this->Ob1){
+            case '1': $this->Ob1 = 'Ya'; break;
+            case '2': $this->Ob1 = 'Tidak'; break;
+            default: $this->Ob1 = '-';
+        }
         return $this->Ob1;
     }
 
     public function getOb2(){
+        switch($this->Ob2){
+            case '1': $this->Ob2 = '0 - 6 Bulan'; break;
+            case '2': $this->Ob2 = '6 - 12 Bulan'; break;
+            case '3': $this->Ob2 = '> 12 Bulan'; break;
+            default: $this->Ob2 = '-';
+        }
         return $this->Ob2;
     }
 
     public function getOc1(){
+        switch($this->Oc1){
+            case '1': $this->Oc1 = 'Ya'; break;
+            case '2': $this->Oc1 = 'Tidak'; break;
+            default: $this->Oc1 = '-';
+        }
         return $this->Oc1;
     }
 
     public function getOc2(){
+        switch($this->Oc2){
+            case '1': $this->Oc2 = '0 - 6 Bulan'; break;
+            case '2': $this->Oc2 = '6 - 12 Bulan'; break;
+            case '3': $this->Oc2 = '> 12 Bulan'; break;
+            default: $this->Oc2 = '-';
+        }
         return $this->Oc2;
     }
-
     public function getOd1(){
+        switch($this->Od1){
+            case '1': $this->Od1 = 'Ya'; break;
+            case '2': $this->Od1 = 'Tidak'; break;
+            default: $this->Od1 = '-';
+        }
         return $this->Od1;
     }
 
     public function getOd2(){
+        switch($this->Od2){
+            case '1': $this->Od2 = '0 - 6 Bulan'; break;
+            case '2': $this->Od2 = '6 - 12 Bulan'; break;
+            case '3': $this->Od2 = '> 12 Bulan'; break;
+            default: $this->Od2 = '-';
+        }
         return $this->Od2;
     }
 
     public function getOe1(){
+        switch($this->Oe1){
+            case '1': $this->Oe1 = 'Ya'; break;
+            case '2': $this->Oe1 = 'Tidak'; break;
+            default: $this->Oe1 = '-';
+        }
         return $this->Oe1;
     }
 
     public function getOe2(){
+        switch($this->Oe2){
+            case '1': $this->Oe2 = '0 - 6 Bulan'; break;
+            case '2': $this->Oe2 = '6 - 12 Bulan'; break;
+            case '3': $this->Oe2 = '> 12 Bulan'; break;
+            default: $this->Oe2 = '-';
+        }
         return $this->Oe2;
     }
 
     public function getPa1(){
+        switch($this->Pa1){
+            case '1': $this->Pa1 = 'Ya'; break;
+            case '2': $this->Pa1 = 'Tidak'; break;
+            default: $this->Pa1 = '-';
+        }
         return $this->Pa1;
     }
 
     public function getPa2(){
+        switch($this->Pa2){
+            case '1': $this->Pa2 = 'Kanan'; break;
+            case '2': $this->Pa2 = 'Kiri'; break;
+            case '3': $this->Pa2 = 'Bilateral'; break;
+            case '4': $this->Pa2 = 'Lainnya'; break;
+            default: $this->Pa2 = '-';
+        }
         return $this->Pa2;
     }
 
@@ -2447,6 +2819,12 @@ trait AnamnesisTrait{
     }
 
     public function getPa3(){
+        switch($this->Pa3){
+            case '1': $this->Pa3 = '0 - 6 Bulan'; break;
+            case '2': $this->Pa3 = '6 - 12 Bulan'; break;
+            case '3': $this->Pa3 = '> 12 Bulan'; break;
+            default: $this->Pa3 = '-';
+        }
         return $this->Pa3;
     }
 
@@ -2467,26 +2845,60 @@ trait AnamnesisTrait{
     }
 
     public function getPd1(){
+        switch($this->Pd1){
+            case '1': $this->Pd1 = 'Ya'; break;
+            case '2': $this->Pd1 = 'Tidak'; break;
+            default: $this->Pd1 = '-';
+        }
         return $this->Pd1;
     }
 
     public function getPd2(){
+        switch($this->Pd2){
+            case '1': $this->Pd2 = '0 - 6 Bulan'; break;
+            case '2': $this->Pd2 = '6 - 12 Bulan'; break;
+            case '3': $this->Pd2 = '> 12 Bulan'; break;
+            default: $this->Pd2 = '-';
+        }
         return $this->Pd2;
     }
 
     public function getPe1(){
+        switch($this->Pe1){
+            case '1': $this->Pe1 = 'Ya'; break;
+            case '2': $this->Pe1 = 'Tidak'; break;
+            default: $this->Pe1 = '-';
+        }
         return $this->Pe1;
     }
 
     public function getPe2(){
+        switch($this->Pe2){
+            case '1': $this->Pe2 = '0 - 6 Bulan'; break;
+            case '2': $this->Pe2 = '6 - 12 Bulan'; break;
+            case '3': $this->Pe2 = '> 12 Bulan'; break;
+            default: $this->Pe2 = '-';
+        }
         return $this->Pe2;
     }
 
     public function getQa1(){
+        switch($this->Qa1){
+            case '1': $this->Qa1 = 'Ya'; break;
+            case '2': $this->Qa1 = 'Tidak'; break;
+            default: $this->Qa1 = '-';
+        }
         return $this->Qa1;
     }
 
     public function getQa2(){
+        switch($this->Qa2){
+            case '1': $this->Qa2 = 'Kanan'; break;
+            case '2': $this->Qa2 = 'Kiri'; break;
+            case '3': $this->Qa2 = 'Bilateral'; break;
+            case '4': $this->Qa2 = 'Lainnya'; break;
+            default: $this->Qa2 = '-';
+        }
         return $this->Qa2;
     }
 
@@ -2515,154 +2927,365 @@ trait AnamnesisTrait{
     }
 
     public function getQd1(){
+        switch($this->Qd1){
+            case '1': $this->Qd1 = 'Ya'; break;
+            case '2': $this->Qd1 = 'Tidak'; break;
+            default: $this->Qd1 = '-';
+        }
         return $this->Qd1;
     }
 
     public function getQd2(){
+        switch($this->Qd2){
+            case '1': $this->Qd2 = '0 - 6 Bulan'; break;
+            case '2': $this->Qd2 = '6 - 12 Bulan'; break;
+            case '3': $this->Qd2 = '> 12 Bulan'; break;
+            default: $this->Qd2 = '-';
+        }
         return $this->Qd2;
     }
 
     public function getQe1(){
+        switch($this->Qe1){
+            case '1': $this->Qe1 = 'Ya'; break;
+            case '2': $this->Qe1 = 'Tidak'; break;
+            default: $this->Qe1 = '-';
+        }
         return $this->Qe1;
     }
 
     public function getQe2(){
+        switch($this->Qe2){
+            case '1': $this->Qe2 = '0 - 6 Bulan'; break;
+            case '2': $this->Qe2 = '6 - 12 Bulan'; break;
+            case '3': $this->Qe2 = '> 12 Bulan'; break;
+            default: $this->Qe2 = '-';
+        }
         return $this->Qe2;
     }
-
     public function getRa1(){
+        switch($this->Ra1){
+            case '1': $this->Ra1 = 'Ya'; break;
+            case '2': $this->Ra1 = 'Tidak'; break;
+            default: $this->Ra1 = '-';
+        }
         return $this->Ra1;
     }
 
     public function getRa2(){
+        switch($this->Ra2){
+            case '1': $this->Ra2 = '0 - 6 Bulan'; break;
+            case '2': $this->Ra2 = '6 - 12 Bulan'; break;
+            case '3': $this->Ra2 = '> 12 Bulan'; break;
+            default: $this->Ra2 = '-';
+        }
         return $this->Ra2;
     }
 
     public function getRb1(){
+        switch($this->Rb1){
+            case '1': $this->Rb1 = 'Ya'; break;
+            case '2': $this->Rb1 = 'Tidak'; break;
+            default: $this->Rb1 = '-';
+        }
         return $this->Rb1;
     }
 
     public function getRb2(){
+        switch($this->Rb2){
+            case '1': $this->Rb2 = '0 - 6 Bulan'; break;
+            case '2': $this->Rb2 = '6 - 12 Bulan'; break;
+            case '3': $this->Rb2 = '> 12 Bulan'; break;
+            default: $this->Rb2 = '-';
+        }
         return $this->Rb2;
     }
 
     public function getRc1(){
+        switch($this->Rc1){
+            case '1': $this->Rc1 = 'Ya'; break;
+            case '2': $this->Rc1 = 'Tidak'; break;
+            default: $this->Rc1 = '-';
+        }
         return $this->Rc1;
     }
 
     public function getRc2(){
+        switch($this->Rc2){
+            case '1': $this->Rc2 = '0 - 6 Bulan'; break;
+            case '2': $this->Rc2 = '6 - 12 Bulan'; break;
+            case '3': $this->Rc2 = '> 12 Bulan'; break;
+            default: $this->Rc2 = '-';
+        }
         return $this->Rc2;
     }
 
     public function getRd1(){
+        switch($this->Rd1){
+            case '1': $this->Rd1 = 'Ya'; break;
+            case '2': $this->Rd1 = 'Tidak'; break;
+            default: $this->Rd1 = '-';
+        }
         return $this->Rd1;
     }
 
     public function getRd2(){
+        switch($this->Rd2){
+            case '1': $this->Rd2 = '0 - 6 Bulan'; break;
+            case '2': $this->Rd2 = '6 - 12 Bulan'; break;
+            case '3': $this->Rd2 = '> 12 Bulan'; break;
+            default: $this->Rd2 = '-';
+        }
         return $this->Rd2;
     }
 
     public function getRe1(){
+        switch($this->Re1){
+            case '1': $this->Re1 = 'Ya'; break;
+            case '2': $this->Re1 = 'Tidak'; break;
+            default: $this->Re1 = '-';
+        }
         return $this->Re1;
     }
 
     public function getRe2(){
+        switch($this->Re2){
+            case '1': $this->Re2 = '0 - 6 Bulan'; break;
+            case '2': $this->Re2 = '6 - 12 Bulan'; break;
+            case '3': $this->Re2 = '> 12 Bulan'; break;
+            default: $this->Re2 = '-';
+        }
         return $this->Re2;
     }
 
     public function getRf1(){
+        switch($this->Rf1){
+            case '1': $this->Rf1 = 'Ya'; break;
+            case '2': $this->Rf1 = 'Tidak'; break;
+            default: $this->Rf1 = '-';
+        }
         return $this->Rf1;
     }
 
     public function getRf2(){
+        switch($this->Rf2){
+            case '1': $this->Rf2 = '0 - 6 Bulan'; break;
+            case '2': $this->Rf2 = '6 - 12 Bulan'; break;
+            case '3': $this->Rf2 = '> 12 Bulan'; break;
+            default: $this->Rf2 = '-';
+        }
         return $this->Rf2;
     }
 
     public function getSa1(){
+        switch($this->Sa1){
+            case '1': $this->Sa1 = 'Ya'; break;
+            case '2': $this->Sa1 = 'Tidak'; break;
+            default: $this->Sa1 = '-';
+        }
         return $this->Sa1;
     }
 
     public function getSa2(){
+        switch($this->Sa2){
+            case '1': $this->Sa2 = 'Kanan'; break;
+            case '2': $this->Sa2 = 'Kiri'; break;
+            case '3': $this->Sa2 = 'Bilateral'; break;
+            default: $this->Sa2 = '-';
+        }
         return $this->Sa2;
     }
 
     public function getSa3(){
+        switch($this->Sa3){
+            case '1': $this->Sa3 = '0 - 6 Bulan'; break;
+            case '2': $this->Sa3 = '6 - 12 Bulan'; break;
+            case '3': $this->Sa3 = '> 12 Bulan'; break;
+            default: $this->Sa3 = '-';
+        }
         return $this->Sa3;
     }
 
     public function getSb1(){
+        switch($this->Sb1){
+            case '1': $this->Sb1 = 'Ya'; break;
+            case '2': $this->Sb1 = 'Tidak'; break;
+            default: $this->Sb1 = '-';
+        }
         return $this->Sb1;
     }
 
     public function getSb2(){
+        switch($this->Sb2){
+            case '1': $this->Sb2 = '0 - 6 Bulan'; break;
+            case '2': $this->Sb2 = '6 - 12 Bulan'; break;
+            case '3': $this->Sb2 = '> 12 Bulan'; break;
+            default: $this->Sb2 = '-';
+        }
         return $this->Sb2;
     }
 
     public function getSc1(){
+        switch($this->Sc1){
+            case '1': $this->Sc1 = 'Ya'; break;
+            case '2': $this->Sc1 = 'Tidak'; break;
+            default: $this->Sc1 = '-';
+        }
         return $this->Sc1;
     }
 
     public function getSc2(){
+        switch($this->Sc2){
+            case '1': $this->Sc2 = '0 - 6 Bulan'; break;
+            case '2': $this->Sc2 = '6 - 12 Bulan'; break;
+            case '3': $this->Sc2 = '> 12 Bulan'; break;
+            default: $this->Sc2 = '-';
+        }
         return $this->Sc2;
     }
 
     public function getSd1(){
+        switch($this->Sd1){
+            case '1': $this->Sd1 = 'Ya'; break;
+            case '2': $this->Sd1 = 'Tidak'; break;
+            default: $this->Sd1 = '-';
+        }
         return $this->Sd1;
     }
 
     public function getSd2(){
+        switch($this->Sd2){
+            case '1': $this->Sd2 = 'Kanan'; break;
+            case '2': $this->Sd2 = 'Kiri'; break;
+            case '3': $this->Sd2 = 'Bilateral'; break;
+            default: $this->Sd2 = '-';
+        }
         return $this->Sd2;
     }
 
     public function getSd3(){
+        switch($this->Sd3){
+            case '1': $this->Sd3 = 'Kanan'; break;
+            case '2': $this->Sd3 = 'Kiri'; break;
+            case '3': $this->Sd3 = 'Bilateral'; break;
+            default: $this->Sd3 = '-';
+        }
         return $this->Sd3;
     }
 
     public function getSd4(){
+        switch($this->Sd4){
+            case '1': $this->Sd4 = '0 - 6 Bulan'; break;
+            case '2': $this->Sd4 = '6 - 12 Bulan'; break;
+            case '3': $this->Sd4 = '> 12 Bulan'; break;
+            default: $this->Sd4 = '-';
+        }
         return $this->Sd4;
     }
 
-    public function getSe1(){
+   public function getSe1(){
+        switch($this->Se1){
+            case '1': $this->Se1 = 'Ya'; break;
+            case '2': $this->Se1 = 'Tidak'; break;
+            default: $this->Se1 = '-';
+        }
         return $this->Se1;
     }
 
     public function getSe2(){
+        switch($this->Se2){
+            case '1': $this->Se2 = '0 - 6 Bulan'; break;
+            case '2': $this->Se2 = '6 - 12 Bulan'; break;
+            case '3': $this->Se2 = '> 12 Bulan'; break;
+            default: $this->Se2 = '-';
+        }
         return $this->Se2;
     }
 
     public function getTa1(){
+        switch($this->Ta1){
+            case '1': $this->Ta1 = 'Ya'; break;
+            case '2': $this->Ta1 = 'Tidak'; break;
+            default: $this->Ta1 = '-';
+        }
         return $this->Ta1;
     }
 
     public function getTa2(){
+        switch($this->Ta2){
+            case '1': $this->Ta2 = '0 - 6 Bulan'; break;
+            case '2': $this->Ta2 = '6 - 12 Bulan'; break;
+            case '3': $this->Ta2 = '> 12 Bulan'; break;
+            default: $this->Ta2 = '-';
+        }
         return $this->Ta2;
     }
 
     public function getTb1(){
+        switch($this->Tb1){
+            case '1': $this->Tb1 = '< 6 Bulan'; break;
+            case '2': $this->Tb1 = '> 6 Bulan'; break;
+            default: $this->Tb1 = '-';
+        }
         return $this->Tb1;
     }
 
     public function getTb2(){
+        switch($this->Tb2){
+            case '1': $this->Tb2 = 'Dokter Umum'; break;
+            case '2': $this->Tb2 = 'Dokter THT-KL'; break;
+            case '3': $this->Tb2 = 'Lainnya'; break;
+            default: $this->Tb2 = '-';
+        }
         return $this->Tb2;
     }
 
+    public function getTb2Lainnya(){
+        return $this->Tb2Lainnya;
+    }
+
     public function getTb21(){
+        switch($this->Tb21){
+            case '1': $this->Tb21 = 'Ya'; break;
+            case '2': $this->Tb21 = 'Tidak'; break;
+            default: $this->Tb21 = '-';
+        }
         return $this->Tb21;
     }
 
     public function getTb22(){
+        switch($this->Tb22){
+            case '1': $this->Tb22 = 'Ya'; break;
+            case '2': $this->Tb22 = 'Tidak'; break;
+            default: $this->Tb22 = '-';
+        }
         return $this->Tb22;
     }
 
     public function getTb23(){
+        switch($this->Tb23){
+            case '1': $this->Tb23 = 'Ya'; break;
+            case '2': $this->Tb23 = 'Tidak'; break;
+            default: $this->Tb23 = '-';
+        }
         return $this->Tb23;
     }
 
     public function getTb24(){
+        switch($this->Tb24){
+            case '1': $this->Tb24 = 'Ya'; break;
+            case '2': $this->Tb24 = 'Tidak'; break;
+            default: $this->Tb24 = '-';
+        }
         return $this->Tb24;
     }
 
     public function getTb25(){
+        switch($this->Tb24){
+            case '1': $this->Tb25 = 'Ya'; break;
+            case '2': $this->Tb25 = 'Tidak'; break;
+            default: $this->Tb25 = '-';
+        }
         return $this->Tb25;
     }
 
@@ -2671,6 +3294,11 @@ trait AnamnesisTrait{
     }
 
     public function getTc1(){
+        switch($this->Tc1){
+            case '1': $this->Tc1 = 'Ya'; break;
+            case '2': $this->Tc1 = 'Tidak'; break;
+            default: $this->Tc1 = '-';
+        }
         return $this->Tc1;
     }
 
@@ -2679,6 +3307,12 @@ trait AnamnesisTrait{
     }
 
     public function getTc2(){
+        switch($this->Tc2){
+            case '1': $this->Tc2 = '0 - 6 Bulan'; break;
+            case '2': $this->Tc2 = '6 - 12 Bulan'; break;
+            case '3': $this->Tc2 = '> 12 Bulan'; break;
+            default: $this->Tc2 = '-';
+        }
         return $this->Tc2;
     }
 

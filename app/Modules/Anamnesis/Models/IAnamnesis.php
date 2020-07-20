@@ -783,6 +783,8 @@ interface IAnamnesis{
 
     public function getTb2();
 
+    public function getTb2Lainnya();
+
     public function getTb21();
 
     public function getTb22();

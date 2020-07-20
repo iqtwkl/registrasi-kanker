@@ -9,9 +9,13 @@
 namespace App\Http\Controllers\Anamnesis;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Anamnesis\Contracts\AnamnesisContract;
 
 class AnamnesisController extends Controller{
-    public function __construct(){
+    private $anamnesisContract;
+
+    public function __construct(AnamnesisContract $anamnesisContract){
+        $this->anamnesisContract = $anamnesisContract;
         $this->middleware('auth');
     }
 
@@ -23,7 +27,7 @@ class AnamnesisController extends Controller{
 
     public function create()
     {
-        return view('users.create');
+        return view('anamnesis.create');
     }
 
     public function store()
@@ -33,7 +37,7 @@ class AnamnesisController extends Controller{
 
     public function edit()
     {
-        return view('users.edit');
+        return view('anamnesis.edit');
     }
 
     public function update()
@@ -44,5 +48,12 @@ class AnamnesisController extends Controller{
     public function delete()
     {
 
+    }
+
+    public function find($id) 
+    {
+        $anamnesis = $this->anamnesisContract->getById($id);
+        $pasien = $anamnesis->pasien()->first();
+        return view('anamnesis.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis]);
     }
 }

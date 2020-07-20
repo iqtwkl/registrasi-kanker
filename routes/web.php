@@ -39,6 +39,7 @@ Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){
 
 Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
+    Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'AnamnesisController@find'])->name('anamnesis.find');
 });
 
 Route::group(['prefix' => 'dirujuk','namespace' => 'Dirujuk'], function(){

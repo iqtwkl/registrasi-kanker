@@ -8,6 +8,10 @@
  * Created by User2 on 3/30/2020.
  */
 $(document).ready(function(){
+    urls = document.URL.split('/');
+    url = '/anamnesis';
+    if(urls[urls.length-2] == 'public') 
+        url = '/public/anamnesis';
     var configs = {
         columns:[
             {
@@ -32,6 +36,19 @@ $(document).ready(function(){
                 }
             },
             [
+                {
+                    title: 'Action',
+                    field: 'View',
+                    columnType: {
+                        type: 'link',
+                        link: url,
+                        linkQuery: '/find/',
+                        linkParam: {
+                            type: 'column',
+                            value: 'id'
+                        } 
+                    }
+                },
                 {
                     title: 'Action',
                     field: 'Edit',

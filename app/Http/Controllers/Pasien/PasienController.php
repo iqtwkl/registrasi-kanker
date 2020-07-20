@@ -10,18 +10,15 @@ namespace App\Http\Controllers\Pasien;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Pasien\Contracts\PasienContract;
-use App\Modules\Anamnesis\Contracts\AnamnesisContract;
 
 class PasienController extends Controller
 {
     private $pasienContract;
-    private $anamnesisContract;
 
-    public function __construct(PasienContract $pasienContract, AnamnesisContract $anamnesisContract)
+    public function __construct(PasienContract $pasienContract)
     {
         $this->middleware('auth');
         $this->pasienContract = $pasienContract;
-        $this->anamnesisContract = $anamnesisContract;
     }
 
     public function index()

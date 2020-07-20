@@ -19552,6 +19552,9 @@ $(document).ready(function () {
  * Created by User2 on 3/30/2020.
  */
 $(document).ready(function () {
+  urls = document.URL.split('/');
+  url = '/anamnesis';
+  if (urls[urls.length - 2] == 'public') url = '/public/anamnesis';
   var configs = {
     columns: [{
       title: 'Nama',
@@ -19572,6 +19575,18 @@ $(document).ready(function () {
         type: 'field'
       }
     }, [{
+      title: 'Action',
+      field: 'View',
+      columnType: {
+        type: 'link',
+        link: url,
+        linkQuery: '/find/',
+        linkParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }, {
       title: 'Action',
       field: 'Edit',
       columnType: {
@@ -28214,10 +28229,14 @@ $(document).ready(function () {
     var formElement = $(this);
     var idElement = formElement.find('input#id');
     var namaElement = formElement.find('input#nama');
+    var passwordElement = formElement.find('input#password');
     var emailElement = formElement.find('input#email');
+    var hakAksesElement = formElement.find('select#hak_akses');
     idElement.val("");
     namaElement.val("");
+    passwordElement.val("");
     emailElement.val("");
+    hakAksesElement.val("");
   });
   $(".js-user-save-btn").click(function () {
     var _token = $(this).attr('data-token');
@@ -28226,12 +28245,15 @@ $(document).ready(function () {
 
     var formElement = $('#modal-create-users');
     var namaElement = formElement.find('input#nama_user');
+    var passwordElement = formElement.find('input#password');
     var emailElement = formElement.find('input#email');
     var hakAksesElement = formElement.find('select#hak_akses');
 
     var _nama = namaElement.val();
 
     var _email = emailElement.val();
+
+    var _password = passwordElement.val();
 
     var _hak_akses = hakAksesElement.val();
 
@@ -28240,6 +28262,7 @@ $(document).ready(function () {
       url: _url,
       data: {
         nama: _nama,
+        password: _password,
         email: _email,
         _token: _token
       }

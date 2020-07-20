@@ -22,7 +22,7 @@ trait AnamnesisTrait{
     }
 
     public function getTglPeriksa(){
-        return $this->Tgl_periksa;
+        return $this->tgl_periksa;
     }
 
     public function pasien(){

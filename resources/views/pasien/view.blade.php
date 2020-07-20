@@ -59,22 +59,23 @@
                 <div class="tab-pane fade" id="anamnesis" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
+                            <h5 class="card-title">Anamnesis Terakhir</h5>  
                             @include('anamnesis.partials.detail')
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pemeriksaan-fisik" role="tabpanel">
-                    <div class="card">
+                    <div class="card">                        
                         <div class="card-body">
-                            <h5 class="card-title">Pemeriksaan Fisik</h5>
-                            <hr/>
+                            <h5 class="card-title">Pemeriksaan Fisik Terakhir</h5> 
+                            @include('pemeriksaan_fisik.partials.detail')
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pemeriksaan-penunjang" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Pemeriksaan Penunjang</h5>
+                            <h5 class="card-title">Pemeriksaan Penunjang Terakhir</h5>
                             <hr/>
                         </div>
                     </div>
@@ -82,7 +83,7 @@
                 <div class="tab-pane fade" id="diagnosa" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Diagnosa</h5>
+                            <h5 class="card-title">Diagnosa Terakhir</h5>
                             <hr/>
                         </div>
                     </div>
@@ -90,7 +91,7 @@
                 <div class="tab-pane fade" id="terapi" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Terapi</h5>
+                            <h5 class="card-title">Terapi Terakhir</h5>
                             <hr/>
                         </div>
                     </div>

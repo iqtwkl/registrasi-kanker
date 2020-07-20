@@ -196,14 +196,18 @@ trait PasienTrait{
     }
 
     public function pemeriksaanFisik() {
-        return $this->hasMany('App\Modules\PemeriksaanFisik\Model\PemeriksaanFisik', 'id_pasien', 'id');
+        return $this->hasMany('App\Modules\PemeriksaanFisik\Models\PemeriksaanFisik', 'id_pasien', 'id')->orderBy('tglPeriksa');
     }
 
     public function anamnesis() {
-        return $this->hasMany('App\Modules\Anamnesis\Models\Anamnesis', 'id_pasien', 'id');
+        return $this->hasMany('App\Modules\Anamnesis\Models\Anamnesis', 'id_pasien', 'id')->orderBy('tgl_periksa');
     }
     
     public function latestAnamnesis() {
-        return $this->anamnesis()->orderBy('tgl_periksa')->first();
+        return $this->anamnesis()->first();
+    }
+
+    public function latestPemeriksaanFisik() {
+        return $this->pemeriksaanFisik()->first();
     }
 }

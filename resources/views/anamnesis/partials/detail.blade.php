@@ -1,4 +1,3 @@
-<h5 class="card-title">Anamnesis</h5>  
 <hr/>
 @if (is_null($anamnesis))
   <div class="form-control" align="center"><h6> Anamnesis Belum tersedia </h6></div>

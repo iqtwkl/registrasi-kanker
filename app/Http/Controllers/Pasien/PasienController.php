@@ -35,7 +35,8 @@ class PasienController extends Controller
     {
         $pasien = $this->pasienContract->getById($id);
         $anamnesis = $pasien->latestAnamnesis();
-        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis]);
+        $pemeriksaanFisik = $pasien->latestPemeriksaanFisik();
+        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis, 'pemeriksaanFisik'=> $pemeriksaanFisik]);
     }
 
     public function store()

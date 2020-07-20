@@ -9,11 +9,14 @@
 namespace App\Http\Controllers\PemeriksaanFisik;
 
 use App\Http\Controllers\Controller;
+use App\Modules\PemeriksaanFisik\Contracts\PemeriksaanFisikContract;
 
 class PemeriksaanFisikController extends Controller
 {
-    public function __construct()
+    private $pemeriksaanFisikContract;
+    public function __construct(PemeriksaanFisikContract $pemeriksaanFisikContract)
     {
+        $this->pemeriksaanFisikContract = $pemeriksaanFisikContract;
         $this->middleware('auth');
     }
 
@@ -22,7 +25,9 @@ class PemeriksaanFisikController extends Controller
     }
 
     public function find($id){
-        dump($id);
+        $pemeriksaanFisik = $this->pemeriksaanFisikContract->getById($id);
+        $pasien = $pemeriksaanFisik->pasien()->first();
+        return view('pemeriksaan_fisik.view',['id' => $id, 'pasien' => $pasien, 'pemeriksaanFisik' => $pemeriksaanFisik]);
     }
 
     public function create()

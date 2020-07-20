@@ -5,7 +5,7 @@ var dataTable = {
         perPage: 10,
         page: 1,
         searchInput: true,
-        loading: false,
+        loading: true,
         showDataInfo: false,
         baseUrl: window.location.protocol.concat("//") + window.location.host
     },
@@ -14,6 +14,7 @@ var dataTable = {
             dataTable.set(_configs);
         }
 
+        dataTable.generateSearchField(_tableElement);
         dataTable.fetchData(_tableElement);
     },
     reload: function(_tableElement){
@@ -26,7 +27,6 @@ var dataTable = {
             element = $(_tableElement).parent('.table-responsive');
         }
 
-        element.find(".table-search").remove();
         element.find(".pagination").remove();
         element.find("thead").remove();
         element.find("tbody").remove();
@@ -37,6 +37,7 @@ var dataTable = {
         var _token = $(_tableElement).attr('data-token');
         var _limit = dataTable.configs.perPage;
         var _offset = (dataTable.configs.page - 1);
+        var search = dataTable.configs.search;
 
 
         if(dataTable.configs.loading) {
@@ -46,10 +47,9 @@ var dataTable = {
         $.ajax({
             method: "POST",
             url: _url,
-            data: {search: [], limit: _limit, offset: _offset, _token: _token, sort: []}
+            data: {search: search, limit: _limit, offset: _offset, _token: _token, sort: []}
         })
         .done(function(_return){
-            dataTable.generateSearchField(_tableElement);
             dataTable.generateTableHeader(_tableElement, _return.data);
             dataTable.generateTableBody(_tableElement, _return.data);
             dataTable.generateTableFoot(_tableElement, _return);
@@ -88,7 +88,7 @@ var dataTable = {
         if(dataTable.configs.searchInput){
             inputSearchHtml = '<div class="col-sm-12 col-md-6">' +
                 '<div id="example_filter" class="dataTables_filter float-right">' +
-                '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label>' +
+                '<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example" onchange="dataTable.setSearch(this, \''+_tableElement+'\')"></label>' +
                 '</div>' +
                 '</div>';
         }
@@ -96,7 +96,7 @@ var dataTable = {
         var insertedHtml = '<div class="row table-search">' +
             '<div class="col-sm-12 col-md-6">' +
             '<div class="dataTables_length" id="example_length">' +
-            '<label>Show <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm">' +
+            '<label>Show <select name="example_length" id="dataShow" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm" onchange="dataTable.setShowData(this, \''+_tableElement+'\')">' +
             '<option value="10">10</option>' +
             '<option value="25">25</option>' +
             '<option value="50">50</option>' +
@@ -410,13 +410,33 @@ var dataTable = {
 
         $(paginationHtml).insertAfter(_tableElement);
     },
+    setSearch: function(obj, _tableElement){
+        var search = $(obj).val();
+        console.log(search);
+        dataTable.configs.search = search;
+
+        dataTable.clean(_tableElement);
+
+        dataTable.fetchData(_tableElement);
+    },
     setPageAt: function(_obj){
         var tableElement = $(_obj).attr("data-element");
         var page = $(_obj).attr("data-page");
 
         dataTable.configs.page = page;
 
+        dataTable.clean(tableElement);
+
         dataTable.fetchData(tableElement);
+    },
+    setShowData: function(obj, _tableElement){
+        var limit = $(obj).val();
+        console.log(limit);
+        dataTable.configs.perPage = limit;
+
+        dataTable.clean(_tableElement);
+
+        dataTable.fetchData(_tableElement);
     },
     set: function(_configs){
         if(_configs.search){

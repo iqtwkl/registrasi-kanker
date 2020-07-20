@@ -30,7 +30,7 @@ class RumahSakitAjaxController extends Controller
         $offset = $request->input('offset');
         $sort = $request->has('sort')?$request->input('sort'):array();
 
-        $searchArr = ["name" => $search, "email" => $search];
+        $searchArr = ["nama" => $search, "kode" => $search];
         $result = $this->rumahSakitContract->getAll($searchArr, $offset, $limit, $sort);
 
         return response($result);

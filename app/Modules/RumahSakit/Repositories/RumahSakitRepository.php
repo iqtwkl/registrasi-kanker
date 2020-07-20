@@ -23,11 +23,11 @@ class RumahSakitRepository implements IRumahSakitRepository{
         $filter = [];
         if(count($search) > 0) {
             foreach ($search as $key => $value) {
-                if (in_array($key,['nama'])) {
+                //if (in_array($key,['nama'])) {
                     if (!empty($value) && trim($value) != '') {
                         $filter[] = " (LOWER(".$key.") like '%" . strtolower($value) . "%') ";
                     }
-                }
+                //}
             }
         }
 

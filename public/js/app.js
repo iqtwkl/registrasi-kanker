@@ -28849,23 +28849,23 @@ var dataTable = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\global.js */"./resources/js/global.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\plugins\table.js */"./resources/js/plugins/table.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\users.js */"./resources/js/page/users.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\pasien.js */"./resources/js/page/pasien.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\agama.js */"./resources/js/page/agama.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\anamnesis.js */"./resources/js/page/anamnesis.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\dirujuk.js */"./resources/js/page/dirujuk.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\pekerjaan.js */"./resources/js/page/pekerjaan.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\pemeriksaanfisik.js */"./resources/js/page/pemeriksaanfisik.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\pendidikan.js */"./resources/js/page/pendidikan.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\rumahsakit.js */"./resources/js/page/rumahsakit.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\statuspernikahan.js */"./resources/js/page/statuspernikahan.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\pemeriksaanpenunjang.js */"./resources/js/page/pemeriksaanpenunjang.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\diagnosa.js */"./resources/js/page/diagnosa.js");
-__webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\js\page\terapi.js */"./resources/js/page/terapi.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\registrasi\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\global.js */"./resources/js/global.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\plugins\table.js */"./resources/js/plugins/table.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\users.js */"./resources/js/page/users.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pasien.js */"./resources/js/page/pasien.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\agama.js */"./resources/js/page/agama.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\anamnesis.js */"./resources/js/page/anamnesis.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\dirujuk.js */"./resources/js/page/dirujuk.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pekerjaan.js */"./resources/js/page/pekerjaan.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pemeriksaanfisik.js */"./resources/js/page/pemeriksaanfisik.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pendidikan.js */"./resources/js/page/pendidikan.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\rumahsakit.js */"./resources/js/page/rumahsakit.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\statuspernikahan.js */"./resources/js/page/statuspernikahan.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\pemeriksaanpenunjang.js */"./resources/js/page/pemeriksaanpenunjang.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\diagnosa.js */"./resources/js/page/diagnosa.js");
+__webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\js\page\terapi.js */"./resources/js/page/terapi.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\registrasi\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

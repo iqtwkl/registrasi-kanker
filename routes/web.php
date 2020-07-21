@@ -73,6 +73,7 @@ Route::group(['prefix' => 'pemeriksaan-penunjang','namespace' => 'PemeriksaanPen
 
 Route::group(['prefix' => 'diagnosa','namespace' => 'Diagnosa'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'DiagnosaController@index'])->name('diagnosa');
+    Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'DiagnosaController@find'])->name('diagnosa.view');
 });
 
 Route::group(['prefix' => 'terapi','namespace' => 'Terapi'], function(){

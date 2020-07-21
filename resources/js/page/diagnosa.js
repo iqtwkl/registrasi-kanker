@@ -1,5 +1,9 @@
 
 $(document).ready(function(){
+    urls = document.URL.split('/');
+    url = '/diagnosa';
+    if(urls[urls.length-2] == 'public') 
+        url = '/public/diagnosa';
     var configs = {
         columns:[            
             {
@@ -24,6 +28,19 @@ $(document).ready(function(){
                 }
             },
             [
+                {
+                    title: 'Action',
+                    field: 'View',
+                    columnType: {
+                        type: 'link',
+                        link: url,
+                        linkQuery: '/find/',
+                        linkParam: {
+                            type: 'column',
+                            value: 'id'
+                        } 
+                    }
+                },
                 {
                     title: 'Action',
                     field: 'Edit',

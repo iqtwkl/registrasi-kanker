@@ -84,7 +84,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Diagnosa Terakhir</h5>
-                            <hr/>
+                            @include('diagnosa.partials.detail')
                         </div>
                     </div>
                 </div>

@@ -202,6 +202,10 @@ trait PasienTrait{
     public function anamnesis() {
         return $this->hasMany('App\Modules\Anamnesis\Models\Anamnesis', 'id_pasien', 'id')->orderBy('tgl_periksa');
     }
+
+    public function diagnosa() {
+        return $this->hasMany('App\Modules\Diagnosa\Models\Diagnosa', 'id_pasien', 'id')->orderBy('tglPeriksa');
+    }
     
     public function latestAnamnesis() {
         return $this->anamnesis()->first();
@@ -209,5 +213,10 @@ trait PasienTrait{
 
     public function latestPemeriksaanFisik() {
         return $this->pemeriksaanFisik()->first();
+    }
+
+    public function latestDiagnosa()
+    {
+        return $this->diagnosa()->first();
     }
 }

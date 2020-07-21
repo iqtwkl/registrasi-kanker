@@ -2,11 +2,14 @@
 namespace App\Http\Controllers\Diagnosa;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Diagnosa\Contracts\DiagnosaContract;
 
 class DiagnosaController extends Controller {
-    public function __construct()
+    private $diagnosaContract;
+    public function __construct(DiagnosaContract $diagnosaContract)
     {
         $this->middleware('auth');
+        $this->diagnosaContract = $diagnosaContract;
     }
 
     public function index(){
@@ -14,6 +17,8 @@ class DiagnosaController extends Controller {
     }
 
     public function find($id){
-        dump($id);
+        $diagnosa = $this->diagnosaContract->getById($id);
+        $pasien = $diagnosa->pasien()->first();
+        return view('diagnosa.view',['id' => $id, 'pasien' => $pasien, 'diagnosa' => $diagnosa]);
     }
 }

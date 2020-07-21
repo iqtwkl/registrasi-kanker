@@ -26,7 +26,7 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getTglPeriksa(){
-        return $this->tgl_periksa;
+        return $this->tglPeriksa;
     }
 
     public function getTd(){
@@ -58,7 +58,22 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs1(){
-        return $this->ks1;
+        $ks1 = '-';
+        switch($this->ks1){
+            case '1': $ks1 = '0 - Meninggal'; break;
+            case '2': $ks1 = '10 - Penderita sampai pada keadaan terminal (moribund), proses kematian sedang berlangsung.'; break;
+            case '3': $ks1 = '20 - Sangat terlihat sakit. Harus mendapatkan perawatan khusus di Rumah Sakit dan perawatan penunjang yang memadai.'; break;            
+            case '4': $ks1 = '30 - Sangat tidak berdaya. Membutuhkan perawatan medis khusus di Rumah Sakit walaupun tidak dalam keadaan yang mengancam jiwa.'; break;
+            case '5': $ks1 = '40 - Membutuhkan perhatian medis secara khusus dan pendampingan.'; break;
+            case '6': $ks1 = '50 - Tidak dapat melakukan aktifitas sehari-hari. Sangat membutuhkan bantuan orang lain dan pengobatan medis.'; break;
+            case '7': $ks1 = '60 - Tidak dapat melakukan aktifitas sehari-hari. Membutuhkan bantuan orang lain pada keadaan yang sangat sulit, sebagian besar keperluan diri dapat dipenuhi oleh diri sendiri.'; break;
+            case '8': $ks1 = '70 - Tidak dapat melakukan aktifitas sehari-hari. Mampu menjaga keadaan diri sendiri (care for self).';
+            case '9': $ks1 = '80 - Mampu melakukan aktifitas dengan usaha (effort). Didapatkan beberapa tanda gejala dari penyakit.'; break;
+            case '10': $ks1 = '90 - Mampu melakukan aktifitas sehari-hari, Didapatkan tanda minimal dari gejala dan penyakit.'; break;
+            case '11': $ks1 = '100 - Aktifitas normal, tidak ada keluhan, tidak didapatkan adanya penyakit.'; break;
+            default: $ks1 = '-';
+        }
+        return $ks1;
     }
 
     public function getKs2(){
@@ -126,31 +141,84 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs18(){
-        return $this->ks18;
+        $val = '-';
+        switch($this->ks18){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs19(){
-        return $this->ks19;
+        $val = '-';
+        switch($this->ks19){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs20(){
-        return $this->ks20;
+        $val = '-';
+        switch($this->ks20){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs21(){
-        return $this->ks21;
+        $val = '-';
+        switch($this->ks21){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs22(){
-        return $this->ks22;
+        $val = '-';
+        switch($this->ks22){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            case '3': $val = 'Pergerakan Simetris'; break;                                                                                              
+            case '4': $val = 'Pergerakan Asimetris'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs23(){
-        return $this->ks23;
+        $val = '-';
+        switch($this->ks23){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            case '3': $val = 'Pergerakan Simetris'; break;                                                                                              
+            case '4': $val = 'Pergerakan Asimetris'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs24(){
-        return $this->ks24;
+        $val = '-';
+        switch($this->ks24){
+            case '0': $val = 'Letak Tengah'; break;
+            case '1': $val = 'Terdorong Ke Kiri'; break;
+            case '2': $val = 'Terdorong Ke Kanan'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs25(){
@@ -158,15 +226,35 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs26(){
-        return $this->ks26;
+        $val = '-';
+        switch($this->ks26){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs27(){
-        return $this->ks27;
+        $val = '-';
+        switch($this->ks27){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs28(){
-        return $this->ks28;
+        $val = '-';
+        switch($this->ks28){            
+            case '1': $val = 'Terbuka'; break;
+            case '2': $val = 'Tertutup'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs29(){
@@ -174,23 +262,56 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs30(){
-        return $this->ks30;
+        $val = '-';
+        switch($this->ks30){
+            case '0': $val = 'T0'; break;
+            case '1': $val = 'T1'; break;
+            case '2': $val = 'T2'; break;                                                
+            case '3': $val = 'T3'; break;                                                
+            case '4': $val = 'T4'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs31(){
-        return $this->ks31;
+        $val = '-';
+        switch($this->ks31){
+            case '0': $val = 'T0'; break;
+            case '1': $val = 'T1'; break;
+            case '2': $val = 'T2'; break;                                                
+            case '3': $val = 'T3'; break;                                                
+            case '4': $val = 'T4'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs32(){
-        return $this->ks32;
+        $val = '-';
+        switch($this->ks32){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Bulging'; break;
+            case '2': $val = 'Ulkus'; break;                                                
+            case '3': $val = 'Destruksi'; break;                                                                                                            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs33(){
-        return $this->ks33;
+        $this->ks33;
     }
 
     public function getKs34(){
-        return $this->ks34;
+        $val = '-';
+        switch($this->ks34){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Bulging'; break;
+            case '2': $val = 'Infiltrasi Tumor'; break;                                                            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs35(){
@@ -198,7 +319,15 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs36(){
-        return $this->ks36;
+        $val = '-';
+        switch($this->ks36){
+            case '0': $val = 'Eritroplakia'; break;
+            case '1': $val = 'Melanosis'; break;
+            case '2': $val = 'Hiperpigmentasi'; break;                                                
+            case '3': $val = 'Normal'; break;                                                                                                            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs37(){
@@ -206,7 +335,13 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs38(){
-        return $this->ks38;
+        $val = '-';
+        switch($this->ks38){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs39(){
@@ -222,7 +357,14 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs42(){
-        return $this->ks42;
+        $val = '-';
+        switch($this->ks42){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Maloklusi'; break;            
+            case '2': $val = 'Karies Dentis'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs43(){
@@ -230,7 +372,14 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs44(){
-        return $this->ks44;
+        $val = '-';
+        switch($this->ks44){            
+            case '1': $val = 'Kiri'; break;            
+            case '2': $val = 'Kanan'; break;            
+            case '3': $val = 'Bilateral'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs45(){
@@ -242,15 +391,38 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs47(){
-        return $this->ks47;
+        $val = '-';
+        switch($this->ks47){            
+            case '1': $val = 'Ya'; break;            
+            case '2': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs48(){
-        return $this->ks48;
+        $val = '-';
+        switch($this->ks48){            
+            case '1': $val = 'Kiri'; break;            
+            case '2': $val = 'Kanan'; break;            
+            case '3': $val = 'Bilateral'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs49(){
-        return $this->ks49;
+        $val = '-';
+        switch($this->ks49){            
+            case '5': $val = 'Normal'; break;            
+            case '1': $val = 'Unilateral'; break;            
+            case '2': $val = 'Kiri'; break;            
+            case '3': $val = 'Kanan'; break;            
+            case '4': $val = 'Bilateral'; break;            
+            case '6': $val = 'Ikut Bergerak Saat Menelan'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs50(){
@@ -258,7 +430,13 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs51(){
-        return $this->ks51;
+        $val = '-';
+        switch($this->ks51){            
+            case '1': $val = 'Ada'; break;            
+            case '2': $val = 'Tidak Ada'; break;                     
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs52(){
@@ -266,35 +444,97 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs53(){
-        return $this->ks53;
+        $val = '-';
+        switch($this->ks53){            
+            case '1': $val = 'Keras'; break;            
+            case '2': $val = 'Lunak'; break;            
+            case '3': $val = 'Terfiksir'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs54(){
-        return $this->ks54;
+        $val = '-';
+        switch($this->ks54){            
+            case '1': $val = 'Level Ia'; break;            
+            case '2': $val = 'Level Ib'; break;            
+            case '3': $val = 'Level IIa'; break;            
+            case '4': $val = 'Level IIb'; break;            
+            case '5': $val = 'Level III'; break;            
+            case '6': $val = 'Level IV'; break;            
+            case '7': $val = 'Level Va'; break;            
+            case '8': $val = 'Level Vb'; break;            
+            case '9': $val = 'Level VI'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs55(){
-        return $this->ks55;
+        $val = '-';
+        switch($this->ks55){            
+            case '1': $val = 'Kiri'; break;            
+            case '2': $val = 'Kanan'; break;            
+            case '3': $val = 'Bilateral'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs56(){
-        return $this->ks56;
+        $val = '-';
+        switch($this->ks56){            
+            case '1': $val = 'Soliter'; break;            
+            case '2': $val = 'Multipel'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs57(){
-        return $this->ks57;
+        $val = '-';
+        switch($this->ks57){            
+            case '1': $val = 'Simetris'; break;            
+            case '2': $val = 'Asimetris'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs58(){
-        return $this->ks58;
+        $val = '-';
+        switch($this->ks58){            
+            case '1': $val = 'Sentral'; break;            
+            case '2': $val = 'Perifer'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs59(){
-        return $this->ks59;
+        $val = '-';
+        switch($this->ks59){            
+            case '1': $val = 'HB I'; break;            
+            case '2': $val = 'HB II'; break;            
+            case '3': $val = 'HB III'; break;            
+            case '4': $val = 'HB IV'; break;            
+            case '5': $val = 'HB V'; break;            
+            case '6': $val = 'HB VI'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs60(){
-        return $this->ks60;
+        $val = '-';
+        switch($this->ks60){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Massa'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs61(){
@@ -302,15 +542,44 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs62(){
-        return $this->ks62;
+        $val = '-';
+        switch($this->ks62){
+            case '0': $val = 'Tenang'; break;
+            case '1': $val = 'Hiperemis'; break;
+            case '2': $val = 'Massa'; break;                        
+            case '3': $val = 'Pergerakan Simetris'; break;                        
+            case '4': $val = 'Pergerakan Asimetris'; break;                        
+            case '5': $val = 'Parese'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs63(){
-        return $this->ks63;
+        $val = '-';
+        switch($this->ks62){
+            case '0': $val = 'Tenang'; break;
+            case '1': $val = 'Hiperemis'; break;
+            case '2': $val = 'Massa'; break;                        
+            case '3': $val = 'Pergerakan Simetris'; break;                        
+            case '4': $val = 'Pergerakan Asimetris'; break;                        
+            case '5': $val = 'Parese'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs64(){
-        return $this->ks64;
+        $val = '-';
+        switch($this->ks64){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Massa'; break;
+            case '3': $val = 'Hipertrofi Grade I'; break;                        
+            case '3': $val = 'Hipertrofi Grade II'; break;                        
+            case '3': $val = 'Hipertrofi Grade III'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs65(){
@@ -318,7 +587,17 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs66(){
-        return $this->ks66;
+        $ks66 = '-';
+        switch($this->ks66){
+            case '1': $ks66 = '0 - Sepenuhnya aktif, dapat mengerjakan aktifitas sama seperti sebelum sakit tanpa ada hambatan'; break;
+            case '2': $ks66 = '1 - Terdapat hambatan pada aktifitas fisik berat namun masih dapat berjalan dan mengerjakan pekerjaan ringan atau pekerjaan yang sifatnya tidak banyak berpindah tempat. contohnya, pekerjaan rumah ringan, pekerjaan kantor'; break;
+            case '3': $ks66 = '2 - Dapat berjalan dan mengurus diri sendiri namun tidak dapat mengerjakan aktifitas lainnya. Jumlah aktivitas lebih dari 50%'; break;            
+            case '4': $ks66 = '3 - Hanya dapat mengurus dirinya secara terbatas, kegiatannya terbatas di tempat tidur dan kursi lebih dari 50% dari jumlah aktivitas biasa'; break;
+            case '5': $ks66 = '4 - Tidak dapat beraktifitas. Tidak dapat mengurus dirinya sendiri. Secara penuh terbatas pada tempat tidur'; break;
+            case '6': $ks66 = '5 - Kematian'; break;    
+            default: $ks66 = '-';        
+        }
+        return $ks66;
     }
 
     public function getKs67(){
@@ -326,199 +605,530 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getKs68(){
-        return $this->ks68;
+        $val = '-';
+        switch($this->ks68){            
+            case '1': $val = 'Ya'; break;            
+            case '2': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69a(){
-        return $this->ks69a;
+        $val = '-';
+        switch($this->ks69a){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69b(){
-        return $this->ks69b;
+        $val = '-';
+        switch($this->ks69b){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69c(){
-        return $this->ks69c;
+        $val = '-';
+        switch($this->ks69c){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69d(){
-        return $this->ks69d;
+        $val = '-';
+        switch($this->ks69d){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69e(){
-        return $this->ks69e;
+        $val = '-';
+        switch($this->ks69e){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69f(){
-        return $this->ks69f;
+        $val = '-';
+        switch($this->ks69f){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69g(){
-        return $this->ks69g;
+        $val = '-';
+        switch($this->ks69g){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69h(){
-        return $this->ks69h;
+        $val = '-';
+        switch($this->ks69h){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69i(){
-        return $this->ks69i;
+        $val = '-';
+        switch($this->ks69i){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69j(){
-        return $this->ks69j;
+        $val = '-';
+        switch($this->ks69j){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69k(){
-        return $this->ks69k;
+        $val = '-';
+        switch($this->ks69k){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs69l(){
-        return $this->ks69l;
+        $val = '-';
+        switch($this->ks69l){            
+            case '1': $val = 'Ya'; break;            
+            case '0': $val = 'Tidak'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getKs70(){
-        return $this->ks70;
+        $val = '-';
+        switch($this->ks70){            
+            case '1': $val = 'Kiri'; break;            
+            case '2': $val = 'Kanan'; break;            
+            case '3': $val = 'Bilateral'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl1(){
-        return $this->sl1;
+        $val = '-';
+        switch($this->sl1){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Lividae'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl1a(){
-        return $this->sl1a;
+        $val = '-';
+        switch($this->sl1a){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Lividae'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl2(){
-        return $this->sl2;
+        $val = '-';
+        switch($this->sl2){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl2a(){
-        return $this->sl2a;
+        $val = '-';
+        switch($this->sl2a){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl3(){
-        return $this->sl3;
+        $val = '-';
+        switch($this->sl3){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl3a(){
-        return $this->sl3a;
+        $val = '-';
+        switch($this->sl3){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl4(){
-        return $this->sl4;
+        $val = '-';
+        switch($this->sl4){
+            case '1': $val = 'Intak'; break;
+            case '2': $val = 'Perforasi'; break;
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl4a(){
-        return $this->sl4a;
+        $val = '-';
+        switch($this->sl4a){
+            case '1': $val = 'Intak'; break;
+            case '2': $val = 'Perforasi'; break;
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl5(){
-        return $this->sl5;
+        $val = '-';
+        switch($this->sl5){
+            case '1': $val = 'Sentral'; break;
+            case '2': $val = 'Marginal'; break;
+            case '3': $val = 'Total'; break;
+            case '4': $val = 'Tidak Dapat Dinilai'; break;
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl5a(){
-        return $this->sl5a;
+        $val = '-';
+        switch($this->sl5a){
+            case '1': $val = 'Sentral'; break;
+            case '2': $val = 'Marginal'; break;
+            case '3': $val = 'Total'; break;
+            case '4': $val = 'Tidak Dapat Dinilai'; break;
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl6(){
-        return $this->sl6;
+        $val = '-';
+        switch($this->sl6){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Lividae'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl6a(){
-        return $this->sl6a;
+        $val = '-';
+        switch($this->sl6a){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Lividae'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl7(){
-        return $this->sl7;
+        $val = '-';
+        switch($this->sl7){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl7a(){
-        return $this->sl7a;
+        $val = '-';
+        switch($this->sl7a){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl8(){
-        return $this->sl8;
+        $val = '-';
+        switch($this->sl8){
+            case '1': $val = 'Eutrofi'; break;
+            case '2': $val = 'Hipertrofi'; break;                                    
+            case '3': $val = 'Atrofi'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl8a(){
-        return $this->sl8a;
+        $val = '-';
+        switch($this->sl8a){
+            case '1': $val = 'Eutrofi'; break;
+            case '2': $val = 'Hipertrofi'; break;                                    
+            case '3': $val = 'Atrofi'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl9(){
-        return $this->sl9;
+        $val = '-';
+        switch($this->sl9){
+            case '1': $val = 'Tidak Ada Deviasi'; break;
+            case '2': $val = 'Deviasi'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl9a(){
-        return $this->sl9a;
+        $val = '-';
+        switch($this->sl9a){
+            case '1': $val = 'Tidak Ada Deviasi'; break;
+            case '2': $val = 'Deviasi'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl10(){
-        return $this->sl10;
+        $val = '-';
+        switch($this->sl10){
+            case '1': $val = 'Normal'; break;
+            case '2': $val = 'Menurun'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl10a(){
-        return $this->sl0a;
+        $val = '-';
+        switch($this->sl10){
+            case '1': $val = 'Normal'; break;
+            case '2': $val = 'Menurun'; break;                                                
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl11(){
-        return $this->sl11;
+        $val = '-';
+        switch($this->sl11){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Hiperemis'; break;
+            case '3': $val = 'Lividae'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl12(){
-        return $this->sl12;
+        $val = '-';
+        switch($this->sl12){
+            case '0': $val = 'Normal'; break;
+            case '1': $val = 'Tumor Eksofitik'; break;
+            case '2': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl13(){
-        return $this->sl13;
+        $val = '-';
+        switch($this->sl13){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl14(){
-        return $this->sl14;
+        $val = '-';
+        switch($this->sl14){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl15(){
-        return $this->sl15;
+        $val = '-';
+        switch($this->sl15){
+            case '1': $val = 'Eutrofi'; break;
+            case '2': $val = 'Hipertrofi'; break;                                    
+            case '3': $val = 'Atrofi'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl16(){
-        return $this->sl16;
+        $val = '-';
+        switch($this->sl16){
+            case '1': $val = 'Eutrofi'; break;
+            case '2': $val = 'Hipertrofi'; break;                                    
+            case '3': $val = 'Atrofi'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl17(){
-        return $this->sl17;
+        $val = '-';
+        switch($this->sl17){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl18(){
-        return $this->sl18;
+        $val = '-';
+        switch($this->sl18){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl19(){
-        return $this->sl19;
+        $val = '-';
+        switch($this->sl19){
+            case '1': $val = 'Serous'; break;
+            case '2': $val = 'Mukoid'; break;
+            case '3': $val = 'Seromukoid'; break;                        
+            case '4': $val = 'Purulen'; break;                        
+            case '5': $val = 'Mukopurulen'; break;                        
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl20(){
-        return $this->sl20;
+        $val = '-';
+        switch($this->sl20){
+            case '1': $val = 'Polip'; break;
+            case '2': $val = 'Tumor Eksofitik'; break;
+            case '3': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl21(){
-        return $this->sl21;
+        $val = '-';
+        switch($this->sl21){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Tumor Eksofitik'; break;
+            case '3': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl22(){
-        return $this->sl22;
+        $val = '-';
+        switch($this->sl22){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Tumor Eksofitik'; break;
+            case '3': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl23(){
-        return $this->sl23;
+        $val = '-';
+        switch($this->sl23){
+            case '1': $val = 'Normal'; break;
+            case '2': $val = 'Tumor Eksofitik'; break;
+            case '3': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl24(){
-        return $this->sl24;
+        $val = '-';
+        switch($this->sl24){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl24a(){
-        return $this->sl24a;
+        $val = '-';
+        switch($this->sl24a){
+            case '1': $val = 'Ada'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl25(){
@@ -526,11 +1136,24 @@ trait PemeriksaanFisikTrait{
     }
 
     public function getSl26(){
-        return $this->sl26;
+        $val = '-';
+        switch($this->sl26){
+            case '1': $val = 'Ya'; break;
+            case '2': $val = 'Tidak'; break;                                    
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getSl27(){
-        return $this->sl27;
+        $val = '-';
+        switch($this->sl27){
+            case '1': $val = 'Tenang'; break;
+            case '2': $val = 'Tumor Eksofitik'; break;
+            case '3': $val = 'Tumor Ulseratif'; break;                                                                                              
+            default: $val = '-';        
+        }
+        return $val;
     }
 
     public function getCreatedAt(){

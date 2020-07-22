@@ -1,13 +1,16 @@
 <?php return array (
-  'facade/ignition' => 
+  'nunomaduro/collision' => 
   array (
     'providers' => 
     array (
-      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
+      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
-    'aliases' => 
+  ),
+  'nesbot/carbon' => 
+  array (
+    'providers' => 
     array (
-      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
+      0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
   'fideloper/proxy' => 
@@ -24,18 +27,15 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
-  'nesbot/carbon' => 
+  'facade/ignition' => 
   array (
     'providers' => 
     array (
-      0 => 'Carbon\\Laravel\\ServiceProvider',
+      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
     ),
-  ),
-  'nunomaduro/collision' => 
-  array (
-    'providers' => 
+    'aliases' => 
     array (
-      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
     ),
   ),
 );

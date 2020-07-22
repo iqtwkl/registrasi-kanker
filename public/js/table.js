@@ -6,7 +6,7 @@ var dataTable = {
         page: 1,
         searchInput: true,
         loading: true,
-        showDataInfo: false,
+        showDataInfo: true,
         baseUrl: window.location.protocol.concat("//") + window.location.host
     },
     init: function(_tableElement, _configs){
@@ -53,7 +53,7 @@ var dataTable = {
             dataTable.generateTableHeader(_tableElement, _return.data);
             dataTable.generateTableBody(_tableElement, _return.data);
             dataTable.generateTableFoot(_tableElement, _return);
-            dataTable.generatePagination(_tableElement, _return);
+            dataTable.generatePagination(_tableElement, _return.totalRecords);
 
             if(dataTable.configs.loading) {
                 dataTable.generateLoading(_tableElement, false);
@@ -359,8 +359,9 @@ var dataTable = {
 
         var currentPage = dataTable.configs.page;
         var startPage = 1;
-        var totalPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage));
-        var endPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage));
+        var modPage = ((parseInt(_totalData) % parseInt(dataTable.configs.perPage)) > 0)?1:0;
+        var totalPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage)) + modPage;
+        var endPage = (parseInt(_totalData) / parseInt(dataTable.configs.perPage)) + modPage;
 
         if (parseInt(totalPage) > 10) {
             endPage = 10;
@@ -371,7 +372,7 @@ var dataTable = {
         }
 
         if (parseInt(currentPage) > 3) {
-            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) - 1) + "\">Prev</span></li>";
+            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) - 1) + "\" data-element=\"" + _tableElement + "\">Prev</span></li>";
         }
 
         if (parseInt(currentPage) > 5) {
@@ -391,19 +392,19 @@ var dataTable = {
                     activePage = "active";
                     clickable = "";
                 }
-                paginationHtml += "<li class=\"page-item" + activePage + "\"><span class=\"page-link\" "+clickable+"  data-page=\"" + i + "\">" + i + "</span></li>";
+                paginationHtml += "<li class=\"page-item" + activePage + "\"><span class=\"page-link\" "+clickable+"  data-page=\"" + i + "\" data-element=\"" + _tableElement + "\">" + i + "</span></li>";
             }
         }
 
         if((parseInt(totalPage) > 10) && (parseInt(currentPage) < parseInt(totalPage))) {
-            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) + 1) + "\">Next</span></li>";
+            paginationHtml += "<li class=\"page-item\"><span class=\"page-link\" onclick=\"dataTable.setPageAt(this)\" data-page=\"" + (parseInt(currentPage) + 1) + "\" data-element=\"" + _tableElement + "\">Next</span></li>";
             var activePage = "";
             var clickable = "onclick=\"dataTable.setPageAt(this)\"";
             if (totalPage == currentPage) {
                 activePage = "active";
                 clickable = "";
             }
-            paginationHtml += "<li class=\"page-item " + activePage + " \"><span class=\"page-link\" " + clickable + " data-page=\"" + parseInt(totalPage) + "\">Last</span></li>";
+            paginationHtml += "<li class=\"page-item " + activePage + " \"><span class=\"page-link\" " + clickable + " data-page=\"" + parseInt(totalPage) + "\" data-element=\"" + _tableElement + "\">Last</span></li>";
         }
 
         paginationHtml += "</ul>";

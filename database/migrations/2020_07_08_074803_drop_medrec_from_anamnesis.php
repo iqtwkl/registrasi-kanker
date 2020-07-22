@@ -14,8 +14,7 @@ class DropMedrecFromAnamnesis extends Migration
     public function up()
     {
         Schema::table('anamnesis', function (Blueprint $table) {
-            $table->dropColumn("medrec");                              
-            $table->dropColumn("nama_pasien");                              
+            $table->dropColumn("medrec");
         });
     }
 

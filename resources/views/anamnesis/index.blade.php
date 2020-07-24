@@ -20,6 +20,11 @@
             <div class="table-responsive">
                 <table class="table js-data-anamnesis" id="js-table-anamnesis" data-token="{{ csrf_token() }}" data-url="{{ route("anamnesis.all") }}">
                 </table>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="{{ route('anamnesis.create') }}" class="btn btn-primary" data-id="1">Create</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

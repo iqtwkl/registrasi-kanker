@@ -31,6 +31,10 @@ Route::group(['prefix' => 'users','namespace' => 'Users'], function(){
 Route::group(['prefix' => 'pasien','namespace' => 'Pasien'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PasienController@index'])->name('pasien');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'PasienController@find'])->name('pasien.find');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'PasienController@create'])->name('pasien.create');
+    Route::get('/store', ['middleware' => 'web', 'uses' => 'PasienController@store'])->name('pasien.store');
+    Route::get('/edit', ['middleware' => 'web', 'uses' => 'PasienController@edit'])->name('pasien.edit');
+    Route::get('/update', ['middleware' => 'web', 'uses' => 'PasienController@update'])->name('pasien.update');
 });
 
 Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){
@@ -40,6 +44,7 @@ Route::group(['prefix' => 'agama','namespace' => 'Agama'], function(){
 Route::group(['prefix' => 'anamnesis','namespace' => 'Anamnesis'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'AnamnesisController@index'])->name('anamnesis');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'AnamnesisController@find'])->name('anamnesis.find');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'AnamnesisController@create'])->name('anamnesis.create');
 });
 
 Route::group(['prefix' => 'dirujuk','namespace' => 'Dirujuk'], function(){

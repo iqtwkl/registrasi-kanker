@@ -54,9 +54,10 @@ $(document).ready(function(){
                     title: 'Action',
                     field: 'Edit',
                     columnType: {
-                        type: 'modal',
-                        target: 'modal-edit-pasien',
-                        modalParam: {
+                        type: 'link',
+                        link: url,
+                        linkQuery: '/edit/',
+                        linkParam: {
                             type: 'column',
                             value: 'id'
                         }

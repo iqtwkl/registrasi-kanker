@@ -29,7 +29,43 @@ class StoreRequest extends FormRequest{
     public function rules()
     {
         return [
-
+            'nama' => '',
+            'kode_rs' => '',
+            'no_rekam_medis' => '',
+            'nama_orang_tua' => '',
+            'tempat_lahir' => '',
+            'tgl_lahir' => '',
+            'pendidikan' => '',
+            'pekerjaan' => '',
+            'hamil' => '',
+            'menyusui' => '',
+            'rujuk' => '',
+            'agama' => '',
+            'perkawinan' => '',
+            'keturunan' => '',
+            'suku' => '',
+            'asing' => '',
+            'daerah' => '',
+            'jalan' => '',
+            'rt' => '',
+            'rw' => '',
+            'no' => '',
+            'kode_telp' => '',
+            'telp' => '',
+            'kelurahan' => '',
+            'kecamatan' => '',
+            'kabupaten' => '',
+            'provinsi' => '',
+            'jalan_o' => '',
+            'rt_o' => '',
+            'rw_o' => '',
+            'no_o' => '',
+            'kode_telp_o' => '',
+            'telp_o' => '',
+            'kelurahan_o' => '',
+            'kecamatan_o' => '',
+            'kabupaten_o' => '',
+            'provinsi_o' => ''
         ];
     }
 

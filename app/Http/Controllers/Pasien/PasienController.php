@@ -28,7 +28,7 @@ class PasienController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        return view('pasien.create');
     }
 
     public function find($id)
@@ -46,9 +46,10 @@ class PasienController extends Controller
 
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('users.edit');
+        $pasien = $this->pasienContract->getById($id);
+        return view('pasien.edit', compact('pasien'));
     }
 
     public function update()

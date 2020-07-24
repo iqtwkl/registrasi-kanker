@@ -47,7 +47,11 @@ trait PasienTrait{
         return $this->pekerjaan;
     }
 
-    public function getHamil(){        
+    public function getHamilOriginal(){
+        return $this->hamil;
+    }
+
+    public function getHamil(){
         if ($this->hamil == 1) {
             $this->hamil = 'ya';
         } else if ($this->hamil == 2) {
@@ -58,7 +62,11 @@ trait PasienTrait{
         return $this->hamil;
     }
 
-    public function getMenyusui(){        
+    public function getMenyusuiOriginal(){
+        return $this->menyusui;
+    }
+
+    public function getMenyusui(){
         if ($this->menyusui == 1) {
             $this->menyusui = 'ya';
         } else if ($this->menyusui == 2) {

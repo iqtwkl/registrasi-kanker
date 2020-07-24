@@ -18,7 +18,9 @@ interface IPasien{
     public function getTanggalLahir();
     public function getPendidikan();
     public function getPekerjaan();
+    public function getHamilOriginal();
     public function getHamil();
+    public function getMenyusuiOriginal();
     public function getMenyusui();
     public function getRujuk();
     public function getAgama();

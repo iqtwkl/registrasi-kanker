@@ -37,8 +37,9 @@ class PasienController extends Controller
         $anamnesis = $pasien->latestAnamnesis();
         $pemeriksaanFisik = $pasien->latestPemeriksaanFisik();
         $diagnosa = $pasien->latestDiagnosa();
+        $terapi = $pasien->latestTerapi();
         return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis, 
-            'pemeriksaanFisik'=> $pemeriksaanFisik, 'diagnosa' => $diagnosa]);
+            'pemeriksaanFisik'=> $pemeriksaanFisik, 'diagnosa' => $diagnosa, 'terapi' => $terapi]);
     }
 
     public function store()

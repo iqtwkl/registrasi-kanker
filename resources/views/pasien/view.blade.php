@@ -91,8 +91,9 @@
                 <div class="tab-pane fade" id="terapi" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Terapi Terakhir</h5>
+                            <h5 class="card-title">Rencana Terapi Terakhir</h5>
                             <hr/>
+                            @include('terapi.partials.detail')
                         </div>
                     </div>
                 </div>

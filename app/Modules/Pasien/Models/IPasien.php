@@ -56,5 +56,10 @@ interface IPasien{
     public function getUpdatedAt();
     public function pemeriksaanFisik();
     public function anamnesis();
+    public function diagnosa();
+    public function terapi();
     public function latestAnamnesis();
+    public function latestDiagnosa();
+    public function latestPemeriksaanFisik();
+    public function latestTerapi();
 }

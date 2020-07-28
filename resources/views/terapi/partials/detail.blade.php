@@ -218,11 +218,18 @@
 </div>
 <div class="form-control" align="center"><h6> Operasi </h6></div>
 <div class="form-row">
-    <div class="col-12">
-        <label for="">Masilektomi : </label>
+    <div class="form-group col-12">
+        <label for="">Operasi : </label>
+        <div>
+            <strong>{{  $terapi->getB21() ?? '' }}</strong>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group col-12">
+        <label for="">Jenis Operasi : </label>        
     </div>
     <div class="form-group col-4">
-        <label for="">Tanggal Mulai : </label>
+        <label for="">Masilektomi : </label>
         <div>
             <strong>{{  $terapi->getB22a() ?? '' }}</strong>
         </div>
@@ -303,6 +310,64 @@
         <label for="">Lainnya : </label>
         <div>
             <strong>{{  $terapi->getB22v() ?? '' }}</strong> - <strong>{{  $terapi->getB22_lainnya() ?? '' }}</strong>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="form-row">
+    <div class="form-group col-6">
+        <label for="">Diseksi Leher : </label>
+        <div>
+            <strong>{{  $terapi->getB23() ?? '' }}</strong>
+        </div>
+    </div>
+    <div class="form-group col-6">
+        <label for="">Jenis : </label>
+        <div>
+            <strong>{{  $terapi->getB24() ?? '' }}</strong>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="form-group">
+    <label for="">Follow Up : </label>
+    <div>
+        <strong>{{  $terapi->getB25() ?? '' }}</strong>
+    </div>
+</div>
+<div class="form-group">
+    <label for="">Tanggal Kunjungan Follow Up : </label>
+    <div>
+        <strong>{{  $terapi->getB26() ?? '' }}</strong>
+    </div>
+</div>
+<div class="form-group">
+    <label for="">Keluhan : </label>
+    <div>
+        <strong>{{  $terapi->getB27() ?? '' }}</strong>
+    </div>
+</div>
+<hr>
+<div class="form-row">
+    <div class="col-12">
+        <label for="">Klinis : </label>
+    </div>
+    <div class="form-group">
+        <label for="">No Respons : </label>
+        <div>
+            <strong>{{  $terapi->getB28() ?? '' }}</strong>
+        </div>
+        <div class="form-group">
+            <label for="">Partial Respons : </label>
+            <div>
+                <strong>{{  $terapi->getB29() ?? '' }}</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">Komplit Respons : </label>
+            <div>
+                <strong>{{  $terapi->getB30() ?? '' }}</strong>
+            </div>
         </div>
     </div>
 </div>

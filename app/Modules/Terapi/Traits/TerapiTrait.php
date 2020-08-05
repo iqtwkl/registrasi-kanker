@@ -34,10 +34,27 @@ trait TerapiTrait {
         return $this->b3;
     } 
     public function getB4(){
-        return $this->b4;
+        $val = '-';
+        switch($this->b4) {
+            case '1' : $val = 'Operasi + Radioterapi'; break;
+            case '2' : $val = 'Radioterapi'; break;
+            case '3' : $val = 'Kemoterapi'; break;
+            case '4' : $val = 'Kemoradiasi'; break;
+            case '5' : $val = 'Operasi'; break;
+            default: $val = '-';
+        }
+        return $val;
     } 
     public function getB5(){
-        return $this->b5;
+        $val = '-';
+        switch($this->b5) {
+            case '1' : $val = 'Cobalt'; break;
+            case '2' : $val = '2D / 3D'; break;
+            case '3' : $val = 'IMRT'; break;
+            case '4' : $val = 'Linac'; break;            
+            default: $val = '-';
+        }
+        return $val;
     } 
     public function getB6(){
         return $this->b6;
@@ -64,7 +81,13 @@ trait TerapiTrait {
         return $this->b13;
     }
     public function getB14(){
-        return $this->b14;
+        $val = '-';
+        switch($this->b14) {
+            case '1' : $val = '3x'; break;
+            case '2' : $val = '> 3x'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB15(){
         return $this->b15;
@@ -85,100 +108,284 @@ trait TerapiTrait {
         return $this->b20;
     }
     public function getB21(){
-        return $this->b21;
+        $val = '-';
+        switch($this->b21) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22a(){
-        return $this->b22a;
+        $val = '-';
+        switch($this->b22a) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22b(){
-        return $this->b22b;
+        $val = '-';
+        switch($this->b22b) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22c(){
-        return $this->b22c;
+        $val = '-';
+        switch($this->b22c) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22d(){
-        return $this->b22d;
+        $val = '-';
+        switch($this->b22d) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22e(){
-        return $this->b22e;
+        $val = '-';
+        switch($this->b22e) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22f(){
-        return $this->b22f;
+        $val = '-';
+        switch($this->b22f) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22g(){
-        return $this->b22g;
+        $val = '-';
+        switch($this->b22g) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22h(){
-        return $this->b22h;
+        $val = '-';
+        switch($this->b22h) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22i(){
-        return $this->b22i;
+        $val = '-';
+        switch($this->b22i) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22j(){
-        return $this->b22j;
+        $val = '-';
+        switch($this->b22j) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22k(){
-        return $this->b22k;
+        $val = '-';
+        switch($this->b22k) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22l(){
-        return $this->b22l;
+        $val = '-';
+        switch($this->b22l) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22m(){
-        return $this->b22m;
+        $val = '-';
+        switch($this->b22m) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22n(){
-        return $this->b22n;
+        $val = '-';
+        switch($this->b22n) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22o(){
-        return $this->b22o;
+        $val = '-';
+        switch($this->b22o) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22p(){
-        return $this->b22p;
+        $val = '-';
+        switch($this->b22p) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22q(){
-        return $this->b22q;
+        $val = '-';
+        switch($this->b22q) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22r(){
-        return $this->b22r;
+        $val = '-';
+        switch($this->b22r) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22s(){
-        return $this->b22s;
+        $val = '-';
+        switch($this->b22s) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22t(){
-        return $this->b22t;
+        $val = '-';
+        switch($this->b22t) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22u(){
-        return $this->b22u;
+        $val = '-';
+        switch($this->b22u) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22v(){
-        return $this->b22v;
+        $val = '-';
+        switch($this->b22v) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB22_lainnya(){
         return $this->b22_lainnya;
     }
     public function getB23(){
-        return $this->b23;
+        $val = '-';
+        switch($this->b23) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB24(){
-        return $this->b24;
+        $val = '-';
+        switch($this->b22a) {
+            case '1' : $val = 'Radikal'; break;
+            case '2' : $val = 'Radikal Modifikasi'; break;            
+            case '2' : $val = 'Selektif'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB25(){
-        return $this->b25;
+        $val = '-';
+        switch($this->b25) {
+            case '1' : $val = '< 3 Bulan'; break;
+            case '2' : $val = '6 Bulan'; break;            
+            case '3' : $val = '> 12 Bulan'; break;            
+            case '4' : $val = '3 - 6 Bulan'; break;            
+            case '5' : $val = '12 Bulan'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB26(){
         return $this->b26;
     }
     public function getB27(){
-        return $this->b27;
+        $val = '-';
+        switch($this->b27) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB28(){
-        return $this->b28;
+        $val = '-';
+        switch($this->b28) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB29(){
-        return $this->b29;
+        $val = '-';
+        switch($this->b29) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB30(){
-        return $this->b30;
+        $val = '-';
+        switch($this->b30) {
+            case '1' : $val = 'Ya'; break;
+            case '2' : $val = 'Tidak'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB31(){
         return $this->b31;
@@ -196,7 +403,13 @@ trait TerapiTrait {
         return $this->b35;
     }
     public function getB36(){
-        return $this->b36;
+        $val = '-';
+        switch($this->b36) {
+            case '1' : $val = '3x'; break;
+            case '2' : $val = '> 3x'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB37(){
         return $this->b37;
@@ -211,7 +424,13 @@ trait TerapiTrait {
         return $this->b40;
     }
     public function getB41(){
-        return $this->b41;
+        $val = '-';
+        switch($this->b41) {
+            case '1' : $val = '3x'; break;
+            case '2' : $val = '> 3x'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB42(){
         return $this->b42;
@@ -226,7 +445,15 @@ trait TerapiTrait {
         return $this->b45;
     }
     public function getB46(){
-        return $this->b46;
+        $val = '-';
+        switch($this->b46) {
+            case '1' : $val = '6x'; break;
+            case '2' : $val = '7x'; break;
+            case '3' : $val = '12x'; break;
+            case '4' : $val = '> 12x'; break;            
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getB47(){
         return $this->b47;
@@ -241,7 +468,14 @@ trait TerapiTrait {
         return $this->b50;
     }
     public function getB51(){
-        return $this->b51;
+        $val = '-';
+        switch($this->b51) {
+            case '1' : $val = '3x'; break;
+            case '2' : $val = '6x'; break;    
+            case '3' : $val = '> 6x'; break;        
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getSl1(){
         return $this->S11;

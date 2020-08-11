@@ -32,7 +32,7 @@ class PemeriksaanFisikController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        return view('pemeriksaan_fisik.create');
     }
 
     public function store()

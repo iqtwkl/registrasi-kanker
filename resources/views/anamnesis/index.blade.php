@@ -25,14 +25,15 @@
                         <a href="{{ route('anamnesis.create') }}" class="btn btn-primary" data-id="1">Create</a>
                     </div>
                 </div>
+                <br />
             </div>
         </div>
     </div>
 
     <!-- Start Modal -->
-    @include('anamnesis.partials.modal_create')
-    @include('anamnesis.partials.modal_edit')
-    @include('anamnesis.partials.modal_delete')
+    <!-- include('anamnesis.partials.modal_create')
+    include('anamnesis.partials.modal_edit')
+    include('anamnesis.partials.modal_delete')-->
     <!-- End Modal -->
 @endsection
 

@@ -58,6 +58,7 @@ Route::group(['prefix' => 'pekerjaan','namespace' => 'Pekerjaan'], function(){
 Route::group(['prefix' => 'pemeriksaan-fisik','namespace' => 'PemeriksaanFisik'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@index'])->name('pemeriksaan-fisik');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@find'])->name('pemeriksaan-fisik.find');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@create'])->name('pemeriksaan-fisik.create');
 });
 
 Route::group(['prefix' => 'pendidikan','namespace' => 'Pendidikan'], function(){

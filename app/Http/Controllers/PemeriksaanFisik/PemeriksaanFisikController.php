@@ -42,7 +42,7 @@ class PemeriksaanFisikController extends Controller
 
     public function edit()
     {
-        return view('users.edit');
+        return view('pemeriksaan_fisik.edit');
     }
 
     public function update()

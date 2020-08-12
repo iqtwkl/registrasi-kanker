@@ -16,4 +16,29 @@ class PemeriksaanPenunjangController extends Controller {
     public function find($id){
         dump($id);
     }
+
+    public function create()
+    {
+        return view('pemeriksaan_penunjang.create');
+    }
+
+    public function store()
+    {
+
+    }
+
+    public function edit()
+    {
+        return view('pemeriksaan_penunjang.edit');
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function delete()
+    {
+
+    }
 }

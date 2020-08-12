@@ -75,6 +75,7 @@ Route::group(['prefix' => 'status-pernikahan','namespace' => 'StatusPernikahan']
 
 Route::group(['prefix' => 'pemeriksaan-penunjang','namespace' => 'PemeriksaanPenunjang'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'PemeriksaanPenunjangController@index'])->name('pemeriksaan-penunjang');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'PemeriksaanPenunjangController@create'])->name('pemeriksaan-penunjang.create');
 });
 
 Route::group(['prefix' => 'diagnosa','namespace' => 'Diagnosa'], function(){

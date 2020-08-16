@@ -85,6 +85,7 @@ Route::group(['prefix' => 'diagnosa','namespace' => 'Diagnosa'], function(){
 
 Route::group(['prefix' => 'terapi','namespace' => 'Terapi'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'TerapiController@index'])->name('terapi');
+    Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'TerapiController@find'])->name('terapi.view');
 });
 
 ///AJAX

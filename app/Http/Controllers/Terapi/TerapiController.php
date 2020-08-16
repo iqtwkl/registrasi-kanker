@@ -2,11 +2,14 @@
 namespace App\Http\Controllers\Terapi;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Terapi\Contracts\TerapiContract;
 
 class TerapiController extends Controller{
-    public function __construct()
+    private $terapiContract;
+    public function __construct(TerapiContract $terapiContract)
     {
         $this->middleware('auth');
+        $this->terapiContract = $terapiContract;
     }
 
     public function index(){
@@ -14,6 +17,8 @@ class TerapiController extends Controller{
     }
 
     public function find($id){
-        dump($id);
+        $terapi = $this->terapiContract->getById($id);
+        $pasien = $terapi->pasien()->first();
+        return view('terapi.view', ['id' => $id, 'pasien' => $pasien, 'terapi' => $terapi]);
     }
 }

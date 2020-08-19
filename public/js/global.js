@@ -1,6 +1,10 @@
 /**
  * Created by User2 on 4/7/2020.
  */
+$(function() {
+    $( ".js-datepicker" ).datepicker();
+});
+
 function ShowMessageBox(title, message, status, btn1text, tableClass) {
     var icon = 'ui-icon-info';
     if (status == 0) {

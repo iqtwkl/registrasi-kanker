@@ -23,6 +23,10 @@ class RumahSakitService implements RumahSakitContract{
         $this->repository = $repository;
     }
 
+    public function all(){
+        return $this->repository->all();
+    }
+
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array()){
         return $this->repository->getAll($search, $offset, $limit, $sort);
     }

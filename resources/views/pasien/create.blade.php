@@ -20,9 +20,9 @@
         <div class="col-md-12 col-xl-12">
             @include("pasien.partials.form", [
                     'id' => 0,
+                    'no_rekam_medis' => '',
                     'nama' => '',
                     'kode_rs' => '',
-                    'no_rekam_medis' => '',
                     'nama_orang_tua' => '',
                     'tempat_lahir' => '',
                     'tgl_lahir' => '',
@@ -35,13 +35,16 @@
                     'perkawinan' => '',
                     'keturunan' => '',
                     'suku' => '',
+                    'jenis_kelamin' => '',
                     'asing' => '',
                     'daerah' => '',
+                    'usia' => '',
                     'jalan' => '',
                     'rt' => '',
                     'rw' => '',
                     'no' => '',
                     'kode_telp' => '',
+                    'handphone' => '',
                     'telp' => '',
                     'kelurahan' => '',
                     'kecamatan' => '',
@@ -62,6 +65,8 @@
                     'listPekerjaan' => [],
                     'listAgama' => [],
                     'listPerkawinan' => [],
+                    'listDirujuk' => [],
+                    'listJumlahAnak' => [],
                     'button' => 'Simpan',
                     'action' => route('pasien.store')
                 ])

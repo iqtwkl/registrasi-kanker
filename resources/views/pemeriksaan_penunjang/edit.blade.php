@@ -19,12 +19,12 @@
     <div class="row">
         <div class="col-md-12 col-xl-12">
             @include("pemeriksaan_penunjang.partials.form", [
-                    'id' => '',
-                    'nama_pasien' => '',
-                    'id_pasien' => '',
-                    'medrec' => '',
-                    'kunjungan' => '',
-                    'tanggal_periksa' => '',
+                    'id' => ''.'getId()',
+                    'nama_pasien' => ''.'getPasien()->getNama()',
+                    'id_pasien' => ''.'getPasien()->getId()',
+                    'medrec' => ''.'getPasien()->getMedrec()',
+                    'kunjungan' => ''.'getKunjungan()',
+                    'tanggal_periksa' => ''.'getTanggalPeriksa()',
                     'a1' => ''.'getA1()',
                     'a2' => ''.'getA2()',
                     'a3' => ''.'getA3()',

@@ -9,26 +9,26 @@
 namespace App\Http\Controllers\Pasien;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Pasien\StoreRequest;
+use App\Http\Requests\Pasien\UpdateRequest;
 use App\Modules\Pasien\Contracts\PasienContract;
+use App\Modules\RumahSakit\Contracts\RumahSakitContract;
 
 class PasienController extends Controller
 {
     private $pasienContract;
+    private $rumahSakitContract;
 
-    public function __construct(PasienContract $pasienContract)
+    public function __construct(PasienContract $pasienContract, RumahSakitContract $rumahSakitContract)
     {
         $this->middleware('auth');
         $this->pasienContract = $pasienContract;
+        $this->rumahSakitContract = $rumahSakitContract;
     }
 
     public function index()
     {
         return view('pasien.index');
-    }
-
-    public function create()
-    {
-        return view('pasien.create');
     }
 
     public function find($id)
@@ -38,13 +38,19 @@ class PasienController extends Controller
         $pemeriksaanFisik = $pasien->latestPemeriksaanFisik();
         $diagnosa = $pasien->latestDiagnosa();
         $terapi = $pasien->latestTerapi();
-        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis, 
+        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis,
             'pemeriksaanFisik'=> $pemeriksaanFisik, 'diagnosa' => $diagnosa, 'terapi' => $terapi]);
     }
 
-    public function store()
+    public function create()
     {
+        $listRs = $this->rumahSakitContract->all();
+        return view('pasien.create', compact('listRs'));
+    }
 
+    public function store(StoreRequest $request)
+    {
+        $request = $this->pasienContract->store($request->all());
     }
 
     public function edit($id)
@@ -53,8 +59,10 @@ class PasienController extends Controller
         return view('pasien.edit', compact('pasien'));
     }
 
-    public function update()
+    public function update(UpdateRequest $request)
     {
+        $request = $this->update($request->all());
+
 
     }
 

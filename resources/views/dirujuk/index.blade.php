@@ -5,7 +5,7 @@
 @endsection
 
 @section("content")
-    <h2>Pasien</h2>
+    <h2>Dirujuk</h2>
     <hr />
 
     <div class="table-responsive">

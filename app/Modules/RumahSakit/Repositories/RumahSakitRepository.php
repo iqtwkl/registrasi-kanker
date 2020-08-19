@@ -18,6 +18,10 @@ class RumahSakitRepository implements IRumahSakitRepository{
         $this->model = $model;
     }
 
+    public function all(){
+        return $this->model->all();
+    }
+
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array()){
         $condition = "1=1";
         $filter = [];

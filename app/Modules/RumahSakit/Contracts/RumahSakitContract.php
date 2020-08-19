@@ -12,6 +12,7 @@ use App\Http\Requests\RumahSakit\StoreRequest;
 use App\Http\Requests\RumahSakit\UpdateRequest;
 
 interface RumahSakitContract{
+    public function all();
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array());
     public function getById($id);
     public function store(StoreRequest $request);

@@ -32,6 +32,7 @@
         </div>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Diagnosis </h6></div>
 <hr/>
 <div class="form-group col-md-6">
@@ -72,7 +73,9 @@
         <strong>{{  $diagnosa->getC17() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium Neoplasma Laring, Orofaring, Hipofaring, Rongga Mulut, Kelenjar Liur, dan Sinus Paranasal </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">T/N/M</label>
     <div>
@@ -98,7 +101,9 @@
         <strong>{{  $diagnosa->getC5() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium Neoplasma Tiroid </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">Karsinoma Papilari/Folikulari (Usia &lt 45 Tahun)</label>
     <div>
@@ -149,7 +154,9 @@
         <strong>{{  $diagnosa->getC12() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium Neoplasma Kulit Kepala Leher </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">T/N/M</label>
     <div>
@@ -162,7 +169,9 @@
         <strong>{{  $diagnosa->getC14() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium NHML </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">T/N/M</label>
     <div>
@@ -175,7 +184,9 @@
         <strong>{{  $diagnosa->getC20() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium Neoplasma Kulit Kepala Leher </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">T/N/M</label>
     <div>
@@ -188,14 +199,18 @@
         <strong>{{  $diagnosa->getC14() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Stadium Angiofibroma Nasofaring Belia </h6></div>
+<hr/>
 <div class="form-group col-md-6">
     <label for="">Stadium</label>
     <div>
         <strong>{{  $diagnosa->getC22() ?? '' }}</strong>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Kesimpulan </h6></div>
+<hr/>
 <div class="form-group col-md-6">    
     <div>
         <strong>{{  $diagnosa->getC15() ?? '' }}</strong>

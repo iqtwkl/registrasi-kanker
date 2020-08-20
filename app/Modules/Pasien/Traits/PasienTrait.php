@@ -207,6 +207,10 @@ trait PasienTrait{
         return $this->hasMany('App\Modules\PemeriksaanFisik\Models\PemeriksaanFisik', 'id_pasien', 'id')->orderBy('tglPeriksa');
     }
 
+    public function pemeriksaanPenunjang() {
+        return $this->hasMany('App\Modules\PemeriksaanPenunjang\Models\PemeriksaanPenunjang', 'id_pasien', 'id')->orderBy('tglPeriksa');
+    }
+
     public function anamnesis() {
         return $this->hasMany('App\Modules\Anamnesis\Models\Anamnesis', 'id_pasien', 'id')->orderBy('tgl_periksa');
     }
@@ -225,6 +229,10 @@ trait PasienTrait{
 
     public function latestPemeriksaanFisik() {
         return $this->pemeriksaanFisik()->first();
+    }
+
+    public function latestPemeriksaanPenunjang() {
+        return $this->pemeriksaanPenunjang()->first();
     }
 
     public function latestTerapi()

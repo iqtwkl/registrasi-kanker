@@ -31,6 +31,7 @@ mix.js([
     ], 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copyDirectory('resources/img', 'public/img')
+    .copyDirectory('resources/files', 'public/files')
     .styles([
         'resources/css/sidebar.css',
         'resources/css/plugins/table.css'

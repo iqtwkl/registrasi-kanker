@@ -36,10 +36,11 @@ class PasienController extends Controller
         $pasien = $this->pasienContract->getById($id);
         $anamnesis = $pasien->latestAnamnesis();
         $pemeriksaanFisik = $pasien->latestPemeriksaanFisik();
+        $pemeriksaanPenunjang = $pasien->latestPemeriksaanPenunjang();
         $diagnosa = $pasien->latestDiagnosa();
         $terapi = $pasien->latestTerapi();
-        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis,
-            'pemeriksaanFisik'=> $pemeriksaanFisik, 'diagnosa' => $diagnosa, 'terapi' => $terapi]);
+        return view('pasien.view',['id' => $id, 'pasien' => $pasien, 'anamnesis' => $anamnesis, 
+            'pemeriksaanFisik'=> $pemeriksaanFisik, 'diagnosa' => $diagnosa, 'terapi' => $terapi,'pemeriksaanPenunjang' => $pemeriksaanPenunjang]);
     }
 
     public function create()

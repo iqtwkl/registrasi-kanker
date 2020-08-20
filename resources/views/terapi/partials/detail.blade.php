@@ -1,7 +1,9 @@
+<hr/>
 @if (is_null($terapi))
 <div class="form-control" align="center"><h6> Rencana Terapi Belum tersedia </h6></div>   
 @else
 <div class="form-control" align="center"><h6> Pasien </h6></div>
+<hr/>
 <div class="form-row">    
     <div class="form-group col-md-6">
         <label for="nama_pasien">Nama Pasien</label>
@@ -30,7 +32,9 @@
         </div>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Rencana Terapi </h6></div>
+<hr/>
 <div class="form-group">
     <label for="">Rencana Terapi : </label>
     <div>
@@ -72,7 +76,9 @@
         </div>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Kemoterapi </h6></div>
+<hr/>
 <div class="form-row">
     <div class="col-12">
         <label for="">Adjuvan Kemoterapi : </label>
@@ -216,7 +222,9 @@
         </div>
     </div>
 </div>
+<hr/>
 <div class="form-control" align="center"><h6> Operasi </h6></div>
+<hr/>
 <div class="form-row">
     <div class="form-group col-12">
         <label for="">Operasi : </label>

@@ -12,6 +12,7 @@ use App\Http\Requests\StatusPernikahan\StoreRequest;
 use App\Http\Requests\StatusPernikahan\UpdateRequest;
 
 interface StatusPernikahanContract{
+    public function all();
     public function getAll($search = array(), $offset = null, $limit = null, $sort = array());
     public function getById($id);
     public function store(StoreRequest $request);

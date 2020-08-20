@@ -18,6 +18,7 @@ interface IPasien{
     public function getTanggalLahir();
     public function getPendidikan();
     public function getPekerjaan();
+    public function getJenisKelamin();
     public function getHamilOriginal();
     public function getHamil();
     public function getMenyusuiOriginal();
@@ -28,6 +29,7 @@ interface IPasien{
     public function getAnak();
     public function getKeturunan();
     public function getSuku();
+    public function getAsingOriginal();
     public function getAsing();
     public function getDaerah();
     public function getJalan();

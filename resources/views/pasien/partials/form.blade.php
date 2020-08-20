@@ -1,4 +1,4 @@
-<form id="form" method="post" action="">
+<form id="form" method="post" action="{{ $action }}">
     {{ csrf_field() }}
     <input type="hidden" id="id" name="id" value="{{ $id }}">
     <div class="row">
@@ -21,12 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="tgl_lahir">Tanggal Lahir</label>
-                <div class="input-group mb-3">
-                    <input id="tgl_lahir" name="tgl_lahir" type="text" class="form-control js-datepicker" value="{{ old('tgl_lahir', $tgl_lahir) }}" aria-label="DD/MM/YYYY" aria-describedby="date-icon" readonly>
-                    <div class="input-group-append">
-                        <span class="input-group-text fa fa-calendar" id="date-icon"></span>
-                    </div>
-                </div>
+                <input id="tgl_lahir" name="tgl_lahir" type="date" class="form-control" value="{{ old('tgl_lahir', $tgl_lahir) }}" aria-label="DD/MM/YYYY" aria-describedby="date-icon">
             </div>
             <div class="form-group">
                 <label for="usia">Usia</label>
@@ -37,7 +32,7 @@
                 <select name="pendidikan" id="pendidikan" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listPendidikan as $key => $itemPendidikan)
-                        <option value="{{ $itemPendidikan->getId() }}" @if(old('pendidikan', $pendidikan) == $itemPendidikan->getId()) checked @endif>{{ $itemPendidikan->getNama() }}</option>
+                        <option value="{{ $itemPendidikan->getId() }}" @if(old('pendidikan', $pendidikan) == $itemPendidikan->getId()) selected @endif>{{ $itemPendidikan->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -46,7 +41,7 @@
                 <select name="pekerjaan" id="pekerjaan" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listPekerjaan as $key => $itemPekerjaan)
-                        <option value="{{ $itemPekerjaan->getId() }}" @if(old('pekerjaan', $pekerjaan) == $itemPekerjaan->getId()) checked @endif>{{ $itemPekerjaan->getNama() }}</option>
+                        <option value="{{ $itemPekerjaan->getId() }}" @if(old('pekerjaan', $pekerjaan) == $itemPekerjaan->getId()) selected @endif>{{ $itemPekerjaan->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -58,10 +53,9 @@
                 <label for="jenis_kelamin">Jenis Kelamin</label>
                 <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
                     <option value="0">Silahkan Pilih</option>
-                    <option value="1" @if(old('jenis_kelamin', $jenis_kelamin) == '1') checked @endif>Laki-laki</option>
-                    <option value="2" @if(old('jenis_kelamin', $jenis_kelamin) == '2') checked @endif>Perempuan</option>
+                    <option value="1" @if(old('jenis_kelamin', $jenis_kelamin) == '1') selected @endif>Laki-laki</option>
+                    <option value="2" @if(old('jenis_kelamin', $jenis_kelamin) == '2') selected @endif>Perempuan</option>
                 </select>
-                <input id="jenis_kelamin" name="jenis_kelamin" type="text" class="form-control" value="{{ old('jenis_kelamin', $jenis_kelamin)}}">
             </div>
             <div class="form-group">
                 <label for="hamil">Hamil</label>
@@ -109,7 +103,7 @@
                 <select name="kode_rs" id="kode_rs" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listRs as $key => $itemRs)
-                        <option value="{{ $itemRs->getKode() }}" @if(old('kode_rs', $kode_rs) == $itemRs->getKode()) checked @endif>{{ $itemRs->getNama() }}</option>
+                        <option value="{{ $itemRs->getKodeRs() }}" @if(old('kode_rs', $kode_rs) == $itemRs->getKodeRs()) selected @endif>{{ $itemRs->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -118,7 +112,7 @@
                 <select name="agama" id="agama" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listAgama as $key => $itemAgama)
-                        <option value="{{ $itemAgama->getId() }}" @if(old('agama', $agama) == $itemAgama->getId()) checked @endif>{{ $itemAgama->getNama() }}</option>
+                        <option value="{{ $itemAgama->getId() }}" @if(old('agama', $agama) == $itemAgama->getId()) selected @endif>{{ $itemAgama->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -127,7 +121,7 @@
                 <select name="rujuk" id="rujuk" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listDirujuk as $key => $itemDirujuk)
-                        <option value="{{ $itemDirujuk->getId() }}" @if(old('rujuk', $rujuk) == $itemDirujuk->getId()) checked @endif>{{ $itemDirujuk->getNama() }}</option>
+                        <option value="{{ $itemDirujuk->getId() }}" @if(old('rujuk', $rujuk) == $itemDirujuk->getId()) selected @endif>{{ $itemDirujuk->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -136,7 +130,7 @@
                 <select name="perkawinan" id="perkawinan" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listPerkawinan as $key => $itemPerkawinan)
-                        <option value="{{ $itemPerkawinan->getId() }}" @if(old('perkawinan', $perkawinan) == $itemPerkawinan->getId()) checked @endif>{{ $itemPerkawinan->getNama() }}</option>
+                        <option value="{{ $itemPerkawinan->getId() }}" @if(old('perkawinan', $perkawinan) == $itemPerkawinan->getId()) selected @endif>{{ $itemPerkawinan->getNama() }}</option>
                     @endforeach
                 </select>
             </div>
@@ -145,7 +139,7 @@
                 <select name="anak" id="anal" class="form-control">
                     <option value="0">Silahkan Pilih</option>
                     @foreach($listJumlahAnak as $key => $itemJumlahAnak)
-                        <option value="{{ $itemJumlahAnak->getId() }}" @if(old('anak', $anak) == $itemJumlahAnak->getId()) checked @endif>{{ $itemJumlahAnak->getNama() }}</option>
+                        <option value="{{ $key }}" @if(old('anak', $anak) == $key) selected @endif>{{ $itemJumlahAnak }}</option>
                     @endforeach
                 </select>
             </div>

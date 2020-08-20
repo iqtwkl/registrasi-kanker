@@ -19,6 +19,10 @@ trait PasienTrait{
         return $this->belongsTo('App\Modules\RumahSakit\Models\RumahSakit', 'kode_rs', 'kode');
     }
 
+    public function getKodeRs(){
+        return $this->kode_rs;
+    }
+
     public function getNoRekamMedis(){
         return $this->no_rekam_medis;
     }
@@ -45,6 +49,14 @@ trait PasienTrait{
 
     public function getPekerjaan(){
         return $this->pekerjaan;
+    }
+
+    public function getJenisKelamin(){
+        return $this->jenis_kelamin;
+    }
+
+    public function getAnak(){
+        return $this->anak;
     }
 
     public function getHamilOriginal(){
@@ -89,10 +101,6 @@ trait PasienTrait{
         return $this->perkawinan;
     }
 
-    public function getAnak(){
-        return $this->anak;
-    }
-
     public function getKeturunan(){
         return $this->keturunan;
     }
@@ -103,6 +111,10 @@ trait PasienTrait{
 
     public function getAsing(){
         $this->asing = $this->asing == '' ? 'WNI' : 'Asing';
+        return $this->asing;
+    }
+
+    public function getAsingOriginal(){
         return $this->asing;
     }
 

@@ -15,16 +15,15 @@
         </nav>
     </div>
 
-    <div class="row">
-        <div class="col-md-12 col-xl-12">
-            <div class="table-responsive">
-                <table class="table js-data-pasien" id="js-table-pasien" data-token="{{ csrf_token() }}" data-url="{{ route("pasien.all") }}">
-                </table>
-                <div class="">
-                    <a href="{{ route('pasien.create') }}" class="btn btn-primary">Create</a>
-                </div>
+    <div class="table-responsive">
+        <table class="table js-data-pasien" id="js-table-pasien" data-token="{{ csrf_token() }}" data-url="{{ route("pasien-ajax.all") }}">
+        </table>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="{{ route('pasien.create') }}" class="btn btn-primary">Create</a>
             </div>
         </div>
+        <br/>
     </div>
 
     <!-- Start Modal -->

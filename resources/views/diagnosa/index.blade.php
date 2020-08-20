@@ -14,7 +14,7 @@
             </ol>
         </nav>
     </div>
-    
+
     <div class="table-responsive">
         <table id="js-table-diagnosa" class="table js-data-diagnosa" data-token="{{ csrf_token() }}" data-url="{{ route("diagnosa.all") }}">
         </table>

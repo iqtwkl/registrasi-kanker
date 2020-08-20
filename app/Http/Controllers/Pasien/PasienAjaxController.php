@@ -9,8 +9,6 @@
 namespace App\Http\Controllers\Pasien;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Pasien\StoreRequest;
-use App\Http\Requests\Pasien\UpdateRequest;
 use App\Modules\Pasien\Contracts\PasienContract;
 use Illuminate\Http\Request;
 
@@ -37,17 +35,8 @@ class PasienAjaxController extends Controller
         return $this->pasienContract->getAll($searchArr, $offset, $limit, $sort);
     }
 
-    public function store(StoreRequest $request){
-        return $this->pasienContract->store($request);
-    }
-
-    public function update(UpdateRequest $request){
-        return $this->pasienContract->update($request);
-    }
-
     public function remove(Request $request){
         $id = $request->input("id");
         return $this->pasienContract->remove($id);
     }
-
 }

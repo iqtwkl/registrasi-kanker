@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal-delete-pasien" data-id="" data-url="" data-token="{{ csrf_token() }}">
+<div class="modal fade" id="modal-delete-pasien" data-id="" data-url="">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>
-                <button type="button" class="btn btn-primary">@lang('form.confirm')</button>
+                <button type="button" class="btn btn-primary js-pasien-remove-btn"  data-url="{{ route('pasien-ajax.remove') }}" data-token="{{ csrf_token() }}">@lang('form.confirm')</button>
             </div>
         </div>
         <!-- /.modal-content -->

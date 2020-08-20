@@ -218,22 +218,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA20()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA201()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA202()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA203()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -273,22 +273,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA24()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA241()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA242()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA243()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -328,22 +328,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA28()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA281()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA282()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA283()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -383,22 +383,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA32()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA321()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA322()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA323()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -438,22 +438,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA36()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA361()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA362()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA363()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -493,22 +493,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA40()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA401()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA402()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA403()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -548,22 +548,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA44()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA441()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA442()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA443()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -609,22 +609,22 @@
         <label for="">File : </label>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA60()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA601()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA602()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
     <div class="col-3">
-        <a href="#">
+        <a href="#" data-toggle="modal" data-target="#show-image-modal">
             <img src="{{ asset($pemeriksaanPenunjang->getA603()) ??asset('img/blank.png') }}" class="img-thumbnail">
         </a>
     </div>
@@ -701,3 +701,4 @@
     </div>
 </div>
 @endif
+@include('layouts.partials.image_viewer_modal')

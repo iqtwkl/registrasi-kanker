@@ -42,7 +42,53 @@ trait PemeriksaanPenunjangTrait {
         return $this->a6;
     }
     public function getA7(){
-        return $this->a7;
+        $val = '-';
+        switch($this->a7) {
+            case '1' : $val = 'Non Hodgkin Limfoma Maligna'; break;
+            case '2' : $val = 'Karsinoma Tidak Berkeratin'; break;
+            case '3' : $val = 'Tidak Berdiferensiasi'; break;
+            case '4' : $val = 'T/NK Cell Lymphoma'; break;
+            case '5' : $val = 'Adenocystic Carcinoma'; break;
+            case '6' : $val = 'Karsinoma Sel Skuamosa'; break;
+            case '7' : $val = 'Neuroendokrin'; break;
+            case '8' : $val = 'Rhabdomyosarcoma'; break;
+            case '9' : $val = 'AdenoCarsinoma'; break;
+            case '10' : $val = 'Karsinoma Sel Basal'; break;
+            case '11' : $val = ' Melanoma Maligna'; break;
+            case '12' : $val = 'Polymorphous Low-Grade AdenoCarcinoma'; break;
+            case '13' : $val = 'Mucoepidermoid Carcinoma'; break;
+            case '14' : $val = 'Hemangioma'; break;
+            case '15' : $val = 'Small Cell Carcinoma'; break;
+            case '16' : $val = 'Atypical Carcinoid'; break;
+            case '17' : $val = 'Chondrosarcoma'; break;
+            case '18' : $val = 'Spindle Cell  Carcinoma'; break;
+            case '19' : $val = 'Rhabdomyosarcoma'; break;
+            case '20' : $val = 'Pleomorfik Adenoma'; break;
+            case '21' : $val = 'Granular Cell Tumor'; break;
+            case '22' : $val = 'Fibrus Histiositoma'; break;
+            case '24' : $val = 'Chondroma'; break;
+            case '25' : $val = 'Chondroblastoma'; break;
+            case '26' : $val = 'Schwanoma'; break;
+            case '27' : $val = 'Paraganglioma'; break;
+            case '28' : $val = 'Hemangioendotelioma'; break;
+            case '29' : $val = 'Vascular Malformation'; break;
+            case '30' : $val = 'Struma Uninodusa Non Toksika'; break;
+            case '31' : $val = 'Struma Multinodusa Non Toksika'; break;
+            case '32' : $val = 'Papilari Carcinoma Tiroid'; break;
+            case '33' : $val = 'Folikuler Carcinoma Tiroid'; break;
+            case '34' : $val = 'Medulare Carcinoma Tiroid'; break;
+            case '35' : $val = 'Anaplastic Carcinoma Tiroid'; break;
+            case '36' : $val = 'Kista Duktus Tiroglosus'; break;
+            case '37' : $val = 'Tumor Warthin'; break;
+            case '38' : $val = 'Karsinoma Sel Asinik'; break;
+            case '39' : $val = 'Kista Brankial : Tipe I'; break;
+            case '39' : $val = 'Kista Brankial : Tipe II'; break;
+            case '39' : $val = 'Kista Brankial : Tipe III'; break;
+            case '39' : $val = 'Kista Brankial : Tipe IV'; break;
+            case '40' : $val = ' Wegener’s Granulomatosis (WG)'; break;
+            default: $val = '-';
+        }
+        return $val;
     }
     public function getA7a(){
         return $this->a7a;
@@ -60,16 +106,43 @@ trait PemeriksaanPenunjangTrait {
         return $this->a11;
     }
     public function getA12(){
-        return $this->a12;
+        $val = '-';
+        switch($this->a12) {
+            case '1' : $val = 'Kanan'; break;
+            case '2' : $val = 'Kiri'; break;
+            case '3' : $val = 'Bilateral'; break;
+            default: $val= '-';
+        }
+        return $val;
     }
     public function getA13(){
-        return $this->a13;
+        $val = '-';
+        switch($this->a13) {
+            case '1' : $val = 'Kanan'; break;
+            case '2' : $val = 'Kiri'; break;
+            case '3' : $val = 'Bilateral'; break;
+            default: $val= '-';
+        }
+        return $val;
     }
     public function getA14(){
         return $this->a14;
     }
     public function getA15(){
-        return $this->a15;
+        $val = '-';
+        switch($this->a15){            
+            case '1': $val = 'Level Ia'; break;            
+            case '2': $val = 'Level Ib'; break;            
+            case '3': $val = 'Level IIa'; break;            
+            case '4': $val = 'Level IIb'; break;            
+            case '5': $val = 'Level III'; break;            
+            case '6': $val = 'Level IV'; break;            
+            case '7': $val = 'Level Va'; break;            
+            case '8': $val = 'Level Vb'; break;            
+            case '9': $val = 'Level VI'; break;            
+            default: $val = '-';        
+        }
+        return $val;
     }
     public function getA16(){
         return $this->a16;
@@ -267,19 +340,53 @@ trait PemeriksaanPenunjangTrait {
         return $this->a50;
     }
     public function getA51(){
-        return $this->a51;
+        $val = '-';
+        switch($this->a51){            
+            case '1': $val = 'Normal'; break;            
+            case '2': $val = 'Tuli Sensorineural'; break;            
+            case '3': $val = 'Tuli Konduktif'; break;            
+            case '4': $val = 'Tuli Campuran'; break;                               
+            default: $val = '-';        
+        }
+        return $val;
     }
     public function getA52(){
-        return $this->a52;
+        $val = '-';
+        switch($this->a52){            
+            case '1': $val = 'Normal'; break;            
+            case '2': $val = 'Tuli Sensorineural'; break;            
+            case '3': $val = 'Tuli Konduktif'; break;            
+            case '4': $val = 'Tuli Campuran'; break;                               
+            default: $val = '-';        
+        }
+        return $val;
     }
     public function getA53(){
         return $this->a53;
     }
     public function getA54(){
-        return $this->a54;
+        $val = '-';
+        switch($this->a54){            
+            case '1': $val = 'Tipe A'; break;            
+            case '2': $val = 'Tipe B'; break;            
+            case '3': $val = 'Tipe C'; break;            
+            case '4': $val = 'Tipe Ad'; break;                               
+            case '5': $val = 'Tipe As'; break;                               
+            default: $val = '-';        
+        }
+        return $val;
     }
     public function getA55(){
-        return $this->a55;
+        $val = '-';
+        switch($this->a55){            
+            case '1': $val = 'Tipe A'; break;            
+            case '2': $val = 'Tipe B'; break;            
+            case '3': $val = 'Tipe C'; break;            
+            case '4': $val = 'Tipe Ad'; break;                               
+            case '5': $val = 'Tipe As'; break;                               
+            default: $val = '-';        
+        }
+        return $val;
     }
     public function getA56(){
         return $this->a56;

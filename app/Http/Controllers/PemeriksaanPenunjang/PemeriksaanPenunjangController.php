@@ -2,11 +2,14 @@
 namespace App\Http\Controllers\PemeriksaanPenunjang;
 
 use App\Http\Controllers\Controller;
+use App\Modules\PemeriksaanPenunjang\Contracts\PemeriksaanPenunjangContract;
 
 class PemeriksaanPenunjangController extends Controller {
-    public function __construct()
+    private $pemeriksaanPenunjangContract;
+    public function __construct(PemeriksaanPenunjangContract $pemeriksaanPenunjangContract)
     {
         $this->middleware('auth');
+        $this->pemeriksaanPenunjangContract = $pemeriksaanPenunjangContract;
     }
 
     public function index(){
@@ -14,7 +17,9 @@ class PemeriksaanPenunjangController extends Controller {
     }
 
     public function find($id){
-        dump($id);
+        $pemeriksaanPenunjang = $this->pemeriksaanPenunjangContract->getById($id);
+        $pasien = $pemeriksaanPenunjang->pasien()->first();
+        return view('pemeriksaan_penunjang.view',['id' => $id, 'pasien' => $pasien, 'pemeriksaanPenunjang' => $pemeriksaanPenunjang]);
     }
 
     public function create()

@@ -27297,6 +27297,9 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
+  urls = document.URL.split('/');
+  url = '/pemeriksaan-penunjang';
+  if (urls[urls.length - 2] == 'public') url = '/public//pemeriksaan-penunjang';
   var configs = {
     columns: [{
       title: 'Nama',
@@ -27317,6 +27320,18 @@ $(document).ready(function () {
         type: 'field'
       }
     }, [{
+      title: 'Action',
+      field: 'View',
+      columnType: {
+        type: 'link',
+        link: url,
+        linkQuery: '/find/',
+        linkParam: {
+          type: 'column',
+          value: 'id'
+        }
+      }
+    }, {
       title: 'Action',
       field: 'Edit',
       columnType: {

@@ -54,8 +54,8 @@
                     'listPerkawinan' => $listPerkawinan,
                     'listDirujuk' => $listDirujuk,
                     'listJumlahAnak' => $listJumlahAnak,
-                    'button' => trans('Simpan'),
-                    'action' => route('pasien.store')
+                    'action' => route('pasien.store'),
+                    'button' => trans('Simpan')
                 ])
         </div>
     </div>

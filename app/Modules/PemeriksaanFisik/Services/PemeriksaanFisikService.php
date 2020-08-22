@@ -29,14 +29,11 @@ class PemeriksaanFisikService implements PemeriksaanFisikContract{
         return $this->repository->getById($id);
     }
 
-    public function store(StoreRequest $request){
-        $data = [];
+    public function store($data){
         return $this->repository->store($data);
     }
 
-    public function update(UpdateRequest $request){
-        $id = $request->input("id");
-        $data = [];
+    public function update($data, $id){
         return $this->repository->update($data, $id);
     }
 

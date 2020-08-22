@@ -148,13 +148,44 @@ class PasienController extends Controller
 
     public function update(UpdateRequest $request)
     {
-        //$request = $this->update($request->all());
+        $id = $request->input("id");
+        $date = str_replace('/', '-"', $request->input("tgl_lahir"));
+        $newDate = date("Y-m-d", strtotime($date));
 
+        $data = [
+            "no_rekam_medis" => $request->input("no_rekam_medis"),
+            "nama" => $request->input("nama"),
+            "nama_orang_tua" => $request->input("nama_orang_tua"),
+            "tempat_lahir" => $request->input("tempat_lahir"),
+            "tgl_lahir" => $newDate,
+            "usia" => $request->input("usia"),
+            "pendidikan" =>  $request->input("pendidikan"),
+            "pekerjaan" => $request->input("pekerjaan"),
+            "suku" => $request->input("suku"),
+            "jenis_kelamin" => $request->input("jenis_kelamin"),
+            "hamil" => $request->input("hamil"),
+            "menyusui" => $request->input("menyusui"),
+            "asing" => $request->input("asing"),
+            "kode_rs" => $request->input("kode_rs"),
+            "agama" => $request->input("agama"),
+            "rujuk" => $request->input("rujuk"),
+            "perkawinan" => $request->input("perkawinan"),
+            "anak" => $request->input("anak"),
+            "jalan" => $request->input("jalan"),
+            "rt" => $request->input("rt"),
+            "rw" => $request->input("rw"),
+            "kelurahan" => $request->input("kelurahan"),
+            "kecamatan" => $request->input("kecamatan"),
+            "kabupaten" => $request->input("kabupaten"),
+            "provinsi" => $request->input("provinsi"),
+            "telp" => $request->input("telp"),
+            "handphone" => $request->input("handphone"),
+            "created_by" => Auth::user()->getAuthIdentifier(),
+            "last_updated_by" => Auth::user()->getAuthIdentifier()
+        ];
 
-    }
+        $this->pasienContract->update($data, $id);
 
-    public function delete()
-    {
-
+        return redirect(route("pasien"));
     }
 }

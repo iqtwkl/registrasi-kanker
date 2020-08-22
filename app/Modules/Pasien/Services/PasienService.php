@@ -30,11 +30,11 @@ class PasienService implements PasienContract{
         return $this->repository->getById($id);
     }
 
-    public function store(array $data){
+    public function store($data){
         return $this->repository->store($data);
     }
 
-    public function update(array $data, $id){
+    public function update($data, $id){
         return $this->repository->update($data, $id);
     }
 

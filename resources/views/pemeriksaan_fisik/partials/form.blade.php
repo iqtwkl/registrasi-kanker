@@ -12,32 +12,34 @@
         <label for="medrec">Medical Record</label>
         <input id="medrec" name="medrec" type="text" class="form-control" value="{{ old('medrec',$medrec) }}">
     </div>
-    <div class="form-group">
-        <label for="kunjungan">Kunjungan</label>
-        <input id="kunjungan" name="kunjungan" type="text" class="form-control" value="{{ old('kunjungan',$kunjungan) }}">
-    </div>
-    <div class="form-group">
-        <label for="tgl_periksa">Tanggal Periksa</label>
-        <input id="tgl_periksa" name="tgl_periksa" type="text" class="form-control" value="{{ old('tgl_periksa',$tanggal_periksa) }}">
+    <div class="form-row">
+        <div class="col-md-6">
+            <label for="tgl_periksa">Tanggal Periksa</label>
+            <input id="tgl_periksa" name="tgl_periksa" type="date" class="form-control" value="{{ old('tgl_periksa',$tanggal_periksa) }}">
+        </div>
+        <div class="col-md-6">
+            <label for="kunjungan">Kunjungan</label>
+            <input id="kunjungan" name="kunjungan" type="text" class="form-control" value="{{ old('kunjungan',$kunjungan) }}">
+        </div>
     </div>
     <div class="form-group">
         <hr/>
     </div>
     <div class="form-row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="td_mmhg">TD/mmHg</label>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <input id="td_mmhg" name="td" type="number" class="form-control" value="{{ old('td',$td) }}">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <input id="td_mmhg" name="mmhg" type="number" class="form-control" value="{{ old('mmhg',$mmhg) }}">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="nadi_menit">Nadi/menit</label>
                 <input id="nadi_menit" name="nadi_menit" type="text" class="form-control" value="{{ old('nadi_menit',$nadi_menit) }}">
@@ -45,13 +47,13 @@
         </div>
     </div>
     <div class="form-row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="tinggi_badan">Tinggi Badan (cm)</label>
                 <input id="tinggi_badan" name="tinggi_badan" type="text" class="form-control" value="{{ old('tinggi_badan',$tinggi_badan) }}">
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="berat_badan">Berat Badan (kg)</label>
                 <input id="berat_badan" name="berat_badan" type="text" class="form-control" value="{{ old('berat_badan',$berat_badan) }}">

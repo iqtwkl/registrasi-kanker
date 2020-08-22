@@ -59,6 +59,9 @@ Route::group(['prefix' => 'pemeriksaan-fisik','namespace' => 'PemeriksaanFisik']
     Route::get('', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@index'])->name('pemeriksaan-fisik');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@find'])->name('pemeriksaan-fisik.find');
     Route::get('/create', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@create'])->name('pemeriksaan-fisik.create');
+    Route::post('/store', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@store'])->name('pemeriksaan-fisik.store');
+    Route::get('/edit/{id}', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@create'])->name('pemeriksaan-fisik.edit');
+    Route::post('/update', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikController@update'])->name('pemeriksaan-fisik.update');
 });
 
 Route::group(['prefix' => 'pendidikan','namespace' => 'Pendidikan'], function(){
@@ -136,11 +139,9 @@ Route::group(['prefix' => 'pekerjaan-ajax','namespace' => 'Pekerjaan'], function
 });
 
 Route::group(['prefix' => 'pemeriksaan-fisik-ajax','namespace' => 'PemeriksaanFisik'], function(){
-    Route::post('list', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getAll'])->name('pemeriksaan-fisik.all');
-    Route::post('getById', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik.getById');
-    Route::post('store', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@sotre'])->name('pemeriksaan-fisik.store');
-    Route::post('update', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@update'])->name('pemeriksaan-fisik.update');
-    Route::post('remove', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@remove'])->name('pemeriksaan-fisik.remove');
+    Route::post('list', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getAll'])->name('pemeriksaan-fisik-ajax.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@getById'])->name('pemeriksaan-fisik-ajax.getById');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'PemeriksaanFisikAjaxController@remove'])->name('pemeriksaan-fisik-ajax.remove');
 });
 
 Route::group(['prefix' => 'pendidikan-ajax','namespace' => 'Pendidikan'], function(){

@@ -122,7 +122,7 @@
                     'ks52' => '',
                     'ks53' => '',
                     'ks54' => '',
-                    'action' => '',
+                    'action' => route("pemeriksaan-fisik.store"),
                     'button' => trans('form.save')
                 ])
         </div>

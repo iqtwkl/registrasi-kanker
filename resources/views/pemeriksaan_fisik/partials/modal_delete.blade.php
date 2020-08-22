@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@lang('form.close')</button>
-                <button type="button" class="btn btn-primary">@lang('form.confirm')</button>
+                <button type="button" class="btn btn-primary js-pemeriksaan-fisik-remove-btn" data-url="{{ route('pemeriksaan-fisik-ajax.remove') }}" data-token="{{ csrf_token() }}">@lang('form.confirm')</button>
             </div>
         </div>
         <!-- /.modal-content -->

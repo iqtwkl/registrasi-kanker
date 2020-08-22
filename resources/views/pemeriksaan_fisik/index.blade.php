@@ -17,7 +17,7 @@
     </div>
 
     <div class="table-responsive">
-        <table id="js-table-pemeriksaan-fisik" class="table js-data-pemeriksaan-fisik" data-token="{{ csrf_token() }}" data-url="{{ route("pemeriksaan-fisik.all") }}">
+        <table id="js-table-pemeriksaan-fisik" class="table js-data-pemeriksaan-fisik" data-token="{{ csrf_token() }}" data-url="{{ route("pemeriksaan-fisik-ajax.all") }}">
         </table>
         <div class="row">
             <div class="col-md-12 text-center">

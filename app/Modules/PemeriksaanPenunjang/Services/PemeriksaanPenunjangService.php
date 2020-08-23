@@ -26,16 +26,13 @@ class PemeriksaanPenunjangService implements PemeriksaanPenunjangContract{
 
     }
 
-    public function store(StoreRequest $request) 
+    public function store($data)
     {
-        $data = [];
         return $this->repository->store($data);
     }
 
-    public function update(UpdateRequest $request)
+    public function update($data, $id)
     {
-        $id = $request->input("id");
-        $data = [];
         return $this->repository->update($data, $id);
     }
 

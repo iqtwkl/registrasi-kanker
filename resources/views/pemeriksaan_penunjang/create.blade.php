@@ -119,7 +119,7 @@
                     'a53' => '',
                     'a54' => '',
                     'a55' => '',
-                    'action' => '',
+                    'action' => route("pemeriksaan-penunjang.store"),
                     'button' => trans('form.save')
                 ])
         </div>

@@ -1,3 +1,44 @@
+.card {
+    border: none;
+    -webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+    box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+    margin-bottom: 24px;
+}
+
+.simplebar-content-wrapper {
+    direction: inherit;
+    -webkit-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+    scrollbar-width: none;
+}
+
+.timeline-alt {
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-alt .timeline-item {
+    position: relative;
+}
+
+.timeline-alt .timeline-item .timeline-icon {
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #fff;
+}
 @keyframes swing {
     0% {
         transform: rotate(0deg);

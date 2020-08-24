@@ -14,4 +14,6 @@ interface IPasienRepository{
     public function store(array $data);
     public function update(array $data, $id);
     public function remove($id);
+    public function countAll();
+    public function countThisMonth();
 }

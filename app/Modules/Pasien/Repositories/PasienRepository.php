@@ -9,6 +9,7 @@
 namespace App\Modules\Pasien\Repositories;
 
 use App\Modules\Pasien\Models\Pasien;
+use Carbon\Carbon;
 
 class PasienRepository implements IPasienRepository{
 
@@ -73,5 +74,15 @@ class PasienRepository implements IPasienRepository{
 
     public function remove($id){
         return $this->model->destroy($id);
+    }
+
+    public function countAll() {
+        $count = $this->model->get()->count();
+        return $count;
+    }
+
+    public function countThisMonth() {
+        $today = Carbon::today();
+        return $this->model->with('terapi')->whereBetween('tglPeriksa', [$today->startOfMonth(), $today->endOfMonth()])->count();
     }
 }

@@ -20,7 +20,8 @@ Route::group(['prefix' => 'auth','namespace' => 'Auth'], function(){
 });
 
 
-Route::get('/', ['middleware' => 'web', 'uses' => 'Users\UserController@index'])->name('home');
+Route::get('/', ['middleware' => 'web', 'uses' => 'DashboardController@index'])->name('home');
+Route::get('dashboard/pasien/report',['middleware' => 'web', 'uses' => 'DashboardController@reportPasien'])->name('dashboard.pasien.report');
 
 
 Route::group(['prefix' => 'users','namespace' => 'Users'], function(){

@@ -41,4 +41,14 @@ class PasienService implements PasienContract{
     public function remove($id){
         return $this->repository->remove($id);
     }
+
+    public function countAll()
+    {
+        return $this->repository->countAll();
+    }
+
+    public function countThisMonth()
+    {
+        return $this->repository->countThisMonth();
+    }
 }

@@ -17,4 +17,6 @@ interface PasienContract{
     public function store($data);
     public function update($data, $id);
     public function remove($id);
+    public function countAll();
+    public function countThisMonth();
 }

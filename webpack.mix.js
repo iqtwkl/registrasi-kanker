@@ -33,6 +33,7 @@ mix.js([
     .copyDirectory('resources/img', 'public/img')
     .copyDirectory('resources/files', 'public/files')
     .styles([
+        'resources/css/app.css',
         'resources/css/sidebar.css',
         'resources/css/plugins/table.css'
     ], 'public/css/all.css');

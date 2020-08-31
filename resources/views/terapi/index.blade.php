@@ -16,7 +16,7 @@
     </div>
 
     <div class="table-responsive">
-        <table id="js-table-terapi" class="table js-data-terapi" data-token="{{ csrf_token() }}" data-url="{{ route("terapi.all") }}">
+        <table id="js-table-terapi" class="table js-data-terapi" data-token="{{ csrf_token() }}" data-url="{{ route("terapi-ajax.all") }}">
         </table>
         <div class="row">
             <div class="col-md-12 text-center">

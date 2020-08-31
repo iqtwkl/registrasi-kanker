@@ -89,11 +89,19 @@ Route::group(['prefix' => 'pemeriksaan-penunjang','namespace' => 'PemeriksaanPen
 Route::group(['prefix' => 'diagnosa','namespace' => 'Diagnosa'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'DiagnosaController@index'])->name('diagnosa');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'DiagnosaController@find'])->name('diagnosa.view');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'DiagnosaController@create'])->name('diagnosa.create');
+    Route::post('/store', ['middleware' => 'web', 'uses' => 'DiagnosaController@store'])->name('diagnosa.store');
+    Route::get('/edit/{id}', ['middleware' => 'web', 'uses' => 'DiagnosaController@create'])->name('diagnosa.edit');
+    Route::post('/update', ['middleware' => 'web', 'uses' => 'DiagnosaController@update'])->name('diagnosa.update');
 });
 
 Route::group(['prefix' => 'terapi','namespace' => 'Terapi'], function(){
     Route::get('', ['middleware' => 'web', 'uses' => 'TerapiController@index'])->name('terapi');
     Route::get('/find/{id}', ['middleware' => 'web', 'uses' => 'TerapiController@find'])->name('terapi.view');
+    Route::get('/create', ['middleware' => 'web', 'uses' => 'TerapiController@create'])->name('terapi.create');
+    Route::post('/store', ['middleware' => 'web', 'uses' => 'TerapiController@store'])->name('terapi.store');
+    Route::get('/edit/{id}', ['middleware' => 'web', 'uses' => 'TerapiController@create'])->name('terapi.edit');
+    Route::post('/update', ['middleware' => 'web', 'uses' => 'TerapiController@update'])->name('terapi.update');
 });
 
 ///AJAX
@@ -179,19 +187,15 @@ Route::group(['prefix' => 'pemeriksaan-penunjang-ajax','namespace' => 'Pemeriksa
 });
 
 Route::group(['prefix' => 'diagnosa-ajax','namespace' => 'Diagnosa'], function(){
-    Route::post('list', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@getAll'])->name('diagnosa.all');
-    Route::post('getById', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@getById'])->name('diagnosa.getById');
-    Route::post('store', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@store'])->name('diagnosa.store');
-    Route::post('update', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@update'])->name('diagnosa.update');
-    Route::post('remove', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@remove'])->name('diagnosa.remove');
+    Route::post('list', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@getAll'])->name('diagnosa-ajax.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@getById'])->name('diagnosa-ajax.getById');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'DiagnosaAjaxController@remove'])->name('diagnosa-ajax.remove');
 });
 
 Route::group(['prefix' => 'terapi-ajax','namespace' => 'Terapi'], function(){
-    Route::post('list', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@getAll'])->name('terapi.all');
-    Route::post('getById', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@getById'])->name('terapi.getById');
-    Route::post('store', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@store'])->name('terapi.store');
-    Route::post('update', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@update'])->name('terapi.update');
-    Route::post('remove', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@remove'])->name('terapi.remove');
+    Route::post('list', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@getAll'])->name('terapi-ajax.all');
+    Route::post('getById', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@getById'])->name('terapi-ajax.getById');
+    Route::post('remove', ['middleware' => 'web', 'uses' => 'TerapiAjaxController@remove'])->name('terapi-ajax.remove');
 });
 
 Route::group(['prefix' => 'migration-data','namespace' => 'MigrationData'], function(){

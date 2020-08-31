@@ -49,7 +49,7 @@
                     'c20' => '',
                     'c22' => '',
                     'c15' => '',
-                    'action' => '',
+                    'action' => route("diagnosa.store"),
                     'button' => trans('form.save')
                 ])
         </div>

@@ -38,14 +38,6 @@ class TerapiAjaxController extends Controller {
         return response(['data' => $result]);
     }
 
-    public function store(StoreRequest $request){
-        return $this->terapiContract->store($request);
-    }
-
-    public function update(UpdateRequest $request){
-        return $this->terapiContract->update($request);
-    }
-
     public function remove(Request $request){
         $id = $request->input("id");
         return $this->terapiContract->remove($id);

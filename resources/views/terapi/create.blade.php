@@ -80,7 +80,7 @@
                 'b28' => '',
                 'b29' => '',
                 'b30' => '',
-                'action' => '',
+                'action' => route("terapi.store"),
                 'button' => trans('form.save')
             ])
         </div>
